@@ -42,6 +42,29 @@ export const theme = {
       '8XL': '6rem', // 96px
       '9XL': '8rem', // 128px
     },
+    lineheight: {
+      /**
+       *
+       * these should have the exact same
+       * tokens as font.size.
+       *
+       * (not values, but keys)
+       *
+       */
+      XS: '1rem', // 16px
+      SM: '1.25rem', // 20px
+      MD: '1.5rem', // 24px
+      LG: '1.75rem', // 28px
+      XL: '1.75rem', // 28px
+      XXL: '2rem', // 32px
+      '3XL': '2.25rem', // 36px
+      '4XL': '2.5rem', // 40px
+      '5XL': '1', // 1
+      '6XL': '1', // 1
+      '7XL': '1', // 1
+      '8XL': '1', // 1
+      '9XL': '1', // 1
+    },
     weight: {
       SUPRLITE: '100',
       ULTRALITE: '200',
