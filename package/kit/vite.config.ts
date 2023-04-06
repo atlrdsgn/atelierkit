@@ -55,7 +55,12 @@ export default defineConfig({
     },
   },
   plugins: [
-    banner(`Atelier® Kit v${process.env.npm_package_version}`),
+    banner(`
+    atelierkit© v${process.env.npm_package_version}. 
+    All rights reserved.
+    
+    see https://docs.atlrdsgn.com for more information.
+    `),
     dts({
       outputDir: 'dist/types',
       beforeWriteFile: (filePath, content) => ({
