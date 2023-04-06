@@ -119,6 +119,7 @@ export const themeVars = createThemeContract({
       LOW: null,
       MED: null,
       HIGH: null,
+      TOP: null,
       MAX: null,
     },
   },
@@ -208,6 +209,7 @@ export const themeVars = createThemeContract({
     sapphire12: null,
     sapphire13: null,
 
+    volt0: null,
     volt1: null,
     volt2: null,
     volt3: null,

@@ -14,9 +14,6 @@ export const kitColorPalette = {
   white: '#FFFFFF',
   black: '#000000',
 
-  ...grays,
-  ...pales,
-
   gray100: grays.lite,
   gray200: grays.dark,
   gray300: grays.darkdark,

@@ -1,66 +1,68 @@
 {
-    "name": "@atlrdsgn/kit",
-    "packageManager": "yarn@3.2.2",
-    "version": "0.0.02",
-    "description": "Atelierkit",
-    "author": "chvndler",
-    "homepage": "https://docs.atlrdsgn.com",
-    "license": "MIT",
-    "repository": "atlrdsgn/atlr.kit",
-    "publishConfig": {
-        "access": "public"
+  "name": "@atlrdsgn/kit",
+  "packageManager": "yarn@3.2.2",
+  "version": "0.0.2",
+  "description": "Atelierkit",
+  "author": "chvndler",
+  "homepage": "https://docs.atlrdsgn.com",
+  "license": "MIT",
+  "repository": "atlrdsgn/atlr.kit",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
     },
-    "files": [
-        "dist"
-    ],
-    "type": "module",
-    "main": "./dist/index.umd.cjs",
-    "module": "./dist/index.js",
-    "types": "./dist/types/index.d.ts",
-    "typings": "./dist/types/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "require": "./dist/index.umd.cjs"
-        },
-        "./styles": {
-            "import": "./dist/style.css",
-            "require": "./dist/style.css"
-        }
-    },
-    "scripts": {
-        "build": "vite build",
-        "build:types": "yarn tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-        "lint": "eslint src --ext .ts",
-        "clean": "rm -rf node_modules && rm -rf dist",
-        "release": "npm publish --access public",
-        "dev:release": "npm publish --access private",
-        "pretty": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,md}"
-    },
-    "peerDependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "dependencies": {
-        "@radix-ui/react-avatar": "^1.0.2",
-        "@vanilla-extract/css": "^1.11.0",
-        "@vanilla-extract/recipes": "^0.4.0",
-        "@vanilla-extract/sprinkles": "^1.5.2",
-        "clsx": "^1.2.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@types/node": "^18.15.11",
-        "@types/react": "^18.0.31",
-        "@types/react-dom": "^18.0.11",
-        "@vanilla-extract/vite-plugin": "^3.8.0",
-        "@vitejs/plugin-react": "^3.1.0",
-        "prettier": "^2.8.7",
-        "typescript": "^5.0.3",
-        "vite": "^4.2.1",
-        "vite-plugin-banner": "^0.7.0",
-        "vite-plugin-dts": "^2.1.0",
-        "vite-plugin-progress": "^0.0.7"
+    "./styles": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:types": "yarn tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf node_modules && rm -rf dist",
+    "release": "npm publish --access public",
+    "dev:release": "npm publish --access private",
+    "pretty": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,md}"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.2",
+    "@vanilla-extract/css": "^1.11.0",
+    "@vanilla-extract/recipes": "^0.4.0",
+    "@vanilla-extract/sprinkles": "^1.5.2",
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "@vanilla-extract/vite-plugin": "^3.8.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.37.0",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "vite-plugin-banner": "^0.7.0",
+    "vite-plugin-dts": "^2.1.0",
+    "vite-plugin-progress": "^0.0.7"
+  }
 }
