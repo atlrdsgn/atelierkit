@@ -74,13 +74,13 @@ const variant = {
     color: variant.color,
     boxShadow: variant.boxShadow,
     ':hover': {
-      backgroundColor: variant.onHover?.backgroundColor,
-      border: variant.onHover?.border,
-      color: variant.onHover?.color,
-      boxShadow: variant.onHover?.boxShadow,
+      backgroundColor: variant.onHover.backgroundColor,
+      border: variant.onHover.border,
+      color: variant.onHover.color,
+      boxShadow: variant.onHover.boxShadow,
     },
     ':focus': {
-      boxShadow: variant.onFocus?.boxShadow,
+      boxShadow: variant.onFocus.boxShadow,
     },
     ':active': {},
     ':disabled': {},

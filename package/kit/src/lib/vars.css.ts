@@ -79,6 +79,7 @@ export const themeVars = createThemeContract({
     XXL: null,
     PILL: null,
   },
+
   space: {
     ZERO: null,
     NO: null,
