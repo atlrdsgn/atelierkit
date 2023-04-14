@@ -21,7 +21,7 @@ type BASE_CHIP_PROPS = {
 
 export type ChipProps = BASE_CHIP_PROPS
 export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
-  ({children, className, size = 'small', variant = 'primary', ...rest}, ref) => {
+  ({children, className, size = 'small', variant = 'slate', ...rest}, ref) => {
     return (
       <div {...rest} className={clsx(className, css.chip({size, variant}))} ref={ref}>
         {children}

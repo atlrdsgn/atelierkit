@@ -27,7 +27,7 @@ export default defineConfig({
            *
            * named globals for primitive dependencies.
            */
-          // '@radix-ui/react-avatar': 'AVI',
+          '@radix-ui/react-avatar': 'AVI',
           // '@radix-ui/react-checkbox': 'CBX',
           // '@radix-ui/react-hover-card': 'HOVC',
           // '@radix-ui/react-label': 'LABL',

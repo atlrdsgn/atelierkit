@@ -11,19 +11,23 @@ const chipSizeOps = {
   small: {
     fontSize: kit.font.size.XS,
     lineHeight: kit.font.lineheight.XS,
-    padding: `3px 8px`,
+    padding: `3px 6px`,
     borderRadius: BR_SMALL,
   },
   medium: {
     fontSize: kit.font.size.SM,
     lineHeight: kit.font.lineheight.SM,
-    padding: `4px 12px`,
+    padding: `4px 8px`,
     borderRadius: BR_MEDIUM,
   },
 } as const
 
 const chipVariantOps = {
-  primary: {
+  /**
+   *
+   * slate_variant
+   */
+  slate: {
     backgroundColor: kit.color.slate1,
     border: `1px solid ${kit.color.slate3}`,
     color: kit.color.slate5,
@@ -39,6 +43,10 @@ const chipVariantOps = {
     },
   },
 
+  /**
+   *
+   * hyper_variant
+   */
   hyper: {
     backgroundColor: kit.color.hyper6,
     border: `1px solid ${kit.color.hyper7}`,
@@ -146,6 +154,6 @@ export const chip = recipe({
   variants: {size, variant},
   defaultVariants: {
     size: 'small',
-    variant: 'primary',
+    variant: 'slate',
   },
 })
