@@ -1,7 +1,6 @@
 /** @format */
 
 import {kitColorPalette} from './color'
-
 import type {ColorTypes} from './vars.css'
 
 export const theme = {
@@ -12,7 +11,10 @@ export const theme = {
     xlarge: '1200px',
   },
 
-  /** -------------------------------------- */
+  /**
+   *
+   * @typedesign
+   */
   font: {
     family: {
       system: `'Inter', sans-serif`,
@@ -78,8 +80,10 @@ export const theme = {
     },
   },
 
-  /** ---------------------------------------- */
-
+  /**
+   *
+   * @radius
+   */
   radii: {
     NO: '0px',
     DF: '14px',
@@ -91,6 +95,11 @@ export const theme = {
     XXL: '20px',
     PILL: '1000px',
   },
+
+  /**
+   *
+   * @spacing
+   */
   space: {
     ZERO: '0px',
     NO: '0px',
@@ -122,6 +131,11 @@ export const theme = {
     YPX: '15rem', // 240px
     ZPX: '20rem', // 320px
   },
+
+  /**
+   *
+   * @zindex
+   */
   z: {
     indice: {
       ZERO: '0',
@@ -133,6 +147,11 @@ export const theme = {
       MAX: '99999',
     },
   },
+
+  /**
+   *
+   * @basicshadow
+   */
   shadow: {
     NO: 'none',
     DF: '0px 4px 8px rgba(0, 0, 0, 0.1)',

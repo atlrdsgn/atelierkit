@@ -17,15 +17,15 @@ An ever– expanding library of [React](https://reactjs.org/) components, primit
 ## Start
 
 ```yarn
-yarn add atlr.kit
+yarn add @atlrdsgn/kit
 ```
 
 ```pnpm
-pnpm install --save atlr.kit
+pnpm install --save @atlrdsgn/kit
 ```
 
 ```npm
-npm install --save atlr.kit
+npm install --save @atlrdsgn/kit
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ npm install --save atlr.kit
 
 ```tsx
 import * as React from 'react'
-import {Button} from 'atlr.kit'
+import {Button} from '@atlrdsgn/kit'
 
 export const DefaultExample = () => (
   <Button size={'sm'} primary href=''>

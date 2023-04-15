@@ -11,6 +11,10 @@ export const themeVars = createThemeContract({
     xlarge: null,
   },
 
+  /**
+   *
+   * @typedesign
+   */
   font: {
     family: {
       system: 'font-system',
@@ -68,6 +72,10 @@ export const themeVars = createThemeContract({
     },
   },
 
+  /**
+   *
+   * @radius
+   */
   radii: {
     NO: null,
     DF: null,
@@ -80,6 +88,10 @@ export const themeVars = createThemeContract({
     PILL: null,
   },
 
+  /**
+   *
+   * @spacing
+   */
   space: {
     ZERO: null,
     NO: null,
@@ -113,6 +125,10 @@ export const themeVars = createThemeContract({
     ZPX: null,
   },
 
+  /**
+   *
+   * @zindex
+   */
   z: {
     indice: {
       ZERO: null,
@@ -124,7 +140,11 @@ export const themeVars = createThemeContract({
       MAX: null,
     },
   },
-  /** ------------------------------------------- */
+
+  /**
+   *
+   * @basicshadow
+   */
   shadow: {
     NO: null,
     DF: null,
@@ -133,8 +153,10 @@ export const themeVars = createThemeContract({
     HIGH: null,
   },
 
-  /** ------------------------------------------- */
-
+  /**
+   *
+   * @color
+   */
   color: {
     transparent: null,
     current: null,
