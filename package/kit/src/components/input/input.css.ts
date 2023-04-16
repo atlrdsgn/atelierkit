@@ -12,15 +12,20 @@ const property_vars = {
     MEDIUM: '420px',
   },
   padding: {
-    SMALL: '6px 12px',
+    SMALL: '8px 16px',
     MEDIUM: '8px 16px',
   },
   radii: {
     SMALL: '14px',
     MEDIUM: '17px',
   },
-  shadow: {},
+  shadow: {
+    onHOVER: `0px 2px 4px rgba(17, 12, 34, 0.12)`,
+    onFOCUS: `0px 2px 4px rgba(113, 119, 134, 0.4), 0px 0px 0px 5px rgba(196, 198, 205, 0.6)`,
+  },
 } as const
+
+/** ----------------------------------------------- */
 
 export const input_root = style({
   /**
@@ -77,12 +82,12 @@ export const input_label = style({
 /** ---------------------------------------------- */
 
 const INPUT_SIZE = {
-  SMALL: {
+  small: {
     padding: property_vars.padding.SMALL,
     borderRadius: property_vars.radii.SMALL,
     maxWidth: property_vars.width.SMALL,
   },
-  MEDIUM: {
+  medium: {
     padding: property_vars.padding.MEDIUM,
     borderRadius: property_vars.radii.MEDIUM,
     maxWidth: property_vars.width.MEDIUM,
@@ -91,22 +96,36 @@ const INPUT_SIZE = {
 
 const INPUT_COLOR_VARIANT = {
   slate: {
-    background: kit.color.slate1,
     backgroundColor: kit.color.slate1,
     borderColor: kit.color.slate3,
     color: kit.color.slate8,
     boxShadow: '',
-    onHover: {},
-    onFocus: {},
+    onHover: {
+      backgroundColor: kit.color.slate1,
+      borderColor: kit.color.slate4,
+      boxShadow: property_vars.shadow.onHOVER,
+    },
+    onFocus: {
+      backgroundColor: kit.color.slate1,
+      borderColor: kit.color.slate3,
+      boxShadow: property_vars.shadow.onFOCUS,
+    },
   },
   hyper: {
-    background: kit.color.hyper1,
     backgroundColor: kit.color.hyper1,
-    borderColor: '#FFDAFC',
+    borderColor: kit.color.hyper3,
     color: kit.color.hyper6,
     boxShadow: '',
-    onHover: {},
-    onFocus: {},
+    onHover: {
+      backgroundColor: kit.color.slate1,
+      borderColor: kit.color.hyper4,
+      boxShadow: property_vars.shadow.onHOVER,
+    },
+    onFocus: {
+      backgroundColor: kit.color.slate1,
+      borderColor: kit.color.hyper3,
+      boxShadow: property_vars.shadow.onFOCUS,
+    },
   },
 } as const
 
@@ -120,7 +139,6 @@ const size = {
 
 const variant = {
   ...styleVariants(INPUT_COLOR_VARIANT, (value) => ({
-    background: value.background,
     backgroundColor: value.backgroundColor,
     borderColor: value.borderColor,
     color: value.color,
@@ -160,5 +178,5 @@ export const input_field = recipe({
    */
   base: [input_base],
   variants: {size, variant},
-  defaultVariants: {size: 'MEDIUM', variant: 'slate'},
+  defaultVariants: {size: 'medium', variant: 'slate'},
 })

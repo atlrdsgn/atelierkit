@@ -5,6 +5,50 @@ import {kit} from '../../lib'
 
 import {nav_properties} from './top.appbar.css'
 
+/** ---------------------------------------------- */
+
+const NAV_LINK_ALIGNMENT = {
+  start: {
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    textAlign: 'left',
+    marginLeft: nav_properties.LINK.MARGIN.ZERO,
+    marginRight: nav_properties.LINK.MARGIN.RIGHT,
+  },
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginLeft: nav_properties.LINK.MARGIN.LEFT,
+    marginRight: nav_properties.LINK.MARGIN.RIGHT,
+  },
+  end: {
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    textAlign: 'right',
+    marginLeft: nav_properties.LINK.MARGIN.LEFT,
+    marginRight: nav_properties.LINK.MARGIN.ZERO,
+  },
+} as const
+
+const alignment = {
+  ...styleVariants(NAV_LINK_ALIGNMENT, (alignment) => ({
+    justifyContent: alignment.justifyContent,
+    alignItems: alignment.alignItems,
+    textAlign: alignment.textAlign,
+    marginLeft: alignment.marginLeft,
+    marginRight: alignment.marginRight,
+  })),
+} as const
+
+const color = {
+  ...styleVariants(kit.color, (colorValue) => ({
+    color: colorValue,
+  })),
+} as const
+
+/** ----------------------------------------- */
+
 const BOTTOM_APPBAR_LINK_BASE = style({
   all: 'unset',
 
@@ -42,3 +86,16 @@ const BOTTOM_APPBAR_CSS = {
 export const bottom_appbar = style({
   ...BOTTOM_APPBAR_CSS,
 })
+
+export const appbar_link = recipe({
+  base: [BOTTOM_APPBAR_LINK_BASE],
+  variants: {alignment, color},
+  defaultVariants: {
+    alignment: 'center',
+    color: 'slate9',
+  },
+})
+
+export type AppbarLinkAlignment = keyof typeof alignment
+export type AppbarLinkColor = keyof typeof color
+export type AppbarLinkVariantProps = RecipeVariants<typeof appbar_link>

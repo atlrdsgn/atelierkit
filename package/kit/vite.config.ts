@@ -12,6 +12,7 @@ const peers = Object.keys(peerDependencies)
 const primitiveDeps = [
   // ...deps
   '@radix-ui/react-avatar',
+  '@radix-ui/react-switch',
 ]
 
 export default defineConfig({
@@ -32,7 +33,7 @@ export default defineConfig({
           // '@radix-ui/react-hover-card': 'HOVC',
           // '@radix-ui/react-label': 'LABL',
           // '@radix-ui/react-popover': 'POP',
-          // '@radix-ui/react-switch': 'S',
+          '@radix-ui/react-switch': 'SWI',
           // '@radix-ui/react-select': 'SEL',
           // '@radix-ui/react-separator': 'SEP',
           // '@radix-ui/react-tooltip': 'TIP',
