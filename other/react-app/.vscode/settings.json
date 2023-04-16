@@ -1,0 +1,26 @@
+{
+  "workbench.colorTheme": "Everblush",
+  "workbench.iconTheme": "bearded-icons",
+  "editor.fontSize": 12,
+  "editor.fontFamily": "SF Mono, monospace",
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 0,
+
+  "files.autoSave": "onWindowChange",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+
+  "git.ignoreLimitWarning": true,
+  "vsicons.dontShowNewVersionMessage": true,
+
+  "github.copilot.inlineSuggest.enable": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  }
+}

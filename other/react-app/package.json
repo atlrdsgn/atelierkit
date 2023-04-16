@@ -1,0 +1,16 @@
+{
+    "name": "react-app",
+    "packageManager": "yarn@3.2.2",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "clean": "rm -rf node_modules && rm -rf .next"
+    },
+    "dependencies": {
+        "next": "^13.3.0"
+    }
+}

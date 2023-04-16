@@ -1,0 +1,17 @@
+{
+  "global": {
+    "title": "Global",
+    "description": "Global settings for the site"
+  },
+
+  "meta": [
+    {
+      "name": "og:type",
+      "value": "website"
+    }
+  ],
+
+  "footer": {
+    "text": "© 2019 - 2020"
+  }
+}
