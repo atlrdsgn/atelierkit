@@ -4,7 +4,7 @@ import {style, styleVariants} from '@vanilla-extract/css'
 import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
 import {kit} from '../../lib'
 
-const sizeVALUE = {
+const SIZE_MAP = {
   sm: {
     paddingTop: kit.space.DPX,
     paddingBottom: kit.space.DPX,
@@ -23,7 +23,7 @@ const sizeVALUE = {
     paddingLeft: kit.space.ZERO,
     paddingRight: kit.space.ZERO,
   },
-  vp: {
+  vw: {
     paddingTop: kit.space.IPX,
     paddingBottom: kit.space.IPX,
     paddingLeft: kit.space.ZERO,
@@ -32,7 +32,7 @@ const sizeVALUE = {
 } as const
 
 const size = {
-  ...styleVariants(sizeVALUE, (value) => ({
+  ...styleVariants(SIZE_MAP, (value) => ({
     paddingTop: value.paddingTop,
     paddingBottom: value.paddingBottom,
     paddingLeft: value.paddingLeft,
@@ -59,10 +59,10 @@ export const SEC_ROOT = style({
 export type SectionSize = keyof typeof size
 export type SectionVariantProps = RecipeVariants<typeof section>
 export const section = recipe({
-  base: [SEC_ROOT],
+  base: SEC_ROOT,
   variants: {size},
   defaultVariants: {
     // ..
-    size: 'vp',
+    size: 'vw',
   },
 })

@@ -28,7 +28,6 @@ export const theme = {
       H5: '1.125rem', // 18px
       H6: '1rem', // 16px
     },
-    body: {},
     size: {
       XS: '0.75rem', // 12px
       SM: '0.875rem', // 14px

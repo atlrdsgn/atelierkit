@@ -7,7 +7,7 @@ import {component_shadows, kit} from '../../lib'
 const BR_SMALL = '8px'
 const BR_MEDIUM = '12px'
 
-const chipSizeOps = {
+const SIZE_MAP = {
   small: {
     fontSize: kit.font.size.XS,
     lineHeight: kit.font.lineheight.XS,
@@ -22,7 +22,7 @@ const chipSizeOps = {
   },
 } as const
 
-const chipVariantOps = {
+const VARIANT_COLOR_MAP = {
   /**
    *
    * slate_variant
@@ -67,7 +67,7 @@ const chipVariantOps = {
 /** --------------------------------------------------------- */
 
 const size = {
-  ...styleVariants(chipSizeOps, (size) => ({
+  ...styleVariants(SIZE_MAP, (size) => ({
     fontSize: size.fontSize,
     lineHeight: size.lineHeight,
     padding: size.padding,
@@ -76,7 +76,7 @@ const size = {
 }
 
 const variant = {
-  ...styleVariants(chipVariantOps, (variant) => ({
+  ...styleVariants(VARIANT_COLOR_MAP, (variant) => ({
     backgroundColor: variant.backgroundColor,
     border: variant.border,
     color: variant.color,
@@ -150,7 +150,7 @@ export type ChipSizeProps = keyof typeof size
 export type ChipVProps = keyof typeof variant
 export type ChipVariantProps = RecipeVariants<typeof chip>
 export const chip = recipe({
-  base: [CHIP_ROOT],
+  base: CHIP_ROOT,
   variants: {size, variant},
   defaultVariants: {
     size: 'small',

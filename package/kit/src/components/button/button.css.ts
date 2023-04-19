@@ -71,7 +71,7 @@ const style_properties = {
 
 /** ---------------------------------------------- */
 
-const BUTTON_SIZES = {
+const SIZE_MAP = {
   xs: {
     padding: style_properties.padding.XSMALL,
     border: style_properties.border.XSMALL,
@@ -122,7 +122,7 @@ const BUTTON_SIZES = {
   },
 } as const
 
-const BUTTON_COLOR_OPTS = {
+const COLOR_MAP = {
   slate: {
     backgroundColor: kit.color.slate1,
     color: kit.color.slate6,
@@ -140,7 +140,7 @@ const BUTTON_COLOR_OPTS = {
 } as const
 
 const size = {
-  ...styleVariants(BUTTON_SIZES, (value) => ({
+  ...styleVariants(SIZE_MAP, (value) => ({
     padding: value.padding,
     border: value.border,
     borderRadius: value.borderRadius,
@@ -151,7 +151,7 @@ const size = {
 } as const
 
 const variant = {
-  ...styleVariants(BUTTON_COLOR_OPTS, (value) => ({
+  ...styleVariants(COLOR_MAP, (value) => ({
     backgroundColor: value.backgroundColor,
     color: value.color,
 
@@ -183,7 +183,6 @@ const BUTTON_BASE = style({
   fontWeight: kit.font.weight.MEDIUM,
   letterSpacing: '-0.03em',
 
-  border: ``,
   transition: '0.2s cubic-bezier(0.3, 0, 0.5, 1)',
   transitionProperty: 'color, backgroundColor, borderColor',
   willChange: 'color, backgroundColor, borderColor, boxShadow',
@@ -202,7 +201,7 @@ export type ButtonSize = keyof typeof size
 export type ButtonVariant = keyof typeof variant
 export type ButtonVariantProps = RecipeVariants<typeof button>
 export const button = recipe({
-  base: [BUTTON_BASE],
+  base: BUTTON_BASE,
   variants: {size, variant},
   defaultVariants: {
     size: 'sm',

@@ -6,7 +6,7 @@ import type {SectionVariantProps, SectionSize} from './section.css'
 
 import clsx from 'clsx'
 
-interface BaseSectionProps {
+interface BASE_SECTION_PROPS {
   children: React.ReactNode
 
   /**
@@ -17,11 +17,11 @@ interface BaseSectionProps {
   size?: SectionSize
 }
 
-export type SectionProps = BaseSectionProps &
+export type SectionProps = BASE_SECTION_PROPS &
   SectionVariantProps &
   React.HTMLAttributes<HTMLDivElement>
 
-export const Section: React.FC<SectionProps> = ({children, className, size = 'vp', ...rest}) => {
+export const Section: React.FC<SectionProps> = ({children, className, size = 'vw', ...rest}) => {
   return (
     <div {...rest} className={clsx(className, css.section({size}))}>
       {children}

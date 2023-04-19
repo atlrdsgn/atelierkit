@@ -3,10 +3,10 @@
 import React from 'react'
 import * as css from './button.css'
 
-import type {BASE_ButtonProps} from './button.types'
+import type {BASE_BUTTON_PROPS} from './button.types'
 import type {ButtonVariantProps} from './button.css'
 
-type ButtonProps = BASE_ButtonProps & ButtonVariantProps & React.HTMLAttributes<HTMLButtonElement>
+type ButtonProps = BASE_BUTTON_PROPS & ButtonVariantProps & React.HTMLAttributes<HTMLButtonElement>
 
 export const Button: React.FC<ButtonProps> = ({
   children,

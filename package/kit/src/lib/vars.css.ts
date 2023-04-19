@@ -28,7 +28,6 @@ export const themeVars = createThemeContract({
       H5: 'font-heading-h5',
       H6: 'font-heading-h6',
     },
-    body: {},
     size: {
       XS: 'font-size-xs',
       SM: 'font-size-sm',
