@@ -2,7 +2,8 @@
 
 import {style, styleVariants} from '@vanilla-extract/css'
 import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
-import {kit} from '../../lib'
+
+import {kit, rainbow_shadow} from '../../lib'
 
 const style_properties = {
   padding: {
@@ -126,16 +127,32 @@ const COLOR_MAP = {
   slate: {
     backgroundColor: kit.color.slate1,
     color: kit.color.slate6,
-
-    onHOVER: {},
-    onFOCUS: {},
+    onHOVER: {
+      boxShadow: 'none',
+    },
+    onFOCUS: {
+      boxShadow: 'none',
+    },
   },
   hyper: {
     backgroundColor: kit.color.hyper5,
     color: kit.color.hyper1,
-
-    onHOVER: {},
-    onFOCUS: {},
+    onHOVER: {
+      boxShadow: 'none',
+    },
+    onFOCUS: {
+      boxShadow: 'none',
+    },
+  },
+  neon: {
+    backgroundColor: kit.color.slate1,
+    color: kit.color.slate6,
+    onHOVER: {
+      boxShadow: rainbow_shadow.LIGHT.HOVER,
+    },
+    onFOCUS: {
+      boxShadow: 'none',
+    },
   },
 } as const
 
@@ -155,8 +172,12 @@ const variant = {
     backgroundColor: value.backgroundColor,
     color: value.color,
 
-    ':hover': {},
-    ':focus': {},
+    ':hover': {
+      boxShadow: value.onHOVER.boxShadow,
+    },
+    ':focus': {
+      boxShadow: value.onFOCUS.boxShadow,
+    },
   })),
 } as const
 
