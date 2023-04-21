@@ -170,6 +170,7 @@ const input_base = style({
 /** --------------------------------------------------------- */
 
 export type InputSize = keyof typeof size
+export type InputColorVariant = keyof typeof variant
 export type InputVariantProps = RecipeVariants<typeof input_field>
 export const input_field = recipe({
   /**

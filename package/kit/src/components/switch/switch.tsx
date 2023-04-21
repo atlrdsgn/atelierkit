@@ -102,3 +102,4 @@ Switch.Toggle = SwitchToggleComponent
 
 Switch.displayName = 'Switch'
 Switch.Toggle.displayName = 'Switch.Toggle'
+SwitchToggleComponent.displayName = 'Switch.Toggle'
