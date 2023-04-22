@@ -1,35 +1,9 @@
 /** @format */
-
 import {style, styleVariants} from '@vanilla-extract/css'
-import {kit} from '../../lib'
 import {RecipeVariants, recipe} from '@vanilla-extract/recipes'
+import {kit} from '../../../lib'
 
-export const nav_properties = {
-  LINK: {
-    MARGIN: {
-      LEFT: '14px',
-      RIGHT: '14px',
-      ZERO: '0px',
-    },
-  },
-  FONT_SETTINGS: {
-    family: kit.font.family.system,
-    size: kit.font.size.MD,
-    weight: kit.font.weight.MEDIUM,
-    lineheight: kit.font.lineheight.MD,
-    letterspace: 'normal',
-  },
-  PADDING: {
-    TOPBAR: '4px 18px',
-    BOTTOMBAR: '4px 18px',
-  },
-  isBLUR: {
-    true: {
-      backdropFilter: 'blur(40px) saturate(100%)',
-      WebkitBackdropFilter: 'blur(40px) saturate(100%)',
-    },
-  },
-} as const
+import {nav_properties} from '../top/top.appbar.css'
 
 /** ---------------------------------------------- */
 
@@ -75,7 +49,19 @@ const color = {
 
 /** ----------------------------------------- */
 
-const TOP_APPBAR_CSS = {
+const BOTTOM_APPBAR_LINK_BASE = style({
+  all: 'unset',
+
+  fontFamily: nav_properties.FONT_SETTINGS.family,
+  fontSize: nav_properties.FONT_SETTINGS.size,
+  fontWeight: nav_properties.FONT_SETTINGS.weight,
+  lineHeight: nav_properties.FONT_SETTINGS.lineheight,
+  letterSpacing: nav_properties.FONT_SETTINGS.letterspace,
+})
+
+/** ----------------------------------------- */
+
+const BOTTOM_APPBAR_CSS = {
   all: 'unset',
   display: 'flex',
   flexDirection: 'row',
@@ -97,24 +83,12 @@ const TOP_APPBAR_CSS = {
   maxHeight: '40px',
 } as const
 
-const APPBAR_LINK_BASE = style({
-  all: 'unset',
-
-  fontFamily: nav_properties.FONT_SETTINGS.family,
-  fontSize: nav_properties.FONT_SETTINGS.size,
-  fontWeight: nav_properties.FONT_SETTINGS.weight,
-  lineHeight: nav_properties.FONT_SETTINGS.lineheight,
-  letterSpacing: nav_properties.FONT_SETTINGS.letterspace,
-})
-
-/** ----------------------------------------- */
-
-export const top_appbar = style({
-  ...TOP_APPBAR_CSS,
+export const bottom_appbar = style({
+  ...BOTTOM_APPBAR_CSS,
 })
 
 export const appbar_link = recipe({
-  base: [APPBAR_LINK_BASE],
+  base: [BOTTOM_APPBAR_LINK_BASE],
   variants: {alignment, color},
   defaultVariants: {
     alignment: 'center',
