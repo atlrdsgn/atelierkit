@@ -202,7 +202,7 @@ export const themeVars = createThemeContract({
     lemon12: null,
     lemon13: null,
 
-    slate1: 'color-slate1',
+    slate1: null,
     slate2: null,
     slate3: null,
     slate4: null,
