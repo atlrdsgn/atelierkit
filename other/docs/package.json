@@ -1,0 +1,16 @@
+{
+    "name": "docs.atelierkit",
+    "version": "0.3.24",
+    "packageManager": "yarn@3.2.2",
+    "private": true,
+    "scripts": {
+        "install": "mintlify install",
+        "dev": "mintlify dev"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.3"
+    },
+    "dependencies": {
+        "mintlify": "^2.0.17"
+    }
+}

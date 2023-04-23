@@ -1,0 +1,129 @@
+---
+title: 'All Components'
+sidebarTitle: 'Components'
+description: 'A layout component that centers all the email content.'
+'og:image': ''
+---
+
+## Accordion
+
+<Accordion title="I am an Accordion.">You can put any content in here.</Accordion>
+
+## Accordion Group
+
+<AccordionGroup>
+  <Accordion title="FAQ without Icon">
+    You can put other components inside Accordions.
+  </Accordion>
+  
+  <Accordion title="FAQ with Icon" icon="alien-8bit">
+   Check out the [Accordion](/component-reference/accordion) docs for all the supported props.
+  </Accordion>
+
+  <Accordion title="FAQ without Icon">
+    Check out the [Accordion](/component-reference/accordion) docs for all the supported props.
+  </Accordion>
+</AccordionGroup>
+
+## Card
+
+<Card title="Click on me" icon="link" href="/component-reference/card-group">
+  This is how you use a card with an icon and a link. Clicking on this card brings you to the Card
+  Group page.
+</Card>
+
+## Card Group
+
+<CardGroup cols={2}>
+  <Card title="First Card" icon="square-1" color="#ea5a0c">
+    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+  </Card>
+  <Card title="Second Card" icon="square-2" color="#0285c7">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </Card>
+  <Card title="Third Card" icon="square-3" color="#16a34a">
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+  </Card>
+  <Card title="Fourth Card" icon="square-4" color="#dc2626">
+    Excepteur sint occaecat cupidatat non proident
+  </Card>
+</CardGroup>
+
+
+## Code Group
+
+<CodeGroup>
+
+```sh npm
+npm install @react-email/container -E
+```
+
+```sh yarn
+yarn add @react-email/container -E
+```
+
+</CodeGroup>
+
+
+
+## Tabs
+
+<Tabs>
+  <Tab title="First Tab">☝️ Welcome to the content that you can only see inside the first Tab.</Tab>
+  <Tab title="Second Tab">✌️ Here's content that's only inside the second Tab.</Tab>
+  <Tab title="Third Tab">💪 Here's content that's only inside the third Tab.</Tab>
+</Tabs>
+
+----
+
+## Callout Boxes
+
+#### Note
+<Note>This adds a note in the content</Note>
+
+#### Warning
+<Warning>This adds a warning in the content</Warning>
+
+#### Tip
+<Tip>This adds a note in the content</Tip>
+
+#### Info
+<Info>This adds a note in the content</Info>
+
+
+## Image Frame
+
+<Frame>
+  <img src="./images/search.png" />
+</Frame>
+
+
+## Tooltip
+
+<Tooltip tip="This is a tooltip!">Hover over me</Tooltip>
+
+<hr />
+
+# API Components
+
+<ParamField path="user_id" type="string">
+  The id of the user
+</ParamField>
+
+<RequestExample>
+
+```bash Request
+  curl --request POST \
+    --url https://dog-api.kinduff.com/api/facts
+```
+
+</RequestExample>
+
+
+
+
+
+
+
+
+<Snippet file="support.mdx" />
