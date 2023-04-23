@@ -14,4 +14,4 @@ export const themes = {
   base: kitClass,
   light: liteMode,
   dark: darkMode,
-} as const
+}
