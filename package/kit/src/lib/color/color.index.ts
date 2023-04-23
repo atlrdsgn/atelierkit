@@ -98,3 +98,5 @@ export const kitColorPalette = {
   volt12: volt.volt12,
   volt13: volt.volt13,
 } as const
+
+export const darkKitColorPalette = kitColorPalette

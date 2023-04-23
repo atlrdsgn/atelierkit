@@ -20,7 +20,7 @@ React.PropsWithChildren<KitProviderProps>) => {
     setTheme((prevValue) => (prevValue === 'light' ? 'dark' : 'light'))
   }
 
-  const Mode = kitTheme === 'light' ? themes.light : themes.light
+  const Mode = kitTheme === 'light' ? themes.dark : themes.light
 
   return (
     <KitContext.Provider

@@ -1,12 +1,12 @@
 {
   "name": "@atlrdsgn/kit",
   "packageManager": "yarn@3.2.2",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Atelierkit",
   "author": "chvndler",
   "homepage": "https://docs.atlrdsgn.com",
   "license": "MIT",
-  "repository": "atlrdsgn/atlr.kit",
+  "repository": "atlrdsgn/atelierkit",
   "publishConfig": {
     "access": "public"
   },

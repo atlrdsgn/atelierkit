@@ -1,6 +1,6 @@
 /** @format */
 
-import {kitColorPalette} from './color'
+import {kitColorPalette, darkKitColorPalette} from './color'
 import type {ColorTypes} from './vars.css'
 
 export const theme = {
@@ -166,9 +166,20 @@ const lightModeColors: ColorTypes = {
   ...kitColorPalette,
 } as const
 
+const darkModeColors: ColorTypes = {
+  ...darkKitColorPalette,
+} as const
+
 export const BASE_KIT_THEME = {
   ...theme,
   color: {
     ...lightModeColors,
+  },
+} as const
+
+export const DARK_KIT_THEME = {
+  ...theme,
+  color: {
+    ...darkModeColors,
   },
 } as const

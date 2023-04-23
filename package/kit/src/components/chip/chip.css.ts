@@ -2,7 +2,8 @@
 
 import {style, styleVariants} from '@vanilla-extract/css'
 import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
-import {component_shadows, kit} from '../../lib'
+import {component_shadows} from '../../lib/properties'
+import {kit} from '../../lib'
 
 const BR_SMALL = '8px'
 const BR_MEDIUM = '12px'

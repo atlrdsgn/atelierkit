@@ -3,7 +3,8 @@
 import {style, styleVariants} from '@vanilla-extract/css'
 import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
 
-import {kit, rainbow_shadow} from '../../lib'
+import {rainbow_shadow} from '../../lib/properties'
+import {kit} from '../../lib'
 
 const style_properties = {
   padding: {
