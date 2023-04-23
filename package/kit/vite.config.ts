@@ -13,6 +13,7 @@ const primitiveDeps = [
   // ...deps
   '@radix-ui/react-avatar',
   '@radix-ui/react-switch',
+  '@radix-ui/react-tooltip',
 ]
 
 export default defineConfig({
@@ -36,7 +37,7 @@ export default defineConfig({
           '@radix-ui/react-switch': 'SWI',
           // '@radix-ui/react-select': 'SEL',
           // '@radix-ui/react-separator': 'SEP',
-          // '@radix-ui/react-tooltip': 'TIP',
+          '@radix-ui/react-tooltip': 'TIP',
         },
       },
     },
@@ -83,7 +84,7 @@ export default defineConfig({
        * to 'short' or 'debug' to control
        * how class names are generated.
        */
-      identifiers: 'debug',
+      identifiers: 'short',
     }),
   ],
 })
