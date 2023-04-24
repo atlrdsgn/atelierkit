@@ -1,6 +1,6 @@
 {
-    "name": "docs.atelierkit",
-    "version": "0.3.24",
+    "name": "docs.kit",
+    "version": "0.1.0",
     "packageManager": "yarn@3.2.2",
     "private": true,
     "scripts": {

@@ -2380,11 +2380,11 @@ __metadata:
   linkType: hard
 
 "ansi-escapes@npm:^6.0.0":
-  version: 6.1.0
-  resolution: "ansi-escapes@npm:6.1.0"
+  version: 6.2.0
+  resolution: "ansi-escapes@npm:6.2.0"
   dependencies:
     type-fest: ^3.0.0
-  checksum: 7ce5d9cefd3d7345dc00161aea2ea9ad5fb3dd66658d4e8731ea047be838d755100f0823a05523d0e518e8e080746fc0a45d3ea3053099376bdd572efaedc7c1
+  checksum: f0bc667d5f1ededc3ea89b73c34f0cba95473525b07e1290ddfd3fc868c94614e95f3549f5c4fd0c05424af7d3fd298101fb3d9a52a597d3782508b340783bd7
   languageName: node
   linkType: hard
 
@@ -2933,14 +2933,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromium-bidi@npm:0.4.6":
-  version: 0.4.6
-  resolution: "chromium-bidi@npm:0.4.6"
+"chromium-bidi@npm:0.4.7":
+  version: 0.4.7
+  resolution: "chromium-bidi@npm:0.4.7"
   dependencies:
     mitt: 3.0.0
   peerDependencies:
     devtools-protocol: "*"
-  checksum: 1d6365896bca4592ddd95233a784e4743d2c8c692d065327a416a09acddc3d05e300c360b859d7049f91924be326d801e6fe9860ace4541325b25f4ec6b94b97
+  checksum: eec7581e2eddd2c95014c6edc5aae0b036c79bbeadee05166436b16139b6932c902c5ce21d95ed919a592f58d3a47c5469dc5f3de2a300700b2748ab119ad65e
   languageName: node
   linkType: hard
 
@@ -3463,9 +3463,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"docs.atelierkit@workspace:other/docs":
+"docs.kit@workspace:other/kit.docs":
   version: 0.0.0-use.local
-  resolution: "docs.atelierkit@workspace:other/docs"
+  resolution: "docs.kit@workspace:other/kit.docs"
   dependencies:
     mintlify: ^3.0.25
     prettier: ^2.8.3
@@ -4711,8 +4711,8 @@ __metadata:
   linkType: hard
 
 "inquirer@npm:^9.1.0":
-  version: 9.1.5
-  resolution: "inquirer@npm:9.1.5"
+  version: 9.2.0
+  resolution: "inquirer@npm:9.2.0"
   dependencies:
     ansi-escapes: ^6.0.0
     chalk: ^5.2.0
@@ -4729,7 +4729,7 @@ __metadata:
     strip-ansi: ^7.0.1
     through: ^2.3.6
     wrap-ansi: ^8.1.0
-  checksum: 8491fad532c781041abca63605505ddb4bfeaf6547c8a68aa3e9f5a72dec627e1f222d3dbb082dc741cbb031394c6ae3ca0c3d7d0ffde5087f235939996e63e5
+  checksum: ea795406a654e9eddf9782fbb1f4a4240a78bda825e23ee2cf059ea0723e470cbae8cc9d6c1ae8a58cadd0207d29f8cd8ac20ff7399958a8886dd17ff2f30136
   languageName: node
   linkType: hard
 
@@ -7173,12 +7173,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:19.10.1":
-  version: 19.10.1
-  resolution: "puppeteer-core@npm:19.10.1"
+"puppeteer-core@npm:19.11.0":
+  version: 19.11.0
+  resolution: "puppeteer-core@npm:19.11.0"
   dependencies:
     "@puppeteer/browsers": 0.5.0
-    chromium-bidi: 0.4.6
+    chromium-bidi: 0.4.7
     cross-fetch: 3.1.5
     debug: 4.3.4
     devtools-protocol: 0.0.1107588
@@ -7193,21 +7193,21 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: b913bc566e6202b073021c4978845c3db905b85816631a05d50e0ddb05fa3760d620eb887b073e58352133f50c354daa843b74bab542c7b6756d3d26eb576f8b
+  checksum: fe88d3055649ecebacbbd367bbe96e4ba1aea08f9c13589393cdc701934b34724afcbeba668195a9b9c70fd5a1cf6db230ead66b48767275e60898602a9ff784
   languageName: node
   linkType: hard
 
 "puppeteer@npm:^19.4.0":
-  version: 19.10.1
-  resolution: "puppeteer@npm:19.10.1"
+  version: 19.11.0
+  resolution: "puppeteer@npm:19.11.0"
   dependencies:
     "@puppeteer/browsers": 0.5.0
     cosmiconfig: 8.1.3
     https-proxy-agent: 5.0.1
     progress: 2.0.3
     proxy-from-env: 1.1.0
-    puppeteer-core: 19.10.1
-  checksum: b0b10c6be44ecd619936ad31e6a8d7079cae4cc0fd887552e1afb3e2359773e71bcd5478f34170712369947a110b92ec8c76dbe699fe59f4a4dc5d2fd73761fe
+    puppeteer-core: 19.11.0
+  checksum: 3e23568483ad00f35c23cc581bf7db32ac7835f1d0a31bbd764327e0c1a4515ef99554d1916ab4c56e0bde0c881b33491a248bac6b5972a78a58ca938f4a5b25
   languageName: node
   linkType: hard
 
