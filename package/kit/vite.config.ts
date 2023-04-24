@@ -12,6 +12,7 @@ const peers = Object.keys(peerDependencies)
 const primitiveDeps = [
   // ...deps
   '@radix-ui/react-avatar',
+  '@radix-ui/react-menubar',
   '@radix-ui/react-switch',
   '@radix-ui/react-tooltip',
 ]
@@ -30,6 +31,7 @@ export default defineConfig({
            * named globals for primitive dependencies.
            */
           '@radix-ui/react-avatar': 'AVI',
+          '@radix-ui/react-menubar': 'MBAR',
           // '@radix-ui/react-checkbox': 'CBX',
           // '@radix-ui/react-hover-card': 'HOVC',
           // '@radix-ui/react-label': 'LABL',

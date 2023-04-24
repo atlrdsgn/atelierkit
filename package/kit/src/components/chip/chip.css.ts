@@ -99,7 +99,6 @@ const variant = {
 /** --------------------------------------------------------- */
 
 const CHIP_ROOT = style({
-  all: 'unset',
   appearance: 'none',
   boxSizing: 'border-box',
   display: 'flex',

@@ -62,11 +62,10 @@ export const CONTAINER_BASE = style({
   margin: 'auto',
 
   '@media': {
-    'screen and (min-width: 640px)': {},
-    'screen and (min-width: 768px)': {},
-    'screen and (min-width: 1024px)': {},
-    'screen and (min-width: 1280px)': {},
-    'screen and (min-width: 1536px)': {},
+    'screen and (max-width: 640px)': {
+      paddingLeft: kit.space.IPX,
+      paddingRight: kit.space.IPX,
+    },
   },
 })
 

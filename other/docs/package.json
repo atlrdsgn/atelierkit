@@ -11,6 +11,6 @@
         "prettier": "^2.8.3"
     },
     "dependencies": {
-        "mintlify": "^2.0.17"
+        "mintlify": "^3.0.25"
     }
 }

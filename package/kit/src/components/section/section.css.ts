@@ -43,7 +43,6 @@ const size = {
 /** ------------------------------------------------------- */
 
 export const SEC_ROOT = style({
-  all: 'unset',
   boxSizing: 'border-box',
   display: 'inline-block',
   position: 'relative',
