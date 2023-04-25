@@ -99,7 +99,6 @@ const variant = {
 /** --------------------------------------------------------- */
 
 const CHIP_ROOT = style({
-  appearance: 'none',
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'row',
@@ -121,8 +120,6 @@ const CHIP_ROOT = style({
   fontFamily: kit.font.family.system,
   fontWeight: kit.font.weight.MEDIUM,
   fontVariantNumeric: 'tabular-nums',
-
-  borderRadius: 'inherit',
 
   gap: '4px',
 
@@ -150,7 +147,7 @@ export type ChipSizeProps = keyof typeof size
 export type ChipVProps = keyof typeof variant
 export type ChipVariantProps = RecipeVariants<typeof chip>
 export const chip = recipe({
-  base: CHIP_ROOT,
+  base: [CHIP_ROOT],
   variants: {size, variant},
   defaultVariants: {
     size: 'small',

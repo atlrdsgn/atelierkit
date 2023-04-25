@@ -17,7 +17,8 @@ export const theme = {
    */
   font: {
     family: {
-      system: `'Inter', sans-serif`,
+      system:
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI','Roboto', 'Ubuntu', 'Fira Sans', 'Droid Sans','Helvetica Neue', sans-serif;",
       sf: `'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif`,
       aspekta: `'Aspekta', sans-serif`,
 

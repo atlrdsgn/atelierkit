@@ -22,15 +22,14 @@ export const size = {
 /** --------------------------------- */
 
 const SPACE_BASE = style({
-  all: 'unset',
-  display: 'flex',
+  display: 'block',
   appearance: 'none',
   outline: 'none',
   position: 'relative',
   boxSizing: 'border-box',
   backgroundColor: 'transparent',
-  padding: '0',
-  margin: '0',
+  padding: '0px',
+  margin: '0px',
   width: '100%',
   minWidth: '100%',
   maxWidth: '100%',

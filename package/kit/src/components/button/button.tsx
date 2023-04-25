@@ -8,7 +8,7 @@ import type {ButtonVariantProps} from './button.css'
 
 type ButtonProps = BASE_BUTTON_PROPS & ButtonVariantProps & React.HTMLAttributes<HTMLButtonElement>
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = ({
   children,
   type = 'button',
   as = 'a',
@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   size = 'sm',
   variant = 'hyper',
   ...rest
-}) => {
+}: ButtonProps) => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (href) {
       event.preventDefault()

@@ -42,17 +42,15 @@ const MenubarContentElement = React.forwardRef<
   MenubarContentProps
 >(({children, className, side = 'bottom', sideOffset = 10, ...rest}, ref) => {
   return (
-    <MBAR.Portal>
-      <MBAR.Content
-        {...rest}
-        ref={ref}
-        className={clsx(className, CSS.menubar_content)}
-        side={side}
-        sideOffset={sideOffset}
-      >
-        {children}
-      </MBAR.Content>
-    </MBAR.Portal>
+    <MBAR.Content
+      {...rest}
+      ref={ref}
+      className={clsx(className, CSS.menubar_content)}
+      side={side}
+      sideOffset={sideOffset}
+    >
+      {children}
+    </MBAR.Content>
   )
 })
 

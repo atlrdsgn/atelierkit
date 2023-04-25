@@ -3,35 +3,39 @@
 import {style} from '@vanilla-extract/css'
 import {kit} from '../../lib'
 
-const ROOT_RADII = '6px'
-const ITEM_RADII = '4px'
-
-const CONTENT_CSS = {
-  width: 'auto',
-  minWidth: 220,
-  backgroundColor: kit.color.slate1,
-  borderRadius: 6,
-  padding: 5,
-  boxShadow:
-    '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
-  animationDuration: '400ms',
-  animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
-  willChange: 'transform, opacity',
-} as const
+const ROOT_RADII = '9px'
+const ITEM_RADII = '6px'
+const TRIGGER_RADII = '6px'
+const ITEM_PADDING = '4px 14px'
 
 const ITEM_CSS = {
   BASE: {
+    all: 'unset',
+    boxSizing: 'border-box',
     userSelect: 'none',
-    display: 'flex',
-    alignItems: 'center',
+    outline: 'none',
+    cursor: 'pointer',
+    fontVariantNumeric: 'tabular-nums',
+    WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+
     position: 'relative',
-    padding: '0 10px',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: ITEM_PADDING,
+
     color: kit.color.slate8,
+    backgroundColor: kit.color.slate1,
+
     borderRadius: ITEM_RADII,
     minHeight: '28px',
     height: 'auto',
-    fontSize: kit.font.size.SM,
-    lineHeight: kit.font.lineheight.SM,
+
+    fontFamily: kit.font.family.system,
+    fontWeight: kit.font.weight.MEDIUM,
+    fontSize: kit.font.size.XS,
+    lineHeight: kit.font.lineheight.XS,
   },
   SELECTORS: {
     // '&[data-disabled]'
@@ -41,7 +45,7 @@ const ITEM_CSS = {
     },
     // '&[data-highlighted]'
     HIGHLIGHTED: {
-      backgroundColor: kit.color.slate1,
+      backgroundColor: kit.color.sapphire3,
       color: kit.color.slate9,
     },
   },
@@ -52,42 +56,96 @@ export const menubar_root = style({
   boxSizing: 'border-box',
   position: 'relative',
   display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+
   backgroundColor: kit.color.slate1,
-  padding: '3px',
+  border: `0.5px solid ${kit.color.slate3}`,
   borderRadius: ROOT_RADII,
+  padding: '3px',
+  gap: '3px',
+
+  width: 'auto',
+  margin: 'auto',
 })
 
 export const menubar_trigger = style({
+  all: 'unset',
   boxSizing: 'border-box',
-  outline: 'none',
   userSelect: 'none',
+  outline: 0,
+  cursor: 'pointer',
+  fontVariantNumeric: 'tabular-nums',
+  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+
   /**
    *
    * this should match menubar_item.
    */
   position: 'relative',
   display: 'flex',
+  flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
+  margin: 'auto',
+  padding: ITEM_PADDING,
 
-  padding: '8px 12px',
+  fontFamily: kit.font.family.system,
   fontWeight: kit.font.weight.MEDIUM,
-  fontSize: kit.font.size.SM,
-  lineHeight: kit.font.lineheight.SM,
+  fontSize: kit.font.size.XS,
+  lineHeight: kit.font.lineheight.XS,
 
-  borderRadius: ITEM_RADII,
+  borderRadius: TRIGGER_RADII,
   color: kit.color.slate9,
-  gap: 2,
+
+  /**
+   * if we add icons.
+   */
+  gap: '4px',
 
   selectors: {
     '&[data-highlighted], &[data-state="open"]': {
-      backgroundColor: kit.color.slate1,
+      backgroundColor: kit.color.sapphire4,
     },
   },
 })
 
 export const menubar_item = style({
-  ...ITEM_CSS.BASE,
+  userSelect: 'none',
+  outline: 'none',
+  cursor: 'pointer',
+  fontVariantNumeric: 'tabular-nums',
+  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+
+  position: 'relative',
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+  padding: ITEM_PADDING,
+
+  color: kit.color.slate8,
+  backgroundColor: kit.color.slate1,
+
+  borderRadius: ITEM_RADII,
+  minHeight: '28px',
+  height: 'auto',
+
+  fontFamily: kit.font.family.system,
+  fontWeight: kit.font.weight.MEDIUM,
+  fontSize: kit.font.size.XS,
+  lineHeight: kit.font.lineheight.XS,
+
+  ':hover': {
+    cursor: 'pointer',
+    outline: 'none',
+  },
+
+  ':focus': {
+    outline: 'none',
+  },
+
   selectors: {
     '&[data-disabled]': {
       color: ITEM_CSS.SELECTORS.DISABLED.color,
@@ -101,7 +159,32 @@ export const menubar_item = style({
 })
 
 export const menubar_content = style({
-  ...CONTENT_CSS,
+  width: 'auto',
+  minWidth: '220px',
+  maxWidth: '380px',
+  padding: '3px',
+
+  backgroundColor: kit.color.slate1,
+  border: `0.5px solid ${kit.color.slate3}`,
+  borderRadius: ROOT_RADII,
+
+  boxShadow:
+    '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+  animationDuration: '400ms',
+  animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+  willChange: 'transform, opacity',
+
+  selectors: {
+    '&[data-state="open"]': {},
+    '&[data-state="closed"]': {},
+    '&[data-side="top"], &[data-side="bottom"]': {},
+    '&[data-side="left"], &[data-side="right"]': {},
+
+    '&[data-state="open"][data-side="top"]': {},
+    '&[data-state="open"][data-side="bottom"]': {},
+    '&[data-state="open"][data-side="left"]': {},
+    '&[data-state="open"][data-side="right"]': {},
+  },
 })
 
 /** ---------------------------------------------- */
@@ -117,7 +200,20 @@ export const submenu_trigger = style({
 })
 
 export const submenu_content = style({
-  ...CONTENT_CSS,
+  width: 'auto',
+  minWidth: '220px',
+  maxWidth: '380px',
+  padding: '3px',
+
+  backgroundColor: kit.color.slate1,
+  border: `0.5px solid ${kit.color.slate3}`,
+  borderRadius: ROOT_RADII,
+
+  boxShadow:
+    '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+  animationDuration: '400ms',
+  animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+  willChange: 'transform, opacity',
 })
 
 /** ----------------------------------------------- */
