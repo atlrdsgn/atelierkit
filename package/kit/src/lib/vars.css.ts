@@ -18,6 +18,9 @@ export const themeVars = createThemeContract({
   font: {
     family: {
       system: 'font-system',
+      sf: 'font-sf',
+      aspekta: 'font-aspekta',
+
       mono: 'font-mono',
     },
     heading: {

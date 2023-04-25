@@ -1,0 +1,123 @@
+{
+  "media": {
+    "small": "460px",
+    "medium": "768px",
+    "large": "1024px",
+    "xlarge": "1200px"
+  },
+  "font": {
+    "family": {
+      "system": "'Inter', sans-serif",
+      "mono": "'SF Mono', monospace"
+    },
+    "heading": {
+      "H1": "2.25rem",
+      "H2": "1.875rem",
+      "H3": "1.5rem",
+      "H4": "1.25rem",
+      "H5": "1.125rem",
+      "H6": "1rem"
+    },
+    "size": {
+      "XS": "0.75rem",
+      "SM": "0.875rem",
+      "MD": "1rem",
+      "LG": "1.125rem",
+      "XL": "1.25rem",
+      "XXL": "1.5rem",
+      "3XL": "1.875rem",
+      "4XL": "2.25rem",
+      "5XL": "3rem",
+      "6XL": "3.75rem",
+      "7XL": "4.5rem",
+      "8XL": "6rem",
+      "9XL": "8rem"
+    },
+    "lineheight": {
+      "XS": "1rem",
+      "SM": "1.25rem",
+      "MD": "1.5rem",
+      "LG": "1.75rem",
+      "XL": "1.75rem",
+      "XXL": "2rem",
+      "3XL": "2.25rem",
+      "4XL": "2.5rem",
+      "5XL": "1",
+      "6XL": "1",
+      "7XL": "1",
+      "8XL": "1",
+      "9XL": "1"
+    },
+    "weight": {
+      "SUPRLITE": "100",
+      "ULTRALITE": "200",
+      "LITE": "300",
+      "REGULAR": "400",
+      "MEDIUM": "500",
+      "SEMIBOLD": "600",
+      "BOLD": "700",
+      "HEAVY": "800",
+      "BLACK": "900"
+    }
+  },
+  "radii": {
+    "NO": "0px",
+    "DF": "14px",
+    "XS": "6px",
+    "SM": "12px",
+    "MD": "14px",
+    "LG": "16px",
+    "XL": "18px",
+    "XXL": "20px",
+    "PILL": "1000px"
+  },
+  "space": {
+    "ZERO": "0px",
+    "NO": "0px",
+    "DF": "16px",
+    "APX": "1px",
+    "BPX": "2px",
+    "CPX": "0.25rem",
+    "DPX": "0.375rem",
+    "EPX": "0.5rem",
+    "FPX": "0.625rem",
+    "GPX": "0.75rem",
+    "HPX": "0.875rem",
+    "IPX": "1rem",
+    "JPX": "1.125rem",
+    "KPX": "1.25rem",
+    "LPX": "1.5rem",
+    "MPX": "1.75rem",
+    "NPX": "2rem",
+    "OPX": "2.25rem",
+    "PPX": "2.5rem",
+    "QPX": "2.75rem",
+    "RPX": "3rem",
+    "SPX": "3.5rem",
+    "TPX": "4rem",
+    "UPX": "4.5rem",
+    "VPX": "6rem",
+    "WPX": "8rem",
+    "XPX": "12rem",
+    "YPX": "15rem",
+    "ZPX": "20rem"
+  },
+  "z": {
+    "indice": {
+      "ZERO": "0",
+      "DF": "1",
+      "LOW": "2",
+      "MED": "10",
+      "HIGH": "30",
+      "TOP": "100",
+      "MAX": "99999"
+    }
+  },
+  "shadow": {
+    "NO": "none",
+    "DF": "0px 4px 8px rgba(0, 0, 0, 0.1)",
+    "LOW": "0px 4px 8px rgba(0, 0, 0, 0.1)",
+    "MED": "0px 8px 16px rgba(0, 0, 0, 0.1)",
+    "HIGH": "0px 12px 24px rgba(0, 0, 0, 0.1)"
+  }
+}

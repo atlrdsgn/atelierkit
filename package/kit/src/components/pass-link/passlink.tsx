@@ -1,10 +1,10 @@
 /** @format */
 
 import React from 'react'
-import * as styles from './pass.link.css'
+import * as styles from './passlink.css'
 import clsx from 'clsx'
 
-import type {LinkSizeProps, LinkColorProps, LinkFontProps} from './pass.link.css'
+import type {LinkSizeProps, LinkColorProps, LinkFontProps} from './passlink.css'
 
 interface LinkElementProps {
   children: React.ReactNode

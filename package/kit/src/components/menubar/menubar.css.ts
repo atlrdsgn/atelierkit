@@ -3,9 +3,13 @@
 import {style} from '@vanilla-extract/css'
 import {kit} from '../../lib'
 
+const ROOT_RADII = '6px'
+const ITEM_RADII = '4px'
+
 const CONTENT_CSS = {
+  width: 'auto',
   minWidth: 220,
-  backgroundColor: 'white',
+  backgroundColor: kit.color.slate1,
   borderRadius: 6,
   padding: 5,
   boxShadow:
@@ -17,17 +21,17 @@ const CONTENT_CSS = {
 
 const ITEM_CSS = {
   BASE: {
-    all: 'unset',
     userSelect: 'none',
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
     padding: '0 10px',
     color: kit.color.slate8,
-    borderRadius: 4,
-    height: 25,
-    fontSize: 13,
-    lineHeight: 1,
+    borderRadius: ITEM_RADII,
+    minHeight: '28px',
+    height: 'auto',
+    fontSize: kit.font.size.SM,
+    lineHeight: kit.font.lineheight.SM,
   },
   SELECTORS: {
     // '&[data-disabled]'
@@ -45,16 +49,15 @@ const ITEM_CSS = {
 
 /** ---------------------------------------------------------- */
 export const menubar_root = style({
+  boxSizing: 'border-box',
+  position: 'relative',
   display: 'flex',
-  backgroundColor: 'white',
-  padding: 3,
-  borderRadius: 6,
+  backgroundColor: kit.color.slate1,
+  padding: '3px',
+  borderRadius: ROOT_RADII,
 })
 
-export const menubar_menu = style({})
-
 export const menubar_trigger = style({
-  all: 'unset',
   boxSizing: 'border-box',
   outline: 'none',
   userSelect: 'none',
@@ -68,11 +71,11 @@ export const menubar_trigger = style({
   justifyContent: 'space-between',
 
   padding: '8px 12px',
-  fontWeight: 500,
-  fontSize: 13,
-  lineHeight: 1,
+  fontWeight: kit.font.weight.MEDIUM,
+  fontSize: kit.font.size.SM,
+  lineHeight: kit.font.lineheight.SM,
 
-  borderRadius: 4,
+  borderRadius: ITEM_RADII,
   color: kit.color.slate9,
   gap: 2,
 
@@ -102,8 +105,6 @@ export const menubar_content = style({
 })
 
 /** ---------------------------------------------- */
-
-export const submenu = style({})
 
 export const submenu_trigger = style({
   ...ITEM_CSS.BASE,
