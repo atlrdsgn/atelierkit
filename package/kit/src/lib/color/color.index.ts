@@ -5,7 +5,6 @@ import {lemon} from './src'
 import {slate} from './src'
 import {sapphire} from './src'
 import {volt} from './src'
-
 import {grays, pales} from './src'
 
 export const kitColorPalette = {

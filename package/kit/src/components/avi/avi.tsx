@@ -2,7 +2,7 @@
 
 import React from 'react'
 import * as AVI from '@radix-ui/react-avatar'
-import * as css from './avi.css'
+import * as CSS from './avi.css'
 
 import clsx from 'clsx'
 
@@ -26,7 +26,7 @@ export type AviProps = AviPrimitiveProps
 const AviComponent = React.forwardRef<React.ElementRef<typeof AVI.Root>, AviProps>(
   ({className, size = 'xs', shape = 'rounded', ...props}, forwardedRef) => {
     return (
-      <AVI.Root {...props} ref={forwardedRef} className={clsx(css.avi({size, shape}), className)} />
+      <AVI.Root {...props} ref={forwardedRef} className={clsx(CSS.avi({size, shape}), className)} />
     )
   }
 )
@@ -36,7 +36,7 @@ const AviComponent = React.forwardRef<React.ElementRef<typeof AVI.Root>, AviProp
 export type FallbackProps = React.ComponentProps<typeof AVI.Fallback>
 const AviFallbackComponent = React.forwardRef<HTMLDivElement, FallbackProps>(
   ({className, ...props}, forwardedRef) => {
-    return <AviFallback {...props} ref={forwardedRef} className={clsx(css.fall_back, className)} />
+    return <AviFallback {...props} ref={forwardedRef} className={clsx(CSS.fall_back, className)} />
   }
 )
 
@@ -56,7 +56,7 @@ export type ImageProps = React.ComponentProps<typeof AVI.Image> & {
 }
 const AviImageComponent = React.forwardRef<React.ElementRef<typeof AVI.Image>, ImageProps>(
   ({className, ...props}, forwardedRef) => {
-    return <AviImage {...props} ref={forwardedRef} className={clsx(css.avi_img, className)} />
+    return <AviImage {...props} ref={forwardedRef} className={clsx(CSS.avi_img, className)} />
   }
 )
 
@@ -66,7 +66,7 @@ const demo = 'https://cdn.atlrdsgn.com/assets/github/atlrdsgn/A2.jpg'
 const AviDemoImageComponent = React.forwardRef<React.ElementRef<typeof AVI.Image>, ImageProps>(
   ({className, ...props}, forwardedRef) => {
     return (
-      <AviImage {...props} ref={forwardedRef} src={demo} className={clsx(css.avi_img, className)} />
+      <AviImage {...props} ref={forwardedRef} src={demo} className={clsx(CSS.avi_img, className)} />
     )
   }
 )

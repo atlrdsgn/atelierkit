@@ -9,6 +9,16 @@ export const themeVars = createThemeContract({
     medium: null,
     large: null,
     xlarge: null,
+    queries: {
+      XS: null,
+      SM: null,
+      MD: null,
+      LG: null,
+      XL: null,
+
+      LIGHT: null,
+      DARK: null,
+    },
   },
 
   /**
@@ -76,9 +86,24 @@ export const themeVars = createThemeContract({
 
   /**
    *
+   * @css_selectors
+   */
+  selector: {
+    ACT: null, // active
+    DIS: null, // disabled
+    HOV: null, // hover
+    FOC: null, // focus
+
+    BEFORE: null, // before
+    AFTER: null, // after
+  },
+
+  /**
+   *
    * @radius
    */
   radii: {
+    ZERO: null,
     NO: null,
     DF: null,
     XS: null,

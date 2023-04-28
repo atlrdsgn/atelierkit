@@ -6,8 +6,10 @@ import * as css from './button.css'
 import type {BASE_BUTTON_PROPS} from './button.types'
 import type {ButtonVariantProps} from './button.css'
 
-type ButtonProps = BASE_BUTTON_PROPS & ButtonVariantProps & React.HTMLAttributes<HTMLButtonElement>
-
+type ButtonElementProps = BASE_BUTTON_PROPS &
+  ButtonVariantProps &
+  React.HTMLAttributes<HTMLButtonElement>
+export type ButtonProps = ButtonElementProps
 export const Button = ({
   children,
   type = 'button',
@@ -21,7 +23,14 @@ export const Button = ({
   variant = 'hyper',
   ...rest
 }: ButtonProps) => {
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  /**
+   *
+   * @param event
+   * @returns
+   *
+   * onClick called when button is clicked.
+   */
+  const clickEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (href) {
       event.preventDefault()
       window.open(href, target, rel)
@@ -33,11 +42,12 @@ export const Button = ({
   }
 
   return (
-    <button {...rest} type={type} className={css.button({size, variant})} onClick={handleClick}>
-      {children}
-    </button>
+    <>
+      <button {...rest} type={type} className={css.button({size, variant})} onClick={clickEvent}>
+        {children}
+      </button>
+    </>
   )
 }
 
-export type {ButtonProps}
 Button.displayName = 'Button'

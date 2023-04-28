@@ -82,40 +82,40 @@ const variant = {
     border: variant.border,
     color: variant.color,
     boxShadow: variant.boxShadow,
-    ':hover': {
+
+    [kit.selector.HOV]: {
       backgroundColor: variant.onHover.backgroundColor,
       border: variant.onHover.border,
       color: variant.onHover.color,
       boxShadow: variant.onHover.boxShadow,
     },
-    ':focus': {
+
+    [kit.selector.FOC]: {
       boxShadow: variant.onFocus.boxShadow,
     },
-    ':active': {},
-    ':disabled': {},
   })),
 }
 
 /** --------------------------------------------------------- */
 
 const CHIP_ROOT = style({
+  userSelect: 'none',
+  textDecoration: 'none',
+  outline: 'none',
   boxSizing: 'border-box',
+  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+  whiteSpace: 'nowrap',
+
   display: 'flex',
   flexDirection: 'row',
   flexShrink: 0,
 
+  margin: 'auto',
   justifyContent: 'center',
   alignItems: 'center',
-  lineHeight: '',
-  verticalAlign: 'middle',
-  outline: 'none',
-  padding: 'auto',
-  textDecoration: 'none',
-  userSelect: 'none',
-  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+  lineHeight: 'auto',
   textAlign: 'center',
-  margin: 'auto',
-  whiteSpace: 'nowrap',
+  verticalAlign: 'middle',
 
   fontFamily: kit.font.family.system,
   fontWeight: kit.font.weight.MEDIUM,
@@ -123,11 +123,18 @@ const CHIP_ROOT = style({
 
   gap: '4px',
 
-  ':focus': {},
-  ':hover': {},
-  ':active': {},
+  [kit.selector.ACT]: {},
+  [kit.selector.DIS]: {},
+  [kit.selector.FOC]: {},
+  [kit.selector.HOV]: {},
 
-  '@media': {},
+  '@media': {
+    [kit.media.queries.XS]: {},
+    [kit.media.queries.SM]: {},
+    [kit.media.queries.MD]: {},
+    [kit.media.queries.LG]: {},
+    [kit.media.queries.XL]: {},
+  },
 
   selectors: {
     '&::before': {

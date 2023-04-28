@@ -10,7 +10,6 @@ import dts from 'vite-plugin-dts'
 
 const peers = Object.keys(peerDependencies)
 const primitiveDeps = [
-  // ...deps
   '@radix-ui/react-avatar',
   '@radix-ui/react-menubar',
   '@radix-ui/react-switch',
@@ -28,17 +27,11 @@ export default defineConfig({
           'react-dom': 'ReactDom',
           /**
            *
-           * named globals for primitive dependencies.
+           * named globals for dependencies.
            */
           '@radix-ui/react-avatar': 'AVI',
           '@radix-ui/react-menubar': 'MBAR',
-          // '@radix-ui/react-checkbox': 'CBX',
-          // '@radix-ui/react-hover-card': 'HOVC',
-          // '@radix-ui/react-label': 'LABL',
-          // '@radix-ui/react-popover': 'POP',
           '@radix-ui/react-switch': 'SWI',
-          // '@radix-ui/react-select': 'SEL',
-          // '@radix-ui/react-separator': 'SEP',
           '@radix-ui/react-tooltip': 'TIP',
         },
       },

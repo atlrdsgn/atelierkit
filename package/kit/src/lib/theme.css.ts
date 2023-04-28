@@ -9,6 +9,20 @@ export const theme = {
     medium: '768px',
     large: '1024px',
     xlarge: '1200px',
+
+    /**
+     * @mediaqueries
+     */
+    queries: {
+      XS: 'screen and (max-width: 460px)',
+      SM: 'screen and (max-width: 640px)',
+      MD: 'screen and (max-width: 768px)',
+      LG: 'screen and (max-width: 1024px)',
+      XL: 'screen and (max-width: 1200px)',
+
+      LIGHT: 'screen and (prefers-color-scheme: light)',
+      DARK: 'screen and (prefers-color-scheme: dark)',
+    },
   },
 
   /**
@@ -85,9 +99,24 @@ export const theme = {
 
   /**
    *
+   * @css_selectors
+   */
+  selector: {
+    ACT: ':active',
+    DIS: ':disabled',
+    FOC: ':focus',
+    HOV: ':hover',
+
+    BEFORE: '&::before',
+    AFTER: '&::after',
+  },
+
+  /**
+   *
    * @radius
    */
   radii: {
+    ZERO: '0px',
     NO: '0px',
     DF: '14px',
     XS: '6px',
