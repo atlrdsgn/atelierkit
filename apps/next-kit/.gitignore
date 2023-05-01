@@ -7,7 +7,7 @@
 .yarn/
 
 # Misc.
-.vscode/*
+.vscode
 .DS_Store
 Icon
 
@@ -36,5 +36,5 @@ coverage
 
 .next
 .next/cache
-.vscode
+
 
