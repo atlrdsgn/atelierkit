@@ -1,0 +1,14 @@
+{
+  "extends": "@atlrdsgn/tsconfig/react-kit.json",
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "@atlrdsgn/kit/dist/types",
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "target": "es6",
+    "resolveJsonModule": true
+  }
+}

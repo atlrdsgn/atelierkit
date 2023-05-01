@@ -134,7 +134,6 @@ export const Menubar: React.FC<MenubarProps> & {
 } = (props) => <MenubarRootElement {...props} />
 
 Menubar.displayName = 'Menubar'
-MenubarRootElement.displayName = 'Menubar'
 /** ------------- */
 Menubar.Menu = MenubarMenu
 Menubar.Trigger = MenubarTriggerElement
@@ -148,6 +147,7 @@ Menubar.Portal = MenubarPortal
 MenubarMenu.displayName = 'Menubar-Menu'
 MenubarTriggerElement.displayName = 'Menubar-Trigger'
 MenubarContentElement.displayName = 'Menubar-Content'
+MenubarItemElement.displayName = 'Menubar-Item'
 MenubarSubMenu.displayName = 'Menubar-SubMenu'
 MenubarSubTriggerElement.displayName = 'Menubar-SubTrigger'
 MenubarSubContentElement.displayName = 'Menubar-SubContent'

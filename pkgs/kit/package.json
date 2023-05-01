@@ -2,7 +2,7 @@
   "name": "@atlrdsgn/kit",
   "packageManager": "yarn@3.2.2",
   "version": "0.1.8",
-  "description": "ATELIERKIT©– A minimal UI kit for building components.",
+  "description": "Atelierkit",
   "author": "chvndler",
   "homepage": "https://docs.atlrdsgn.com",
   "license": "MIT",
@@ -10,14 +10,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "typings": "./dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -31,7 +31,7 @@
   "scripts": {
     "build": "vite build",
     "build:types": "yarn tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "lint": "eslint",
+    "lint": "eslint src --ext .ts",
     "clean": "rm -rf node_modules && rm -rf dist",
     "release": "npm publish --access public",
     "dev:release": "npm publish --access private",
@@ -44,6 +44,7 @@
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.2",
     "@radix-ui/react-menubar": "^1.0.2",
+    "@radix-ui/react-select": "^1.2.1",
     "@radix-ui/react-switch": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.5",
     "@vanilla-extract/css": "^1.11.0",

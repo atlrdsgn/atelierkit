@@ -1,0 +1,3 @@
+<!-- @format -->
+
+`eslint-config-atlrdsgn`

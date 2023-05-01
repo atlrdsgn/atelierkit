@@ -2,7 +2,6 @@
 
 import {style, styleVariants} from '@vanilla-extract/css'
 import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
-
 import {rainbow_shadow} from '../../lib/properties'
 import {kit} from '../../lib'
 
@@ -30,19 +29,19 @@ const style_properties = {
     SLATE: {
       INITIAL: {
         XS: `0px 1px 2px -1px rgba(0, 0, 0, 0.25)`,
-        SM: ``,
-        MD: ``,
-        LG: ``,
+        SM: `none`,
+        MD: `none`,
+        LG: `none`,
       },
       HOVER: {
         XS: `0px 2px 4px rgba(0, 0, 0, 0.3)`,
-        SM: ``,
-        MD: ``,
-        LG: ``,
+        SM: `none`,
+        MD: `none`,
+        LG: `none`,
       },
       FOCUS: {
         XS: `0px 1px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 3.5px rgba(0, 0, 0, 0.2)`,
-        SM: ``,
+        SM: `none`,
         MD: `0px 2px 4px rgba(17, 12, 34, 0.18), 0px 0px 0px 5px rgba(236, 236, 237, 1)`,
         LG: `0px 2px 4px rgba(17, 12, 34, 0.12), 0px 0px 0px 6px rgba(236, 236, 237, 1)`,
       },
@@ -51,75 +50,77 @@ const style_properties = {
     HYPER: {
       INITIAL: {
         XS: `0px 1px 2px -1px rgba(102, 27, 95, 0.75)`,
-        SM: ``,
-        MD: ``,
-        LG: ``,
+        SM: `none`,
+        MD: `none`,
+        LG: `none`,
       },
       HOVER: {
         XS: `0px 2px 4px rgba(102, 27, 95, 0.3)`,
         SM: `0px 3px 6px -1px rgba(102, 27, 95, 0.4)`,
-        MD: ``,
-        LG: ``,
+        MD: `none`,
+        LG: `none`,
       },
       FOCUS: {
         XS: `0px 1px 2px rgba(102, 27, 95, 0.3), 0px 0px 0px 3.5px rgba(226, 220, 255, 1)`,
         SM: `0px 1px 2px rgba(102, 27, 95, 0.3), 0px 0px 0px 4.5px rgba(255, 105, 241, 0.2)`,
-        MD: ``,
-        LG: ``,
+        MD: `none`,
+        LG: `none`,
       },
     },
   },
 } as const
 
+const sp = style_properties
+
 /** ---------------------------------------------- */
 
 const SIZE_MAP = {
   xs: {
-    padding: style_properties.padding.XSMALL,
-    border: style_properties.border.XSMALL,
-    borderRadius: style_properties.radii.XSMALL,
+    padding: sp.padding.XSMALL,
+    border: sp.border.XSMALL,
+    borderRadius: sp.radii.XSMALL,
 
     onHOVER: {
-      boxShadow: style_properties.shadows.SLATE.HOVER.XS,
+      boxShadow: sp.shadows.SLATE.HOVER.XS,
     },
     onFOCUS: {
-      boxShadow: style_properties.shadows.SLATE.FOCUS.XS,
+      boxShadow: sp.shadows.SLATE.FOCUS.XS,
     },
   },
   sm: {
-    padding: style_properties.padding.SMALL,
-    border: style_properties.border.SMALL,
-    borderRadius: style_properties.radii.SMALL,
+    padding: sp.padding.SMALL,
+    border: sp.border.SMALL,
+    borderRadius: sp.radii.SMALL,
 
     onHOVER: {
-      boxShadow: style_properties.shadows.SLATE.HOVER.SM,
+      boxShadow: sp.shadows.SLATE.HOVER.SM,
     },
     onFOCUS: {
-      boxShadow: style_properties.shadows.SLATE.FOCUS.SM,
+      boxShadow: sp.shadows.SLATE.FOCUS.SM,
     },
   },
   md: {
-    padding: style_properties.padding.MEDIUM,
-    border: style_properties.border.MEDIUM,
-    borderRadius: style_properties.radii.MEDIUM,
+    padding: sp.padding.MEDIUM,
+    border: sp.border.MEDIUM,
+    borderRadius: sp.radii.MEDIUM,
 
     onHOVER: {
-      boxShadow: style_properties.shadows.SLATE.HOVER.MD,
+      boxShadow: sp.shadows.SLATE.HOVER.MD,
     },
     onFOCUS: {
-      boxShadow: style_properties.shadows.SLATE.FOCUS.MD,
+      boxShadow: sp.shadows.SLATE.FOCUS.MD,
     },
   },
   lg: {
-    padding: style_properties.padding.LARGE,
-    border: style_properties.border.LARGE,
-    borderRadius: style_properties.radii.LARGE,
+    padding: sp.padding.LARGE,
+    border: sp.border.LARGE,
+    borderRadius: sp.radii.LARGE,
 
     onHOVER: {
-      boxShadow: style_properties.shadows.SLATE.HOVER.LG,
+      boxShadow: sp.shadows.SLATE.HOVER.LG,
     },
     onFOCUS: {
-      boxShadow: style_properties.shadows.SLATE.FOCUS.LG,
+      boxShadow: sp.shadows.SLATE.FOCUS.LG,
     },
   },
 } as const
@@ -185,7 +186,6 @@ const variant = {
 /** --------------------------------------------- */
 
 const BUTTON_BASE = style({
-  all: 'unset',
   boxSizing: 'border-box',
   userSelect: 'none',
   outline: 0,
