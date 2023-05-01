@@ -1,15 +1,15 @@
 /** @format */
 
 import '@/scss/index.scss'
+import '@atlrdsgn/kit/styles'
 
 import React from 'react'
 import {ThemeProvider} from 'next-themes'
-import {KitProvider} from '@/theme/provider'
+import {KitProvider} from '@atlrdsgn/kit'
 
 import type {AppProps} from 'next/app'
 import type {GetLayoutFn} from '@/ts/page'
 import {useFontsLoaded} from '@/components/hooks/use-fonts-loaded'
-import {useFathom} from '@/components/hooks/use-fathom'
 
 /*
  * Copyright (C) 2023 @chvndler
@@ -27,7 +27,6 @@ export const useAppContext = () => React.useContext(AppContext)
 
 const App = ({Component, pageProps, ...rest}: AppProps) => {
   useFontsLoaded()
-  useFathom()
 
   const getLayout: GetLayoutFn =
     (Component as any).getLayout || (({Component, pageProps}) => <Component {...pageProps} />)

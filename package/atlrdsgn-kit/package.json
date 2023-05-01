@@ -1,7 +1,7 @@
 {
   "name": "@atlrdsgn/kit",
   "packageManager": "yarn@3.2.2",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Atelierkit",
   "author": "chvndler",
   "homepage": "https://docs.atlrdsgn.com",

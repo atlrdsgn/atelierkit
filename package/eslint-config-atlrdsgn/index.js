@@ -1,11 +1,26 @@
+/** @format */
+
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
+  parser: '@typescript-eslint/parser',
+  extends: ['next', 'turbo', 'prettier'],
+  plugins: ['@typescript-eslint'],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
+    'import/no-anonymous-default-export': 0,
+    'import/no-named-as-default-member': 'off',
+    'import/no-named-as-default': 'off',
   },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: '.',
+      },
+    },
+    react: {
+      version: 'detect',
     },
   },
-};
+}
