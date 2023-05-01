@@ -1,9 +1,9 @@
 <!-- @format -->
 
-# `atelierkit`
+# `ATELIERKIT®`
 
 <a href="https://docs.atlrdsgn.com">
-  <img width="1080" alt="atelierkit" src="https://cdn.atlrdsgn.com/assets/github/atlrdsgn/readme.jpg">
+  <img width="1080" alt="atelierkit" src="https://cdn.atlrdsgn.com/assets/github/atlrdsgn/kit-cover.png">
 </a>
 
 An ever– expanding library of [React](https://reactjs.org/) components, primitives, and tools.
@@ -12,18 +12,18 @@ An ever– expanding library of [React](https://reactjs.org/) components, primit
 
 ### Install.
 
-To get started, add `atelierkit` to your dependencies.
+To get started, add `@atlrdsgn/kit` to your dependencies.
 
 ```yarn
-yarn add atelierkit
+yarn add @atlrdsgn/kit
 ```
 
 ```pnpm
-pnpm install --save atelierkit
+pnpm install --save @atlrdsgn/kit
 ```
 
 ```npm
-npm install --save atelierkit
+npm install --save @atlrdsgn/kit
 ```
 
 <hr />
@@ -36,15 +36,15 @@ npm install --save atelierkit
 
 ```tsx
 import React from 'react'
-import {Badge} from 'atlr.kit'
+import {Canvas} from '@atlrdsgn/kit'
 
 export const DefaultExample = () => (
-  <Badge size='small' href=''>
-    Small Button
-  </Badge>
+  <Canvas>
+    <Text size='sm'>ATELIERKIT®</Text>
+  </Canvas>
 )
 ```
 
 #### More examples..
 
-`© 2023 Atlr® Design`
+`© 2023 atlrdsgn®`

@@ -1,20 +1,18 @@
 <!-- @format -->
 
-## Atelierkit©
-
-`by atlrdsgn®`
-
-<hr />
+# `ATELIERKIT®`
 
 <a href="https://docs.atlrdsgn.com">
-  <img width="1080" alt="atelierkit" src="https://cdn.atlrdsgn.com/assets/github/atlrdsgn/file.cover.png">
+  <img width="1080" alt="atelierkit" src="https://cdn.atlrdsgn.com/assets/github/atlrdsgn/kit-cover.png">
 </a>
 
 An ever– expanding library of [React](https://reactjs.org/) components, primitives, and tools.
 
 <hr />
 
-## Start
+### Install.
+
+To get started, add `@atlrdsgn/kit` to your dependencies.
 
 ```yarn
 yarn add @atlrdsgn/kit
@@ -28,19 +26,25 @@ pnpm install --save @atlrdsgn/kit
 npm install --save @atlrdsgn/kit
 ```
 
-## Usage
+<hr />
 
-`Button`
+### Setup.
+
+<hr />
+
+### Use.
 
 ```tsx
-import * as React from 'react'
-import {Button} from '@atlrdsgn/kit'
+import React from 'react'
+import {Canvas} from '@atlrdsgn/kit'
 
 export const DefaultExample = () => (
-  <Button size={'sm'} primary href=''>
-    Small Button
-  </Button>
+  <Canvas>
+    <Text size='sm'>ATELIERKIT®</Text>
+  </Canvas>
 )
 ```
 
-`© 2023 Atlr® Design`
+#### More examples..
+
+`© 2023 atlrdsgn®`
