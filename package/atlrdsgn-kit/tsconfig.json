@@ -6,9 +6,8 @@
     "rootDir": "src",
     "outDir": "@atlrdsgn/kit/dist/types",
     "jsx": "react-jsx",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "module": "ESNext",
     "target": "es6",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": true
   }
 }

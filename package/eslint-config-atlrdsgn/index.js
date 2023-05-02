@@ -1,14 +1,21 @@
-/** @format */
-
 module.exports = {
+  extends: [
+    'next',
+    'turbo',
+    'prettier',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
   parser: '@typescript-eslint/parser',
-  extends: ['next', 'turbo', 'prettier'],
   plugins: ['@typescript-eslint'],
-  rules: {
-    'import/no-anonymous-default-export': 0,
-    'import/no-named-as-default-member': 'off',
-    'import/no-named-as-default': 'off',
-  },
+  rules: {},
+
+  /**
+   *
+   * see: 'https://typescript-eslint.io/getting-started/'
+   * for more information on set-up.
+   */
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
@@ -23,4 +30,4 @@ module.exports = {
       version: 'detect',
     },
   },
-}
+};
