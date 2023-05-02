@@ -1,15 +1,13 @@
 /** @format */
 
-import React from 'react'
-import * as css from './button.css'
+import React from 'react';
+import * as css from './button.css';
 
-import type {BASE_BUTTON_PROPS} from './button.types'
-import type {ButtonVariantProps} from './button.css'
+import type { BASE_BUTTON_PROPS } from './button.types';
+import type { ButtonVariantProps } from './button.css';
 
-type ButtonElementProps = BASE_BUTTON_PROPS &
-  ButtonVariantProps &
-  React.HTMLAttributes<HTMLButtonElement>
-export type ButtonProps = ButtonElementProps
+type ButtonElementProps = BASE_BUTTON_PROPS & ButtonVariantProps & React.HTMLAttributes<HTMLButtonElement>;
+export type ButtonProps = ButtonElementProps;
 export const Button = ({
   children,
   type = 'button',
@@ -32,22 +30,26 @@ export const Button = ({
    */
   const clickEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (href) {
-      event.preventDefault()
-      window.open(href, target, rel)
+      event.preventDefault();
+      window.open(href, target, rel);
     } else {
-      event.preventDefault()
+      event.preventDefault();
     }
 
-    onClick(event)
-  }
+    onClick(event);
+  };
 
   return (
     <>
-      <button {...rest} type={type} className={css.button({size, variant})} onClick={clickEvent}>
+      <button
+        {...rest}
+        type={type}
+        className={css.button({ size, variant })}
+        onClick={clickEvent}>
         {children}
       </button>
     </>
-  )
-}
+  );
+};
 
-Button.displayName = 'Button'
+Button.displayName = 'Button';

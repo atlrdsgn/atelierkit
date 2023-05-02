@@ -1,7 +1,7 @@
 /** @format */
 
-import {style} from '@vanilla-extract/css'
-import {kit} from '../../lib'
+import { style } from '@vanilla-extract/css';
+import { kit } from '../../lib';
 
 export const canvas = style({
   all: 'unset',
@@ -22,7 +22,7 @@ export const canvas = style({
   position: 'absolute',
   top: '48%',
   left: '50%',
-})
+});
 
 export const canvas_blur = style({
   all: 'unset',
@@ -51,4 +51,4 @@ export const canvas_blur = style({
   justifyContent: 'center',
   alignItems: 'center',
   alignContent: 'center',
-})
+});

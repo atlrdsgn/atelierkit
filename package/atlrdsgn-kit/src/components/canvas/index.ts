@@ -1,3 +1,6 @@
-/** @format */
-
-export * from './canvas'
+/**
+ *
+ * Canvas
+ * CanvasBlur
+ */
+export * from './canvas';

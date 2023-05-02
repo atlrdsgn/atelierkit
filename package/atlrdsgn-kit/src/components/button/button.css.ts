@@ -1,9 +1,9 @@
 /** @format */
 
-import {style, styleVariants} from '@vanilla-extract/css'
-import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
-import {rainbow_shadow} from '../../lib/properties'
-import {kit} from '../../lib'
+import { style, styleVariants } from '@vanilla-extract/css';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
+import { rainbow_shadow } from '../../lib/properties';
+import { kit } from '../../lib';
 
 const style_properties = {
   padding: {
@@ -68,9 +68,9 @@ const style_properties = {
       },
     },
   },
-} as const
+} as const;
 
-const sp = style_properties
+const sp = style_properties;
 
 /** ---------------------------------------------- */
 
@@ -123,7 +123,7 @@ const SIZE_MAP = {
       boxShadow: sp.shadows.SLATE.FOCUS.LG,
     },
   },
-} as const
+} as const;
 
 const COLOR_MAP = {
   slate: {
@@ -156,7 +156,7 @@ const COLOR_MAP = {
       boxShadow: 'none',
     },
   },
-} as const
+} as const;
 
 const size = {
   ...styleVariants(SIZE_MAP, (value) => ({
@@ -167,7 +167,7 @@ const size = {
     ':hover': {},
     ':focus': {},
   })),
-} as const
+} as const;
 
 const variant = {
   ...styleVariants(COLOR_MAP, (value) => ({
@@ -181,7 +181,7 @@ const variant = {
       boxShadow: value.onFOCUS.boxShadow,
     },
   })),
-} as const
+} as const;
 
 /** --------------------------------------------- */
 
@@ -215,18 +215,18 @@ const BUTTON_BASE = style({
   ':disabled': {},
 
   selectors: {},
-})
+});
 
 /** -------------------------------------------- */
 
-export type ButtonSize = keyof typeof size
-export type ButtonVariant = keyof typeof variant
-export type ButtonVariantProps = RecipeVariants<typeof button>
+export type ButtonSize = keyof typeof size;
+export type ButtonVariant = keyof typeof variant;
+export type ButtonVariantProps = RecipeVariants<typeof button>;
 export const button = recipe({
   base: BUTTON_BASE,
-  variants: {size, variant},
+  variants: { size, variant },
   defaultVariants: {
     size: 'sm',
     variant: 'slate',
   },
-})
+});

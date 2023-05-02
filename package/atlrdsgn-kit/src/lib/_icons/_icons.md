@@ -1,3 +1,5 @@
+<!-- @format -->
+
 ## Internal Icons
 
 These are only used internally within this package.

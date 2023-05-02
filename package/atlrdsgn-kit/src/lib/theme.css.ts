@@ -1,7 +1,5 @@
-/** @format */
-
-import {kitColorPalette, darkKitColorPalette} from './color'
-import type {ColorTypes} from './vars.css'
+import { kitColorPalette, darkKitColorPalette } from './color';
+import type { ColorTypes } from './vars.css';
 
 export const theme = {
   media: {
@@ -99,20 +97,6 @@ export const theme = {
 
   /**
    *
-   * @css_selectors
-   */
-  selector: {
-    ACT: ':active',
-    DIS: ':disabled',
-    FOC: ':focus',
-    HOV: ':hover',
-
-    BEFORE: '&::before',
-    AFTER: '&::after',
-  },
-
-  /**
-   *
    * @radius
    */
   radii: {
@@ -193,26 +177,26 @@ export const theme = {
   },
 
   // ..
-} as const
+} as const;
 
 const lightModeColors: ColorTypes = {
   ...kitColorPalette,
-}
+};
 
 const darkModeColors: ColorTypes = {
   ...darkKitColorPalette,
-}
+};
 
 export const BASE_KIT_THEME = {
   ...theme,
   color: {
     ...lightModeColors,
   },
-}
+};
 
 export const DARK_KIT_THEME = {
   ...theme,
   color: {
     ...darkModeColors,
   },
-}
+};

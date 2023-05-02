@@ -15,4 +15,4 @@ export const volt = {
   volt11: `#124010`,
   volt12: `#0a2908`,
   volt13: `#011000`,
-} as const
+} as const;

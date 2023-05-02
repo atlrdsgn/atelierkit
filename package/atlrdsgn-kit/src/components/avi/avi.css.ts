@@ -1,9 +1,9 @@
 /** @format */
 
-import {style, styleVariants} from '@vanilla-extract/css'
-import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
+import { style, styleVariants } from '@vanilla-extract/css';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 
-import {kit} from '../../lib'
+import { kit } from '../../lib';
 
 export const avi_img = style({
   width: '100%',
@@ -11,7 +11,7 @@ export const avi_img = style({
   objectFit: 'cover',
   objectPosition: 'center',
   borderRadius: 'inherit',
-})
+});
 
 export const fall_back = style({
   display: 'flex',
@@ -19,25 +19,23 @@ export const fall_back = style({
   height: '100%',
   alignItems: 'center',
   justifyContent: 'center',
-
   backgroundColor: 'inherit',
   color: kit.color.slate9,
-
   fontFamily: kit.font.family.mono,
   fontSize: kit.font.size.SM,
   fontWeight: kit.font.weight.MEDIUM,
   lineHeight: kit.font.lineheight.SM,
-})
+});
 
 /** --------------------------------------- */
 
-const AVI_SIZE_XS = '32px'
-const AVI_SIZE_SM = '48px'
-const AVI_SIZE_MD = '64px'
-const AVI_SIZE_LG = '70px'
-const AVI_CIRCLE = '999px'
-const AVI_SQUARE = '0px'
-const AVI_ROUNDED = '8px'
+const AVI_SIZE_XS = '32px';
+const AVI_SIZE_SM = '48px';
+const AVI_SIZE_MD = '64px';
+const AVI_SIZE_LG = '70px';
+const AVI_CIRCLE = '999px';
+const AVI_SQUARE = '0px';
+const AVI_ROUNDED = '8px';
 
 const AVI_SIZES = {
   xs: {
@@ -60,7 +58,7 @@ const AVI_SIZES = {
     height: AVI_SIZE_LG,
     border: '2px solid',
   },
-} as const
+} as const;
 
 const AVI_SHAPE = {
   circle: {
@@ -72,7 +70,7 @@ const AVI_SHAPE = {
   rounded: {
     borderRadius: AVI_ROUNDED,
   },
-} as const
+} as const;
 
 export const size = {
   ...styleVariants(AVI_SIZES, (size) => ({
@@ -80,13 +78,13 @@ export const size = {
     height: size.height,
     border: size.border,
   })),
-} as const
+} as const;
 
 export const shape = {
   ...styleVariants(AVI_SHAPE, (shape) => ({
     borderRadius: shape.borderRadius,
   })),
-} as const
+} as const;
 
 /** --------------------------------------- */
 
@@ -102,15 +100,15 @@ const AVI_BASE = style({
    *
    * add box-shadow to the base.
    */
-})
+});
 
 /** -------------------------------------------- */
 
-export type AviSize = keyof typeof size
-export type AviShape = keyof typeof shape
-export type AviVariantProps = RecipeVariants<typeof avi>
+export type AviSize = keyof typeof size;
+export type AviShape = keyof typeof shape;
+export type AviVariantProps = RecipeVariants<typeof avi>;
 export const avi = recipe({
   base: [AVI_BASE],
-  variants: {size, shape},
-  defaultVariants: {size: 'sm', shape: 'rounded'},
-})
+  variants: { size, shape },
+  defaultVariants: { size: 'sm', shape: 'rounded' },
+});

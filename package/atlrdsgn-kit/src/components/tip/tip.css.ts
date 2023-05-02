@@ -1,8 +1,11 @@
-/** @format */
-
-import {style} from '@vanilla-extract/css'
-import {slideFadeDown, slideFadeLeft, slideFadeRight, slideFadeUp} from '../_shared/keyframes.css'
-import {kit} from '../../lib'
+import { style } from '@vanilla-extract/css';
+import {
+  slideFadeDown,
+  slideFadeLeft,
+  slideFadeRight,
+  slideFadeUp,
+} from '../_shared/keyframes.css';
+import { kit } from '../../lib';
 
 /** ------------------------------------------------
  * provided variables
@@ -22,7 +25,7 @@ export const tip_trigger = style({
   border: 'none',
   width: 'fit-content',
   height: 'auto',
-})
+});
 
 export const tip_content = style({
   all: 'unset',
@@ -44,7 +47,8 @@ export const tip_content = style({
   border: '2px solid',
   borderRadius: kit.radii.LG,
   borderColor: kit.color.slate7,
-  boxShadow: 'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
+  boxShadow:
+    'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
 
   animationDuration: '500ms',
   animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
@@ -64,4 +68,4 @@ export const tip_content = style({
       animationName: slideFadeLeft,
     },
   },
-})
+});

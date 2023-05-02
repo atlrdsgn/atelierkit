@@ -1,3 +1,3 @@
 /** @format */
 
-export * from './passlink'
+export * from './passlink';

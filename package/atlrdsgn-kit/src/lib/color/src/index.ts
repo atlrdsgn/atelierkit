@@ -4,10 +4,10 @@ export {
   grays,
   // ..
   pales,
-} from './core'
+} from './core';
 
-export {hyper} from './hyper'
-export {lemon} from './lemon'
-export {slate} from './slate'
-export {sapphire} from './sapphire'
-export {volt} from './volt'
+export { hyper } from './hyper';
+export { lemon } from './lemon';
+export { slate } from './slate';
+export { sapphire } from './sapphire';
+export { volt } from './volt';

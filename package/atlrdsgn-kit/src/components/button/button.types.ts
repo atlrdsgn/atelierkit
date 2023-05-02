@@ -1,20 +1,20 @@
 /** @format */
 
-import React from 'react'
-import type {ButtonSize, ButtonVariant} from './button.css'
+import React from 'react';
+import type { ButtonSize, ButtonVariant } from './button.css';
 
 export interface BASE_BUTTON_PROPS {
-  children: React.ReactNode
+  children: React.ReactNode;
   /**
    *
    * @state props..
    */
-  active?: boolean
-  disabled?: boolean
-  after?: React.ReactNode
-  before?: React.ReactNode
+  active?: boolean;
+  disabled?: boolean;
+  after?: React.ReactNode;
+  before?: React.ReactNode;
 
-  type?: 'button' | 'submit' | 'reset'
+  type?: 'button' | 'submit' | 'reset';
   /**
    *
    * @router props..
@@ -22,11 +22,11 @@ export interface BASE_BUTTON_PROPS {
    * href = string = url
    * onClick = () => buttonProps.onClick
    */
-  as?: React.ElementType<any> | 'a' | 'button'
-  href?: string
-  onClick?: () => void
+  as?: React.ElementType<any> | 'a' | 'button';
+  href?: string;
+  onClick?: () => void;
 
-  target?: string | '_blank' | '_self' | '_parent' | '_top'
+  target?: string | '_blank' | '_self' | '_parent' | '_top';
   rel?:
     | string
     | 'alternate'
@@ -41,14 +41,14 @@ export interface BASE_BUTTON_PROPS {
     | 'noopener'
     | 'prev'
     | 'search'
-    | 'tag'
+    | 'tag';
 
   /**
    *
    * @styling props..
    */
-  className?: string
+  className?: string;
 
-  size?: ButtonSize
-  variant?: ButtonVariant
+  size?: ButtonSize;
+  variant?: ButtonVariant;
 }

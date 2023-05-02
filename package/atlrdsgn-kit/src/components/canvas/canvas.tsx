@@ -1,36 +1,38 @@
 /** @format */
 
-import React from 'react'
-import * as css from './canvas.css'
+import React from 'react';
+import * as css from './canvas.css';
 
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 interface CanvasProps {
-  children?: React.ReactNode
-  className?: string
+  children?: React.ReactNode;
+  className?: string;
 }
 
-export const Canvas = React.forwardRef<HTMLDivElement, CanvasProps>(
-  ({children, ...props}, forwardedRef) => {
-    return (
-      <div ref={forwardedRef} className={clsx(css.canvas)} {...props}>
-        {children}
-      </div>
-    )
-  }
-)
+export const Canvas = React.forwardRef<HTMLDivElement, CanvasProps>(({ children, ...rest }, forwardedRef) => {
+  return (
+    <div
+      ref={forwardedRef}
+      className={clsx(css.canvas)}
+      {...rest}>
+      {children}
+    </div>
+  );
+});
 
-export const BlurredCanvas = React.forwardRef<HTMLDivElement, CanvasProps>(
-  ({children, ...props}, forwardedRef) => {
-    return (
-      <div ref={forwardedRef} className={clsx(css.canvas_blur)} {...props}>
-        {children}
-      </div>
-    )
-  }
-)
+export const CanvasBlur = React.forwardRef<HTMLDivElement, CanvasProps>(({ children, ...rest }, forwardedRef) => {
+  return (
+    <div
+      ref={forwardedRef}
+      className={clsx(css.canvas_blur)}
+      {...rest}>
+      {children}
+    </div>
+  );
+});
 
-Canvas.displayName = 'Canvas'
-BlurredCanvas.displayName = 'Blurred-Canvas'
+Canvas.displayName = 'Canvas';
+CanvasBlur.displayName = 'Blurred-Canvas';
 
-export type {CanvasProps}
+export type { CanvasProps };

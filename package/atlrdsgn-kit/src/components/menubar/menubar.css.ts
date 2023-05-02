@@ -1,12 +1,12 @@
 /** @format */
 
-import {style} from '@vanilla-extract/css'
-import {kit} from '../../lib'
+import { style } from '@vanilla-extract/css';
+import { kit } from '../../lib';
 
-const ROOT_RADII = '9px'
-const ITEM_RADII = '6px'
-const TRIGGER_RADII = '6px'
-const ITEM_PADDING = '4px 14px'
+const ROOT_RADII = '9px';
+const ITEM_RADII = '6px';
+const TRIGGER_RADII = '6px';
+const ITEM_PADDING = '4px 14px';
 
 const ITEM_CSS = {
   BASE: {
@@ -49,7 +49,7 @@ const ITEM_CSS = {
       color: kit.color.slate9,
     },
   },
-} as const
+} as const;
 
 /** ---------------------------------------------------------- */
 export const menubar_root = style({
@@ -68,7 +68,7 @@ export const menubar_root = style({
 
   width: 'auto',
   margin: 'auto',
-})
+});
 
 export const menubar_trigger = style({
   all: 'unset',
@@ -109,7 +109,7 @@ export const menubar_trigger = style({
       backgroundColor: kit.color.sapphire4,
     },
   },
-})
+});
 
 export const menubar_item = style({
   userSelect: 'none',
@@ -156,7 +156,7 @@ export const menubar_item = style({
       color: ITEM_CSS.SELECTORS.HIGHLIGHTED.color,
     },
   },
-})
+});
 
 export const menubar_content = style({
   width: 'auto',
@@ -168,8 +168,7 @@ export const menubar_content = style({
   border: `0.5px solid ${kit.color.slate3}`,
   borderRadius: ROOT_RADII,
 
-  boxShadow:
-    '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+  boxShadow: '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
   animationDuration: '400ms',
   animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
   willChange: 'transform, opacity',
@@ -185,7 +184,7 @@ export const menubar_content = style({
     '&[data-state="open"][data-side="left"]': {},
     '&[data-state="open"][data-side="right"]': {},
   },
-})
+});
 
 /** ---------------------------------------------- */
 
@@ -197,7 +196,7 @@ export const submenu_trigger = style({
       color: kit.color.slate8,
     },
   },
-})
+});
 
 export const submenu_content = style({
   width: 'auto',
@@ -209,12 +208,11 @@ export const submenu_content = style({
   border: `0.5px solid ${kit.color.slate3}`,
   borderRadius: ROOT_RADII,
 
-  boxShadow:
-    '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+  boxShadow: '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
   animationDuration: '400ms',
   animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
   willChange: 'transform, opacity',
-})
+});
 
 /** ----------------------------------------------- */
 
@@ -225,20 +223,20 @@ export const menubar_item_indicator = style({
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-})
+});
 
 export const item_right_slot = style({
   marginLeft: 'auto',
   paddingLeft: 20,
   color: kit.color.slate6,
   selectors: {
-    '[data-highlighted] > &': {color: 'white'},
-    '[data-disabled] &': {color: kit.color.slate3},
+    '[data-highlighted] > &': { color: 'white' },
+    '[data-disabled] &': { color: kit.color.slate3 },
   },
-})
+});
 
 export const menubar_separator = style({
   height: 1,
   backgroundColor: kit.color.slate5,
   margin: 5,
-})
+});

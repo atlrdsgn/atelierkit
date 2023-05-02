@@ -15,7 +15,7 @@ export const hyper = {
   hyper11: `#410f3b`,
   hyper12: `#290725`,
   hyper13: `#11000f`,
-} as const
+} as const;
 
 export const hyperRGBA = {
   hyper0: `rgba(255, 235, 253, 1)`,
@@ -32,4 +32,4 @@ export const hyperRGBA = {
   hyper11: `rgba(65, 15, 59, 1)`,
   hyper12: `rgba(41, 7, 37, 1)`,
   hyper13: `rgba(17, 0, 15, 1)`,
-} as const
+} as const;

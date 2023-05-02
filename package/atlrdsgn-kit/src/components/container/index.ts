@@ -1,3 +1,3 @@
 /** @format */
 
-export * from './container'
+export * from './container';

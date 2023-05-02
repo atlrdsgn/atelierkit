@@ -1,5 +1,5 @@
 {
-    "insertPragma": true,
+    "insertPragma": false,
     "requirePragma": false,
     "arrowParens": "always",
     "bracketSameLine": true,
@@ -7,14 +7,9 @@
     "jsxSingleQuote": true,
     "useTabs": false,
     "tabWidth": 2,
-    "printWidth": 120,
-    "proseWrap": "preserve",
-    "quoteProps": "preserve",
+    "printWidth": 90,
     "semi": true,
     "singleAttributePerLine": true,
     "singleQuote": true,
-    "trailingComma": "all",
-    "embeddedLanguageFormatting": "auto",
-    "htmlWhitespaceSensitivity": "css",
-    "rangeStart": 5
+    "trailingComma": "all"
 }

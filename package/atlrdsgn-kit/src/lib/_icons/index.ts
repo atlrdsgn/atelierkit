@@ -1,9 +1,9 @@
 /** @format */
 
-export {ArrowDownIcon, ArrowUpIcon, SmallArrowDownIcon, SmallArrowUpIcon} from './src/Arrows'
+export { ArrowDownIcon, ArrowUpIcon, SmallArrowDownIcon, SmallArrowUpIcon } from './src/Arrows';
 
 /**
  *
  * types.
  */
-export type {NociProps} from './types'
+export type { NociProps } from './types';

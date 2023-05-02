@@ -11,13 +11,13 @@ const core = {
   rosebud: `#F9B38B`,
   melrose: `#B7B4FE`,
   eastside: `#9E87C5`,
-} as const
+} as const;
 
 export const grays = {
   lite: `${core.athensgray}`,
   dark: `${core.gray}`,
   darkdark: `${core.darkgray}`,
-} as const
+} as const;
 
 export const pales = {
   saintblue: `${core.saintblue}`,
@@ -25,4 +25,4 @@ export const pales = {
   eastside: `${core.eastside}`,
   rosebud: `${core.rosebud}`,
   hurricane: `${core.hurricane}`,
-} as const
+} as const;

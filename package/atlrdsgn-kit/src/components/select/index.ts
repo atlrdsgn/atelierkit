@@ -1,3 +1,1 @@
-/** @format */
-
-export * from './select'
+export * from './select';

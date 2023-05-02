@@ -1,18 +1,18 @@
 /** @format */
 
-import {style, styleVariants} from '@vanilla-extract/css'
-import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
-import {kit} from '../../lib'
+import { style, styleVariants } from '@vanilla-extract/css';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
+import { kit } from '../../lib';
 
 const WIDTH_MAP = {
-  small: {maxWidth: '430px'},
-  medium: {maxWidth: '720px'},
-  large: {maxWidth: '1145px'},
-  xlarge: {maxWidth: '1440px'},
+  small: { maxWidth: '430px' },
+  medium: { maxWidth: '720px' },
+  large: { maxWidth: '1145px' },
+  xlarge: { maxWidth: '1440px' },
 
-  max: {maxWidth: '100%'},
-  full: {maxWidth: '100vw'},
-} as const
+  max: { maxWidth: '100%' },
+  full: { maxWidth: '100vw' },
+} as const;
 
 const ALIGNMENT_MAP = {
   start: {
@@ -30,7 +30,11 @@ const ALIGNMENT_MAP = {
     alignContent: 'flex-end',
     justifyContent: 'flex-end',
   },
-} as const
+} as const;
+
+const BORDER_API = {
+  true: { border: `1px solid ${kit.color.slate3}` },
+};
 
 /** -------------------------------------------- */
 
@@ -38,7 +42,7 @@ export const width = {
   ...styleVariants(WIDTH_MAP, (value) => ({
     maxWidth: value.maxWidth,
   })),
-} as const
+} as const;
 
 export const align = {
   ...styleVariants(ALIGNMENT_MAP, (value) => ({
@@ -46,7 +50,13 @@ export const align = {
     alignContent: value.alignContent,
     justifyContent: value.justifyContent,
   })),
-} as const
+} as const;
+
+export const border = {
+  ...styleVariants(BORDER_API, (value) => ({
+    border: value.border,
+  })),
+} as const;
 
 export const CONTAINER_BASE = style({
   backgroundColor: 'transparent',
@@ -67,13 +77,14 @@ export const CONTAINER_BASE = style({
       paddingRight: kit.space.IPX,
     },
   },
-})
+});
 
-export type ContainerAlignment = keyof typeof align
-export type ContainerWidth = keyof typeof width
-export type ContainerVariantProps = RecipeVariants<typeof container>
+export type ContainerAlignment = keyof typeof align;
+export type ContainerWidth = keyof typeof width;
+export type ContainerBorder = keyof typeof border;
+export type ContainerVariantProps = RecipeVariants<typeof container>;
 export const container = recipe({
   base: [CONTAINER_BASE],
-  variants: {align, width},
-  defaultVariants: {align: 'start', width: 'max'},
-})
+  variants: { align, width, border },
+  defaultVariants: { align: 'start', width: 'max', border: false },
+});

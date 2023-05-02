@@ -1,12 +1,12 @@
 /** @format */
 
-import {style, styleVariants} from '@vanilla-extract/css'
-import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
-import {component_shadows} from '../../lib/properties'
-import {kit} from '../../lib'
+import { style, styleVariants } from '@vanilla-extract/css';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
+import { component_shadows } from '../../lib/properties';
+import { kit } from '../../lib';
 
-const BR_SMALL = '8px'
-const BR_MEDIUM = '12px'
+const BR_SMALL = '8px';
+const BR_MEDIUM = '12px';
 
 const SIZE_MAP = {
   small: {
@@ -21,7 +21,7 @@ const SIZE_MAP = {
     padding: `4px 8px`,
     borderRadius: BR_MEDIUM,
   },
-} as const
+} as const;
 
 const VARIANT_COLOR_MAP = {
   /**
@@ -63,7 +63,7 @@ const VARIANT_COLOR_MAP = {
       boxShadow: component_shadows.hyper.focus,
     },
   },
-} as const
+} as const;
 
 /** --------------------------------------------------------- */
 
@@ -74,7 +74,7 @@ const size = {
     padding: size.padding,
     borderRadius: size.borderRadius,
   })),
-}
+};
 
 const variant = {
   ...styleVariants(VARIANT_COLOR_MAP, (variant) => ({
@@ -94,7 +94,7 @@ const variant = {
       boxShadow: variant.onFocus.boxShadow,
     },
   })),
-}
+};
 
 /** --------------------------------------------------------- */
 
@@ -105,25 +105,21 @@ const CHIP_ROOT = style({
   boxSizing: 'border-box',
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
   whiteSpace: 'nowrap',
-
   display: 'flex',
   flexDirection: 'row',
   flexShrink: 0,
-
   margin: 'auto',
   justifyContent: 'center',
   alignItems: 'center',
   lineHeight: 'auto',
   textAlign: 'center',
   verticalAlign: 'middle',
-
   fontFamily: kit.font.family.system,
   fontWeight: kit.font.weight.MEDIUM,
   fontVariantNumeric: 'tabular-nums',
-
   gap: '4px',
 
-  // '@media': {},
+  '@media': {},
 
   selectors: {
     '&::before': {
@@ -135,18 +131,18 @@ const CHIP_ROOT = style({
       content: '""',
     },
   },
-})
+});
 
 /** --------------------------------------------------------- */
 
-export type ChipSizeProps = keyof typeof size
-export type ChipVProps = keyof typeof variant
-export type ChipVariantProps = RecipeVariants<typeof chip>
+export type ChipSizeProps = keyof typeof size;
+export type ChipVProps = keyof typeof variant;
+export type ChipVariantProps = RecipeVariants<typeof chip>;
 export const chip = recipe({
   base: [CHIP_ROOT],
-  variants: {size, variant},
+  variants: { size, variant },
   defaultVariants: {
     size: 'small',
     variant: 'slate',
   },
-})
+});

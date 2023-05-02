@@ -1,6 +1,6 @@
 /** @format */
 
-import {kit} from '../kit.css'
+import { kit } from '../kit.css';
 /**
  * shadows
  *
@@ -39,7 +39,7 @@ export const large_shadow = {
   0px 13.644368889910274px 13.644368889910274px -3.125px rgba(0, 0, 0, 0.10452), 
   0px 30px 30px -3.75px rgba(0, 0, 0, 0.05)`,
   },
-} as const
+} as const;
 
 /** ------------------------------------------------------------------
  * @rainbow_shadow
@@ -53,21 +53,21 @@ export const rainbow_shadow = {
     INITIAL: `none`,
     HOVER: `2px 0px 4px 0px ${kit.color.hyper6}, 0px 2px 3px 0px ${kit.color.sapphire6}, -2px 0px 4px 0px ${kit.color.volt5}`,
   },
-} as const
+} as const;
 
 /**
  *
  * @component_shadows
  */
 
-const HYPER_RGB_5 = `255, 105, 241`
-const HYPER_RGB_8 = `159, 41, 150`
-const HYPER_RGB_9 = `112, 26, 104`
+const HYPER_RGB_5 = `255, 105, 241`;
+const HYPER_RGB_8 = `159, 41, 150`;
+const HYPER_RGB_9 = `112, 26, 104`;
 
-const SLATE_RGB_3 = `140, 145, 158`
-const SLATE_RGB_4 = `102, 102, 102`
-const SLATE_RGB_5 = `43, 43, 43`
-export type ComponentShadows = keyof typeof component_shadows
+const SLATE_RGB_3 = `140, 145, 158`;
+const SLATE_RGB_4 = `102, 102, 102`;
+const SLATE_RGB_5 = `43, 43, 43`;
+export type ComponentShadows = keyof typeof component_shadows;
 export const component_shadows = {
   primary: {
     initial: `0px 1px 2px rgba(${SLATE_RGB_5}, 0.3)`, // 0px 1px 2px
@@ -79,4 +79,4 @@ export const component_shadows = {
     hover: `0px 2px 3px rgba(${HYPER_RGB_9}, 0.4)`, // 0px 2px 3px
     focus: `0px 1px 2px rgba(${HYPER_RGB_9}, 0.3), 0px 0px 1px 3px rgba(${HYPER_RGB_5}, 0.4)`, // 0px 1px 2px, 0px 0px 1px 3px
   },
-} as const
+} as const;

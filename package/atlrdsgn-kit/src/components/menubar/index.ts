@@ -1,3 +1,3 @@
 /** @format */
 
-export * from './menubar'
+export * from './menubar';

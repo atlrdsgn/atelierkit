@@ -1,11 +1,9 @@
-/** @format */
+import { style, styleVariants } from '@vanilla-extract/css';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
+import { kit } from '../../lib';
 
-import {style, styleVariants} from '@vanilla-extract/css'
-import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
-import {kit} from '../../lib'
-
-const TRGGR_PADDING_LEFT = 14
-const TRGGR_PADDING_RIGHT = 6
+const TRGGR_PADDING_LEFT = 14;
+const TRGGR_PADDING_RIGHT = 6;
 
 /** ------------------------------------ */
 
@@ -16,7 +14,7 @@ export const select_root = style({
   selectors: {
     '&[data-state="open"]': {},
   },
-})
+});
 
 export const select_trigger = style({
   display: 'inline-flex',
@@ -45,14 +43,14 @@ export const select_trigger = style({
   paddingLeft: TRGGR_PADDING_LEFT,
   paddingRight: TRGGR_PADDING_RIGHT,
   // boxShadow: `0 2px 3px ${KitColors.slateA7}`,
-  ':hover': {backgroundColor: kit.color.slate3},
-  ':focus': {boxShadow: `0 0 0 2px ${kit.color.hyper4}`},
+  ':hover': { backgroundColor: kit.color.slate3 },
+  ':focus': { boxShadow: `0 0 0 2px ${kit.color.hyper4}` },
 
   selectors: {
-    '&[data-placeholder]': {color: kit.color.slate9},
+    '&[data-placeholder]': { color: kit.color.slate9 },
     '&[data-disabled]': {},
   },
-})
+});
 
 export const select_content = style({
   zIndex: 999,
@@ -78,7 +76,7 @@ export const select_content = style({
     '&[data-state="open"]': {},
     '&[data-state="closed"]': {},
   },
-})
+});
 
 export const select_item = style({
   userSelect: 'none',
@@ -125,7 +123,7 @@ export const select_item = style({
       color: kit.color.slate1,
     },
   },
-})
+});
 
 export const select_item_indicate = style({
   position: 'absolute',
@@ -134,7 +132,7 @@ export const select_item_indicate = style({
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
-})
+});
 
 export const select_label = style({
   all: 'unset',
@@ -151,18 +149,18 @@ export const select_label = style({
 
   textAlign: 'left',
   lineHeight: '32px',
-})
+});
 
 export const select_separator = style({
   all: 'unset',
   height: 1,
   backgroundColor: kit.color.slate4,
   margin: 5,
-})
+});
 
-export const select_icon = style({})
+export const select_icon = style({});
 
-export const select_group = style({})
+export const select_group = style({});
 
 /** ------------------------------------------------ */
 
@@ -174,12 +172,12 @@ const SCROLL = {
   backgroundColor: 'white',
   color: kit.color.slate12,
   cursor: 'default',
-} as const
+} as const;
 
 export const scroll_down = style({
   ...SCROLL,
-})
+});
 
 export const scroll_up = style({
   ...SCROLL,
-})
+});

@@ -15,4 +15,4 @@ export const sapphire = {
   sapphire11: `#20182d`,
   sapphire12: `#120d1a`,
   sapphire13: `#040307`,
-} as const
+} as const;

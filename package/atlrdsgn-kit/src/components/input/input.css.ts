@@ -1,9 +1,9 @@
 /** @format */
 
-import {style, styleVariants} from '@vanilla-extract/css'
-import {recipe, RecipeVariants} from '@vanilla-extract/recipes'
+import { style, styleVariants } from '@vanilla-extract/css';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 
-import {kit} from '../../lib'
+import { kit } from '../../lib';
 
 const property_vars = {
   width: {
@@ -23,7 +23,7 @@ const property_vars = {
     onHOVER: `0px 2px 4px rgba(17, 12, 34, 0.12)`,
     onFOCUS: `0px 2px 4px rgba(113, 119, 134, 0.4), 0px 0px 0px 5px rgba(196, 198, 205, 0.6)`,
   },
-} as const
+} as const;
 
 /** ----------------------------------------------- */
 
@@ -49,7 +49,7 @@ export const input_root = style({
   height: 'auto',
   minWidth: '400px',
   margin: 'auto',
-})
+});
 
 export const input_label = style({
   /**
@@ -77,7 +77,7 @@ export const input_label = style({
   marginTop: '2px',
   marginBottom: '2px',
   padding: 0,
-})
+});
 
 /** ---------------------------------------------- */
 
@@ -92,7 +92,7 @@ const INPUT_SIZE = {
     borderRadius: property_vars.radii.MEDIUM,
     maxWidth: property_vars.width.MEDIUM,
   },
-} as const
+} as const;
 
 const INPUT_COLOR_VARIANT = {
   slate: {
@@ -127,7 +127,7 @@ const INPUT_COLOR_VARIANT = {
       boxShadow: property_vars.shadow.onFOCUS,
     },
   },
-} as const
+} as const;
 
 const size = {
   ...styleVariants(INPUT_SIZE, (value) => ({
@@ -135,7 +135,7 @@ const size = {
     borderRadius: value.borderRadius,
     maxWidth: value.maxWidth,
   })),
-} as const
+} as const;
 
 const variant = {
   ...styleVariants(INPUT_COLOR_VARIANT, (value) => ({
@@ -154,7 +154,7 @@ const variant = {
       boxShadow: value.onFocus.boxShadow,
     },
   })),
-} as const
+} as const;
 
 /** ---------------------------------------------- */
 
@@ -173,19 +173,19 @@ const input_base = style({
   minWidth: '400px',
 
   border: `2px solid`,
-})
+});
 
 /** --------------------------------------------------------- */
 
-export type InputSize = keyof typeof size
-export type InputColorVariant = keyof typeof variant
-export type InputVariantProps = RecipeVariants<typeof input_field>
+export type InputSize = keyof typeof size;
+export type InputColorVariant = keyof typeof variant;
+export type InputVariantProps = RecipeVariants<typeof input_field>;
 export const input_field = recipe({
   /**
    *
    * the input field.
    */
   base: [input_base],
-  variants: {size, variant},
-  defaultVariants: {size: 'medium', variant: 'slate'},
-})
+  variants: { size, variant },
+  defaultVariants: { size: 'medium', variant: 'slate' },
+});

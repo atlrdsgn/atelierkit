@@ -15,4 +15,4 @@ export const lemon = {
   lemon11: `#2f3920`,
   lemon12: `#1b1f10`,
   lemon13: `#050600`,
-} as const
+} as const;

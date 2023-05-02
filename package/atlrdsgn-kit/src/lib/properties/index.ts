@@ -1,3 +1,3 @@
 /** @format */
 
-export * from './component-shadows'
+export * from './component-shadows';

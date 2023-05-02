@@ -1,21 +1,21 @@
 /** @format */
 
-import {resolve} from 'path'
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-import {peerDependencies} from './package.json'
-import {vanillaExtractPlugin} from '@vanilla-extract/vite-plugin'
-import banner from 'vite-plugin-banner'
-import dts from 'vite-plugin-dts'
+import { peerDependencies } from './package.json';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+import banner from 'vite-plugin-banner';
+import dts from 'vite-plugin-dts';
 
-const peers = Object.keys(peerDependencies)
+const peers = Object.keys(peerDependencies);
 const primitiveDeps = [
   '@radix-ui/react-avatar',
   '@radix-ui/react-menubar',
   '@radix-ui/react-switch',
   '@radix-ui/react-tooltip',
-]
+];
 
 export default defineConfig({
   build: {
@@ -40,11 +40,8 @@ export default defineConfig({
     lib: {
       /**
        *
-       * entry point for the package,
-       * in library mode.
-       *
+       * entry point for the package, in library mode.
        * https://vitejs.dev/guide/build.html#library-mode
-       *
        */
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'kit',
@@ -84,4 +81,4 @@ export default defineConfig({
       identifiers: 'debug',
     }),
   ],
-})
+});

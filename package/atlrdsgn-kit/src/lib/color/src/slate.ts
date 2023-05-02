@@ -15,4 +15,4 @@ export const slate = {
   slate11: `#212327`,
   slate12: `#141618`,
   slate13: `#080809`,
-} as const
+} as const;

@@ -1,4 +1,6 @@
-import {style} from '@vanilla-extract/css'
+/** @format */
+
+import { style } from '@vanilla-extract/css';
 
 /**
  *
@@ -18,20 +20,20 @@ export const base = style({
   verticalAlign: 'baseline',
   WebkitTapHighlightColor: 'transparent',
   textDecoration: 'none',
-})
+});
 
 // HTML5 display-role reset for older browsers
 const block = style({
   display: 'block',
-})
+});
 
 const body = style({
   lineHeight: 1,
-})
+});
 
 const list = style({
   listStyle: 'none',
-})
+});
 
 const quote = style({
   quotes: 'none',
@@ -40,22 +42,22 @@ const quote = style({
       content: "''",
     },
   },
-})
+});
 
 const table = style({
   borderCollapse: 'collapse',
   borderSpacing: 0,
-})
+});
 
 const appearance = style({
   appearance: 'none',
-})
+});
 
 const transparent = style({
   backgroundColor: 'transparent',
-})
+});
 
-const field = style([block, appearance, transparent])
+const field = style([block, appearance, transparent]);
 
 // Custom reset rules
 const mark = style([
@@ -63,7 +65,7 @@ const mark = style([
   {
     color: 'inherit',
   },
-])
+]);
 
 const select = style([
   field,
@@ -77,17 +79,14 @@ const select = style([
       },
     },
   }),
-])
+]);
 
 const input = style([
   field,
   style({
     selectors: {
       ['&[type="number"]']: {},
-      [[
-        '&[type="number"]::-webkit-inner-spin-button',
-        '&[type="number"]::-webkit-outer-spin-button',
-      ].join(',')]: {
+      [['&[type="number"]::-webkit-inner-spin-button', '&[type="number"]::-webkit-outer-spin-button'].join(',')]: {
         WebkitAppearance: 'none',
         margin: 0,
       },
@@ -99,21 +98,21 @@ const input = style([
       },
     },
   }),
-])
+]);
 
-const button = style([transparent])
+const button = style([transparent]);
 
 const a = style({
   textDecoration: 'none',
   color: 'inherit',
-})
+});
 
 /**
  *
  *
  * type of elements..
  */
-export type KitElement = keyof typeof element
+export type KitElement = keyof typeof element;
 export const element = {
   article: block,
   aside: block,
@@ -138,4 +137,4 @@ export const element = {
   button,
   textarea: field,
   input,
-}
+};

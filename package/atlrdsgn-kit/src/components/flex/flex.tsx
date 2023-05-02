@@ -1,7 +1,7 @@
 /** @format */
 
-import React from 'react'
-import * as css from './flex.css'
+import React from 'react';
+import * as css from './flex.css';
 
 import type {
   FlexDirectionProps,
@@ -10,20 +10,20 @@ import type {
   FlexGapProps,
   // ..
   FlexVariantProps,
-} from './flex.css'
+} from './flex.css';
 
 interface BASE_FLEX_PROPS {
-  children?: React.ReactNode
-  className?: string
+  children?: React.ReactNode;
+  className?: string;
 
-  direction?: FlexDirectionProps
-  align?: FlexAlignProps
-  justify?: FlexJustifyProps
-  gap?: FlexGapProps
+  direction?: FlexDirectionProps;
+  align?: FlexAlignProps;
+  justify?: FlexJustifyProps;
+  gap?: FlexGapProps;
 }
 
-type FlexAttributeProps = BASE_FLEX_PROPS & React.HTMLAttributes<HTMLDivElement>
-export type FlexProps = FlexAttributeProps & FlexVariantProps
+type FlexAttributeProps = BASE_FLEX_PROPS & React.HTMLAttributes<HTMLDivElement>;
+export type FlexProps = FlexAttributeProps & FlexVariantProps;
 export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
   (
     {
@@ -36,7 +36,7 @@ export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
       ...props
       //..
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     return (
       <div
@@ -46,12 +46,11 @@ export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
          *
          * @see if this produces what we want.
          */
-        className={css.flex({direction, align, justify, gap})}
-      >
+        className={css.flex({ direction, align, justify, gap })}>
         {children}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-Flex.displayName = 'Flex'
+Flex.displayName = 'Flex';

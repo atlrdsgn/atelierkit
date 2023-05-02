@@ -1,3 +1,3 @@
 /** @format */
 
-export * from './flex'
+export * from './flex';

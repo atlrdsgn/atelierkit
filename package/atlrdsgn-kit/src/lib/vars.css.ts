@@ -1,8 +1,6 @@
-/** @format */
+import { createThemeContract } from '@vanilla-extract/css';
 
-import {createThemeContract} from '@vanilla-extract/css'
-
-export type ThemeContractProps = typeof themeVars
+export type ThemeContractProps = typeof themeVars;
 export const themeVars = createThemeContract({
   media: {
     small: null,
@@ -82,20 +80,6 @@ export const themeVars = createThemeContract({
       HEAVY: 'font-weight-heavy',
       BLACK: 'font-weight-black',
     },
-  },
-
-  /**
-   *
-   * @css_selectors
-   */
-  selector: {
-    ACT: null, // active
-    DIS: null, // disabled
-    HOV: null, // hover
-    FOC: null, // focus
-
-    BEFORE: null, // before
-    AFTER: null, // after
   },
 
   /**
@@ -275,8 +259,8 @@ export const themeVars = createThemeContract({
     volt13: null,
   },
   // ..
-})
+});
 
 export type ColorTypes = {
-  [key in keyof typeof themeVars.color]: string
-}
+  [key in keyof typeof themeVars.color]: string;
+};

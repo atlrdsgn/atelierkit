@@ -1,11 +1,11 @@
 /** @format */
 
-import {hyper} from './src'
-import {lemon} from './src'
-import {slate} from './src'
-import {sapphire} from './src'
-import {volt} from './src'
-import {grays, pales} from './src'
+import { hyper } from './src';
+import { lemon } from './src';
+import { slate } from './src';
+import { sapphire } from './src';
+import { volt } from './src';
+import { grays, pales } from './src';
 
 export const kitColorPalette = {
   transparent: 'transparent',
@@ -96,6 +96,6 @@ export const kitColorPalette = {
   volt11: volt.volt11,
   volt12: volt.volt12,
   volt13: volt.volt13,
-} as const
+} as const;
 
-export const darkKitColorPalette = kitColorPalette
+export const darkKitColorPalette = kitColorPalette;

@@ -1,12 +1,12 @@
 /** @format */
 
-import {style} from '@vanilla-extract/css'
-import {kit} from '../../lib'
+import { style } from '@vanilla-extract/css';
+import { kit } from '../../lib';
 
-const SWITCH_WIDTH = '29px'
-const SWITCH_HEIGHT = 'auto'
-const TOGGLE_WIDTH = '14px'
-const TOGGLE_HEIGHT = '14px'
+const SWITCH_WIDTH = '29px';
+const SWITCH_HEIGHT = 'auto';
+const TOGGLE_WIDTH = '14px';
+const TOGGLE_HEIGHT = '14px';
 
 export const switch_root = style({
   all: 'unset',
@@ -43,7 +43,7 @@ export const switch_root = style({
       backgroundColor: kit.color.slate3,
     },
   },
-})
+});
 
 export const switch_toggle = style({
   verticalAlign: 'middle',
@@ -61,4 +61,4 @@ export const switch_toggle = style({
       backgroundColor: kit.color.hyper6,
     },
   },
-})
+});
