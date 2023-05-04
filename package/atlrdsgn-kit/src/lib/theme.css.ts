@@ -45,6 +45,7 @@ export const theme = {
       H6: '1rem', // 16px
     },
     size: {
+      MINI: '0.688rem', // 11px
       XS: '0.75rem', // 12px
       SM: '0.875rem', // 14px
       MD: '1rem', // 16px
@@ -68,6 +69,7 @@ export const theme = {
        * (not values, but keys)
        *
        */
+      MINI: '0.875rem', // 14px
       XS: '1rem', // 16px
       SM: '1.25rem', // 20px
       MD: '1.5rem', // 24px

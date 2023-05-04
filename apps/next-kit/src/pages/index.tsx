@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageLayout } from '@/components/core';
-import { Button, Canvas, Container, Text } from '@atlrdsgn/kit';
+import { Canvas, Container, Space, Text } from '@atlrdsgn/kit';
+import { DemoButton } from '@/components/react-kit';
 
 const AppIndex = () => (
   <>
@@ -22,13 +23,8 @@ const AppIndex = () => (
             color={'slate5'}>
             welcome to next.kit
           </Text>
-          <Button
-            href={'https://google.com'}
-            target='_blank'
-            variant={'hyper'}
-            size={'xs'}>
-            Extra Small Button
-          </Button>
+          <Space size={'xl'} />
+          <DemoButton />
         </Container>
       </Canvas>
     </PageLayout>

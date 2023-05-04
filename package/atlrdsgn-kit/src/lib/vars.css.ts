@@ -40,6 +40,7 @@ export const themeVars = createThemeContract({
       H6: 'font-heading-h6',
     },
     size: {
+      MINI: 'font-size-mini',
       XS: 'font-size-xs',
       SM: 'font-size-sm',
       MD: 'font-size-md',
@@ -55,6 +56,7 @@ export const themeVars = createThemeContract({
       '9XL': 'font-size-9xl',
     },
     lineheight: {
+      MINI: 'line-height-mini',
       XS: 'line-height-xs',
       SM: 'line-height-sm',
       MD: 'line-height-md',

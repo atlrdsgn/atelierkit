@@ -76,8 +76,8 @@ const sp = style_properties;
 
 const SIZE_MAP = {
   xs: {
-    fontSize: kit.font.size.XS,
-    lineHeight: kit.font.lineheight.XS,
+    fontSize: kit.font.size.MINI,
+    lineHeight: kit.font.lineheight.MINI,
     padding: sp.padding.XSMALL,
     border: sp.border.XSMALL,
     borderRadius: sp.radii.XSMALL,
@@ -90,8 +90,8 @@ const SIZE_MAP = {
     },
   },
   sm: {
-    fontSize: kit.font.size.SM,
-    lineHeight: kit.font.lineheight.SM,
+    fontSize: kit.font.size.XS,
+    lineHeight: kit.font.lineheight.XS,
     padding: sp.padding.SMALL,
     border: sp.border.SMALL,
     borderRadius: sp.radii.SMALL,
@@ -147,7 +147,7 @@ const COLOR_MAP = {
   },
   hyper: {
     backgroundColor: kit.color.hyper5,
-    borderColor: kit.color.hyper4,
+    borderColor: kit.color.hyper6,
     color: kit.color.white,
     onHOVER: {
       boxShadow: 'none',
