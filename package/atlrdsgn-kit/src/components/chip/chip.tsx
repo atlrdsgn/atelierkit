@@ -2,11 +2,17 @@ import React from 'react';
 import * as css from './chip.css';
 import clsx from 'clsx';
 
-import type { ChipVariantProps, ChipSizeProps, ChipVProps } from './chip.css';
+import type {
+  ChipVariantProps,
+  ChipSizeProps,
+  ChipShapeProps,
+  ChipVProps,
+} from './chip.css';
 
 type BASE_CHIP_PROPS = {
   size?: ChipSizeProps;
   variant?: ChipVProps;
+  shape?: ChipShapeProps;
 
   className?: string;
 } & ChipVariantProps &
@@ -14,11 +20,11 @@ type BASE_CHIP_PROPS = {
 
 type ChipProps = BASE_CHIP_PROPS;
 export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
-  ({ children, className, size = 'small', variant = 'slate', ...rest }, ref) => {
+  ({ children, className, size = 'small', shape, variant = 'slate', ...rest }, ref) => {
     return (
       <div
         {...rest}
-        className={clsx(className, css.chip({ size, variant }))}
+        className={clsx(className, css.chip({ size, shape, variant }))}
         ref={ref}>
         {children}
       </div>

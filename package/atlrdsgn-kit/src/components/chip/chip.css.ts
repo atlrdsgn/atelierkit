@@ -23,6 +23,15 @@ const SIZE_MAP = {
   },
 } as const;
 
+const SHAPE_MAP = {
+  rounded: {
+    borderRadius: `${BR_MEDIUM} !important`,
+  },
+  pill: {
+    borderRadius: `50px !important`,
+  },
+} as const;
+
 const VARIANT_COLOR_MAP = {
   /**
    *
@@ -73,6 +82,12 @@ const size = {
     lineHeight: size.lineHeight,
     padding: size.padding,
     borderRadius: size.borderRadius,
+  })),
+};
+
+const shape = {
+  ...styleVariants(SHAPE_MAP, (shape) => ({
+    borderRadius: shape.borderRadius,
   })),
 };
 
@@ -136,11 +151,12 @@ const CHIP_ROOT = style({
 /** --------------------------------------------------------- */
 
 export type ChipSizeProps = keyof typeof size;
+export type ChipShapeProps = keyof typeof shape;
 export type ChipVProps = keyof typeof variant;
 export type ChipVariantProps = RecipeVariants<typeof chip>;
 export const chip = recipe({
   base: [CHIP_ROOT],
-  variants: { size, variant },
+  variants: { size, shape, variant },
   defaultVariants: {
     size: 'small',
     variant: 'slate',

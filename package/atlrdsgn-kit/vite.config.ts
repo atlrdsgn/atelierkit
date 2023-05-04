@@ -1,5 +1,3 @@
-/** @format */
-
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
@@ -9,7 +7,7 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import banner from 'vite-plugin-banner';
 import dts from 'vite-plugin-dts';
 
-const peers = Object.keys(peerDependencies);
+const peerDeps = Object.keys(peerDependencies);
 const primitiveDeps = [
   '@radix-ui/react-avatar',
   '@radix-ui/react-menubar',
@@ -21,10 +19,11 @@ export default defineConfig({
   build: {
     sourcemap: true,
     rollupOptions: {
-      external: [...peers, ...primitiveDeps],
+      external: [...peerDeps, ...primitiveDeps],
       output: {
         globals: {
           react: 'React',
+          React: 'React',
           'react-dom': 'ReactDom',
           /**
            *

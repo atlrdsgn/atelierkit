@@ -53,10 +53,8 @@
     "@vanilla-extract/sprinkles": "^1.6.0",
     "clsx": "^1.2.1",
     "eslint-config-atlrdsgn": "*",
-    "rc-drawer": "^6.1.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-responsive": "^9.0.2"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
