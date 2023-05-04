@@ -9,6 +9,9 @@ module.exports = {
     ],
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
+    parserOptions: {
+        project: ['../atlrdsgn-tsconfig/tsconfig.eslint.json'],
+    },
     rules: {},
 
     /**

@@ -1,6 +1,6 @@
 {
   // extend your base config to share compilerOptions, etc
-  "extends": "./base.json",
+  "extends": ["./base.json", "./next.json", "./react-kit.json", "./node16.json"],
   "compilerOptions": {
     // ensure that nobody can accidentally use this config for a build
     "noEmit": true
