@@ -1,13 +1,12 @@
 import React from 'react';
 import { PageLayout } from '@/components/core';
-import { Canvas, Container, Text } from '@atlrdsgn/kit';
+import { Button, Canvas, Container, Text } from '@atlrdsgn/kit';
 
 const AppIndex = () => (
   <>
     <PageLayout type={'Production'}>
       <Canvas>
         <Container
-          border
           width={'medium'}
           align={'center'}>
           <Text
@@ -23,6 +22,13 @@ const AppIndex = () => (
             color={'slate5'}>
             welcome to next.kit
           </Text>
+          <Button
+            href={'https://google.com'}
+            target='_blank'
+            variant={'hyper'}
+            size={'xs'}>
+            Extra Small Button
+          </Button>
         </Container>
       </Canvas>
     </PageLayout>

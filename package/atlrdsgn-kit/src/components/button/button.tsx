@@ -1,12 +1,12 @@
-/** @format */
-
 import React from 'react';
 import * as css from './button.css';
 
 import type { BASE_BUTTON_PROPS } from './button.types';
 import type { ButtonVariantProps } from './button.css';
 
-type ButtonElementProps = BASE_BUTTON_PROPS & ButtonVariantProps & React.HTMLAttributes<HTMLButtonElement>;
+type ButtonElementProps = BASE_BUTTON_PROPS &
+  ButtonVariantProps &
+  React.HTMLAttributes<HTMLButtonElement>;
 export type ButtonProps = ButtonElementProps;
 export const Button = ({
   children,

@@ -76,6 +76,8 @@ const sp = style_properties;
 
 const SIZE_MAP = {
   xs: {
+    fontSize: kit.font.size.XS,
+    lineHeight: kit.font.lineheight.XS,
     padding: sp.padding.XSMALL,
     border: sp.border.XSMALL,
     borderRadius: sp.radii.XSMALL,
@@ -88,6 +90,8 @@ const SIZE_MAP = {
     },
   },
   sm: {
+    fontSize: kit.font.size.SM,
+    lineHeight: kit.font.lineheight.SM,
     padding: sp.padding.SMALL,
     border: sp.border.SMALL,
     borderRadius: sp.radii.SMALL,
@@ -100,6 +104,8 @@ const SIZE_MAP = {
     },
   },
   md: {
+    fontSize: kit.font.size.MD,
+    lineHeight: kit.font.lineheight.MD,
     padding: sp.padding.MEDIUM,
     border: sp.border.MEDIUM,
     borderRadius: sp.radii.MEDIUM,
@@ -112,6 +118,8 @@ const SIZE_MAP = {
     },
   },
   lg: {
+    fontSize: kit.font.size.LG,
+    lineHeight: kit.font.lineheight.LG,
     padding: sp.padding.LARGE,
     border: sp.border.LARGE,
     borderRadius: sp.radii.LARGE,
@@ -128,6 +136,7 @@ const SIZE_MAP = {
 const COLOR_MAP = {
   slate: {
     backgroundColor: kit.color.slate1,
+    borderColor: kit.color.slate2,
     color: kit.color.slate6,
     onHOVER: {
       boxShadow: 'none',
@@ -138,7 +147,8 @@ const COLOR_MAP = {
   },
   hyper: {
     backgroundColor: kit.color.hyper5,
-    color: kit.color.hyper1,
+    borderColor: kit.color.hyper4,
+    color: kit.color.white,
     onHOVER: {
       boxShadow: 'none',
     },
@@ -148,6 +158,7 @@ const COLOR_MAP = {
   },
   neon: {
     backgroundColor: kit.color.slate1,
+    borderColor: kit.color.slate2,
     color: kit.color.slate6,
     onHOVER: {
       boxShadow: rainbow_shadow.LIGHT.HOVER,
@@ -160,6 +171,8 @@ const COLOR_MAP = {
 
 const size = {
   ...styleVariants(SIZE_MAP, (value) => ({
+    fontSize: value.fontSize,
+    lineHeight: value.lineHeight,
     padding: value.padding,
     border: value.border,
     borderRadius: value.borderRadius,
