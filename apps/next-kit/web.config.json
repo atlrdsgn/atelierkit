@@ -11,7 +11,13 @@
     }
   ],
 
+  "index": {
+    "introduction": "ATELIERKIT®",
+    "subtitle": "welcome to next.kit"
+  },
+
   "footer": {
-    "text": "© 2019 - 2020"
+    "componentlink": "/components",
+    "copyright": "© 2019 - 2020"
   }
 }

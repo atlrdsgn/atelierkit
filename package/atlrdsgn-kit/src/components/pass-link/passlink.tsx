@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import * as styles from './passlink.css';
 import clsx from 'clsx';
@@ -27,7 +25,19 @@ interface LinkElementProps {
 
 export type PassLinkProps = LinkElementProps & React.HTMLAttributes<HTMLAnchorElement>;
 export const PassLink = React.forwardRef<HTMLAnchorElement, PassLinkProps>(
-  ({ children, className, href, variant, target = '_self', size = 'sm', font = 'inherit', ...rest }, forwardedRef) => (
+  (
+    {
+      children,
+      className,
+      href,
+      variant,
+      target = '_self',
+      size = 'sm',
+      font = 'inherit',
+      ...rest
+    },
+    forwardedRef,
+  ) => (
     <a
       ref={forwardedRef}
       href={href}

@@ -2,31 +2,7 @@
 
 import { style, styleVariants } from '@vanilla-extract/css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
-
 import { kit } from '../../lib';
-
-export const base = style({
-  all: 'unset',
-  textDecoration: 'none',
-  backgroundColor: 'transparent',
-  background: 'none',
-  margin: 0,
-  padding: 0,
-  // ...
-  fontWeight: kit.font.weight.REGULAR,
-  color: kit.color.current,
-  // ...
-  transition: 'all 0.2s ease-in-out',
-
-  ':focus': {
-    outline: 'none',
-    textDecoration: 'underline',
-  },
-
-  ':disabled': {
-    color: kit.color.slate3,
-  },
-});
 
 const sizeOptions = {
   xs: { fontSize: kit.font.size.XS, lineHeight: kit.font.lineheight.SM },
@@ -87,6 +63,37 @@ export const font = {
     fontFamily: value.fontFamily,
   })),
 };
+
+/** ------------------------------------------------------ */
+
+export const base = style({
+  all: 'unset',
+  textDecoration: 'none',
+  backgroundColor: 'transparent',
+  background: 'none',
+  margin: 0,
+  padding: 0,
+  // ...
+  fontWeight: kit.font.weight.REGULAR,
+  color: kit.color.current,
+  // ...
+  transition: 'all 0.2s ease-in-out',
+
+  ':hover': {
+    cursor: 'pointer',
+  },
+
+  ':focus': {
+    outline: 'none',
+    textDecoration: 'underline',
+  },
+
+  ':disabled': {
+    color: kit.color.slate3,
+  },
+});
+
+/** -------------------------------------------------------- */
 
 export type LinkSizeProps = keyof typeof size;
 export type LinkColorProps = keyof typeof variant;
