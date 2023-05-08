@@ -27,7 +27,7 @@ __metadata:
     "@radix-ui/react-switch": ^1.0.2
     "@radix-ui/react-tooltip": ^1.0.5
     "@types/node": ^18.15.11
-    "@types/react": ^18.0.31
+    "@types/react": ^18.2.6
     "@types/react-dom": ^18.2.3
     "@vanilla-extract/css": ^1.11.0
     "@vanilla-extract/recipes": ^0.4.0
@@ -1931,7 +1931,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.31":
+"@types/react@npm:*":
   version: 18.0.31
   resolution: "@types/react@npm:18.0.31"
   dependencies:
@@ -1942,14 +1942,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.5":
-  version: 18.2.5
-  resolution: "@types/react@npm:18.2.5"
+"@types/react@npm:^18.2.6":
+  version: 18.2.6
+  resolution: "@types/react@npm:18.2.6"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 97c4534e849edf991be0820b0911d036e794b8e2599a1544f500c769acbcb4f443ccde1a3f22298f22ce368ee7757f746e4a529e889567fc142a627698e2de39
+  checksum: dea9d232d8df7ac357367a69dcb557711ab3d5501807ffa77cebeee73d49ee94d095f298e36853c63ed47cce097eee4c7eae2aaa8c02fac3f0171ec1b523a819
   languageName: node
   linkType: hard
 
@@ -5428,7 +5428,7 @@ __metadata:
   dependencies:
     "@atlrdsgn/kit": "*"
     "@types/node": ^18.16.3
-    "@types/react": ^18.2.5
+    "@types/react": ^18.2.6
     "@types/react-dom": ^18.2.3
     inter-ui: ^3.19.3
     next: ^13.3.0
