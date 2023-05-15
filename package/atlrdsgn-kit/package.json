@@ -64,7 +64,7 @@
     "@vanilla-extract/vite-plugin": "^3.8.0",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.39.0",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "typescript": "^5.0.4",
     "vite": "^4.3.5",
     "vite-plugin-banner": "^0.7.0",
