@@ -32,7 +32,7 @@ __metadata:
     "@vanilla-extract/css": ^1.11.0
     "@vanilla-extract/recipes": ^0.4.0
     "@vanilla-extract/sprinkles": ^1.6.0
-    "@vanilla-extract/vite-plugin": ^3.8.0
+    "@vanilla-extract/vite-plugin": ^3.8.1
     "@vitejs/plugin-react": ^4.0.0
     clsx: ^1.2.1
     eslint: ^8.39.0
@@ -80,30 +80,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.20.7, @babel/core@npm:^7.21.4":
-  version: 7.21.4
-  resolution: "@babel/core@npm:7.21.4"
-  dependencies:
-    "@ampproject/remapping": ^2.2.0
-    "@babel/code-frame": ^7.21.4
-    "@babel/generator": ^7.21.4
-    "@babel/helper-compilation-targets": ^7.21.4
-    "@babel/helper-module-transforms": ^7.21.2
-    "@babel/helpers": ^7.21.0
-    "@babel/parser": ^7.21.4
-    "@babel/template": ^7.20.7
-    "@babel/traverse": ^7.21.4
-    "@babel/types": ^7.21.4
-    convert-source-map: ^1.7.0
-    debug: ^4.1.0
-    gensync: ^1.0.0-beta.2
-    json5: ^2.2.2
-    semver: ^6.3.0
-  checksum: a3beebb2cc79908a02f27a07dc381bcb34e8ecc58fa99f568ad0934c49e12111fc977ee9c5b51eb7ea2da66f63155d37c4dd96b6472eaeecfc35843ccb56bf3d
-  languageName: node
-  linkType: hard
-
-"@babel/core@npm:^7.21.8":
+"@babel/core@npm:^7.20.7, @babel/core@npm:^7.21.8":
   version: 7.21.8
   resolution: "@babel/core@npm:7.21.8"
   dependencies:
@@ -123,6 +100,29 @@ __metadata:
     json5: ^2.2.2
     semver: ^6.3.0
   checksum: f28118447355af2a90bd340e2e60699f94c8020517eba9b71bf8ebff62fa9e00d63f076e033f9dfb97548053ad62ada45fafb0d96584b1a90e8aef5a3b8241b1
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:^7.21.4":
+  version: 7.21.4
+  resolution: "@babel/core@npm:7.21.4"
+  dependencies:
+    "@ampproject/remapping": ^2.2.0
+    "@babel/code-frame": ^7.21.4
+    "@babel/generator": ^7.21.4
+    "@babel/helper-compilation-targets": ^7.21.4
+    "@babel/helper-module-transforms": ^7.21.2
+    "@babel/helpers": ^7.21.0
+    "@babel/parser": ^7.21.4
+    "@babel/template": ^7.20.7
+    "@babel/traverse": ^7.21.4
+    "@babel/types": ^7.21.4
+    convert-source-map: ^1.7.0
+    debug: ^4.1.0
+    gensync: ^1.0.0-beta.2
+    json5: ^2.2.2
+    semver: ^6.3.0
+  checksum: a3beebb2cc79908a02f27a07dc381bcb34e8ecc58fa99f568ad0934c49e12111fc977ee9c5b51eb7ea2da66f63155d37c4dd96b6472eaeecfc35843ccb56bf3d
   languageName: node
   linkType: hard
 
@@ -2341,11 +2341,11 @@ __metadata:
   linkType: hard
 
 "@vanilla-extract/babel-plugin-debug-ids@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@vanilla-extract/babel-plugin-debug-ids@npm:1.0.2"
+  version: 1.0.3
+  resolution: "@vanilla-extract/babel-plugin-debug-ids@npm:1.0.3"
   dependencies:
     "@babel/core": ^7.20.7
-  checksum: 4f3e448ae51fe48e73852816e30aef899a27e54dbafb937f8b59534d289322f590e78e089aae643e94853ce869f44e68021e41b208c6eefe7271e745fa710ec0
+  checksum: aff82b7f5c0e1df0e3018335287d194832930b1e7a586716dbcf5dd2b0d6d74d48cb5cd64ab84232d2b597ff04c8bb2a734f3965c931e07fd3385d4954592fb0
   languageName: node
   linkType: hard
 
@@ -2414,9 +2414,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/vite-plugin@npm:^3.8.0":
-  version: 3.8.0
-  resolution: "@vanilla-extract/vite-plugin@npm:3.8.0"
+"@vanilla-extract/vite-plugin@npm:^3.8.1":
+  version: 3.8.1
+  resolution: "@vanilla-extract/vite-plugin@npm:3.8.1"
   dependencies:
     "@vanilla-extract/integration": ^6.0.2
     outdent: ^0.8.0
@@ -2424,7 +2424,7 @@ __metadata:
     postcss-load-config: ^3.1.0
   peerDependencies:
     vite: ^2.2.3 || ^3.0.0 || ^4.0.3
-  checksum: 475b24ec957ae80d2ada5972b76011969a80094f70dc9ad44f7748b566f87a392923bdc827652b3f6ec2e9d8f9e4b3505c7b60de38d102b090c896ea53db9826
+  checksum: 6c060859bcc4d8131692b1b92c598bee4b636045660e084cc417134bc7638eacbcdbeaebff03b4d1af62851d8957fd943eebd0841ad488535dedb51080c4df41
   languageName: node
   linkType: hard
 
@@ -5566,15 +5566,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mlly@npm:^1.1.0, mlly@npm:^1.1.1":
-  version: 1.2.0
-  resolution: "mlly@npm:1.2.0"
+"mlly@npm:^1.1.0, mlly@npm:^1.2.0":
+  version: 1.2.1
+  resolution: "mlly@npm:1.2.1"
   dependencies:
     acorn: ^8.8.2
     pathe: ^1.1.0
-    pkg-types: ^1.0.2
-    ufo: ^1.1.1
-  checksum: 640b019eb20e8e556bd623141b861d47e5c05f8af00210376ce1015912695dbd93a38cfe7ba18ca04f00e75645378f0f94a48a90bfa6e1b5dee1f0ec9c14eed1
+    pkg-types: ^1.0.3
+    ufo: ^1.1.2
+  checksum: 82939436ec0e1c53e400d86fd571bd005090383b3fa49d5d8b9df4b388b24bae2b7b2f0369ef0c905d29fb35377cd4724d2bf5e5cd130d922849f74948bb81f0
   languageName: node
   linkType: hard
 
@@ -6092,14 +6092,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-types@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "pkg-types@npm:1.0.2"
+"pkg-types@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "pkg-types@npm:1.0.3"
   dependencies:
     jsonc-parser: ^3.2.0
-    mlly: ^1.1.1
+    mlly: ^1.2.0
     pathe: ^1.1.0
-  checksum: 2d0a70c1721c2ebbe075b912531a4f43136e6658fdcc59dc76c39966201ab5ddf265868d1211943183406d4b70d373c17e3b176487bc2020ea737d030b0fd080
+  checksum: 4b305c834b912ddcc8a0fe77530c0b0321fe340396f84cbb87aecdbc126606f47f2178f23b8639e71a4870f9631c7217aef52ffed0ae17ea2dbbe7e43d116a6e
   languageName: node
   linkType: hard
 
@@ -6132,18 +6132,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.3.6, postcss@npm:^8.4.21":
-  version: 8.4.21
-  resolution: "postcss@npm:8.4.21"
-  dependencies:
-    nanoid: ^3.3.4
-    picocolors: ^1.0.0
-    source-map-js: ^1.0.2
-  checksum: e39ac60ccd1542d4f9d93d894048aac0d686b3bb38e927d8386005718e6793dbbb46930f0a523fe382f1bbd843c6d980aaea791252bf5e176180e5a4336d9679
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.4.23":
+"postcss@npm:^8.3.6, postcss@npm:^8.4.23":
   version: 8.4.23
   resolution: "postcss@npm:8.4.23"
   dependencies:
@@ -6573,20 +6562,6 @@ __metadata:
   bin:
     rimraf: bin.js
   checksum: 87f4164e396f0171b0a3386cc1877a817f572148ee13a7e113b238e48e8a9f2f31d009a92ec38a591ff1567d9662c6b67fd8818a2dbbaed74bc26a87a2a4a9a0
-  languageName: node
-  linkType: hard
-
-"rollup@npm:^3.18.0":
-  version: 3.20.2
-  resolution: "rollup@npm:3.20.2"
-  dependencies:
-    fsevents: ~2.3.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    rollup: dist/bin/rollup
-  checksum: 34b0932839b7c2a5d1742fb21ce95a47e0b49a0849f4abee2dccf25833187aa7babb898ca90d4fc761cffa4102b9ed0ac6ad7f6f6b96c8b8e2d67305abc5da65
   languageName: node
   linkType: hard
 
@@ -7383,10 +7358,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "ufo@npm:1.1.1"
-  checksum: 6bd210ed93d8c0dedd76c456b1d1dfb0e3b08c2216ee6080e61f0f545de0bac24b3d3a5530cd6a403810855f8d8fc3922583965296142e04cfc287442635e6c7
+"ufo@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "ufo@npm:1.1.2"
+  checksum: 83c940a6a23b6d4fc0cd116265bb5dcf88ab34a408ad9196e413270ca607a4781c09b547dc518f43caee128a096f20fe80b5a0e62b4bcc0a868619896106d048
   languageName: node
   linkType: hard
 
@@ -7592,14 +7567,13 @@ __metadata:
   linkType: hard
 
 "vite@npm:^3.0.0 || ^4.0.0, vite@npm:^4.1.4":
-  version: 4.2.1
-  resolution: "vite@npm:4.2.1"
+  version: 4.3.6
+  resolution: "vite@npm:4.3.6"
   dependencies:
     esbuild: ^0.17.5
     fsevents: ~2.3.2
-    postcss: ^8.4.21
-    resolve: ^1.22.1
-    rollup: ^3.18.0
+    postcss: ^8.4.23
+    rollup: ^3.21.0
   peerDependencies:
     "@types/node": ">= 14"
     less: "*"
@@ -7625,7 +7599,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 70eb162ffc299017a3c310e3adc95e9661def6b17aafd1f8e5e02e516766060435590dbe3df1e4e95acc3583c728a76e91f07c546221d1e701f1b2b021293f45
+  checksum: fa6a323308da58f08d59c1b96186fc7d054d6bbf2e976129f17cae4d439d50605584d0ec1cf245ac360024998e484422cb504e724c8efb936b3c22a120b4a210
   languageName: node
   linkType: hard
 
