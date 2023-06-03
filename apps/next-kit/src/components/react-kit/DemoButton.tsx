@@ -7,8 +7,8 @@ export const DemoButton = () => {
   return (
     <>
       <Button
-        size={'xs'}
-        variant={'slate'}
+        size='xs'
+        variant='hyper'
         href={'https://google.com'}
         target='_blank'>
         View components

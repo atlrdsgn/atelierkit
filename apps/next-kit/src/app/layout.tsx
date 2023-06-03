@@ -1,5 +1,7 @@
 import '@/scss/global.scss';
+import '@atlrdsgn/kit/styles';
 
+import ThemeProvider from '@/components/theme-provider';
 import { siteURL } from '@/lib/const';
 import type { Metadata } from 'next';
 
@@ -13,7 +15,9 @@ export default function RootLayout({
       lang='en'
       suppressHydrationWarning>
       <body style={{ opacity: 1 }}>
-        <main>{children}</main>
+        <ThemeProvider>
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

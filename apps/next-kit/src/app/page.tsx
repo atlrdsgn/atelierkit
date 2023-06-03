@@ -1,16 +1,14 @@
 import React from 'react';
 import { PageLayout } from '@/components/core';
-import content from '../../web.config.json';
 import HomePage from '@/components/core/home';
+import { DemoButton } from '@/components/react-kit';
 
 const AppIndex = () => {
-  const { index } = content;
-
   return (
     <>
       <PageLayout type={'Production'}>
         <HomePage>
-          <p>{index.introduction}</p>
+          <DemoButton />
         </HomePage>
       </PageLayout>
     </>
