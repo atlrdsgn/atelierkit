@@ -7,8 +7,8 @@ import { Chip } from '@atlrdsgn/kit';
 export const DemoChip = () => {
   return (
     <Chip
-      size={'small'}
-      variant={'hyper'}
+      size={'medium'}
+      variant={'slate'}
       shape={'pill'}>
       Small Chip
     </Chip>

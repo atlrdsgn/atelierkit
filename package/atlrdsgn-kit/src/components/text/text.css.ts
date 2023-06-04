@@ -17,13 +17,13 @@ const SIZE_MAP = {
   lg: { fontSize: kit.font.size.LG, lineHeight: kit.font.lineheight.LG },
   xl: { fontSize: kit.font.size.XL, lineHeight: kit.font.lineheight.XL },
   xxl: { fontSize: kit.font.size.XXL, lineHeight: kit.font.lineheight.XXL },
-  '3xl': { fontSize: kit.font.size['3xl'], lineHeight: kit.font.lineheight['3xl'] },
-  '4xl': { fontSize: kit.font.size['4xl'], lineHeight: kit.font.lineheight['4xl'] },
-  '5xl': { fontSize: kit.font.size['5xl'], lineHeight: kit.font.lineheight['5xl'] },
-  '6xl': { fontSize: kit.font.size['6xl'], lineHeight: kit.font.lineheight['6xl'] },
-  '7xl': { fontSize: kit.font.size['7xl'], lineHeight: kit.font.lineheight['7xl'] },
-  '8xl': { fontSize: kit.font.size['8xl'], lineHeight: kit.font.lineheight['8xl'] },
-  '9xl': { fontSize: kit.font.size['9xl'], lineHeight: kit.font.lineheight['9xl'] },
+  '3xl': { fontSize: kit.font.size['3XL'], lineHeight: kit.font.lineheight['3XL'] },
+  '4xl': { fontSize: kit.font.size['4XL'], lineHeight: kit.font.lineheight['4XL'] },
+  '5xl': { fontSize: kit.font.size['5XL'], lineHeight: kit.font.lineheight['5XL'] },
+  '6xl': { fontSize: kit.font.size['6XL'], lineHeight: kit.font.lineheight['6XL'] },
+  '7xl': { fontSize: kit.font.size['7XL'], lineHeight: kit.font.lineheight['7XL'] },
+  '8xl': { fontSize: kit.font.size['8XL'], lineHeight: kit.font.lineheight['8XL'] },
+  '9xl': { fontSize: kit.font.size['9XL'], lineHeight: kit.font.lineheight['9XL'] },
 } as const;
 
 const WEIGHT_MAP = {

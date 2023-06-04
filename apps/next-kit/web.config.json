@@ -16,6 +16,13 @@
     "subtitle": "welcome to next.kit"
   },
 
+  "components": {
+    "introduction": "@atlrdsgn/kit",
+    "subtitle": "An ever– expanding toolkit, for the disruptive.",
+
+    "components": {}
+  },
+
   "footer": {
     "componentlink": "/components",
     "copyright": "© 2019 - 2020"

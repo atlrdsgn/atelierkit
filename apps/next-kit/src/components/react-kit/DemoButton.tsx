@@ -9,8 +9,8 @@ export const DemoButton = () => {
       <Button
         size='xs'
         variant='hyper'
-        href={'https://google.com'}
-        target='_blank'>
+        href={'/components'}
+        target='_self'>
         View components
       </Button>
     </>

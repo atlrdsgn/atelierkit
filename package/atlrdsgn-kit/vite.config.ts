@@ -77,7 +77,7 @@ export default defineConfig({
        * to 'short' or 'debug' to control
        * how class names are generated.
        */
-      identifiers: 'debug',
+      identifiers: 'short',
     }),
   ],
 });

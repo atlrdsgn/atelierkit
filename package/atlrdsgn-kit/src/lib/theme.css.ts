@@ -52,13 +52,13 @@ export const theme = {
       LG: '1.125rem', // 18px
       XL: '1.25rem', // 20px
       XXL: '1.5rem', // 24px
-      '3XL': '1.875rem', // 30px
-      '4XL': '2.25rem', // 36px
-      '5XL': '3rem', // 48px
-      '6XL': '3.75rem', // 60px
-      '7XL': '4.5rem', // 72px
-      '8XL': '6rem', // 96px
-      '9XL': '8rem', // 128px
+      ['3XL']: '1.875rem', // 30px
+      ['4XL']: '2.25rem', // 36px
+      ['5XL']: '3rem', // 48px
+      ['6XL']: '3.75rem', // 60px
+      ['7XL']: '4.5rem', // 72px
+      ['8XL']: '6rem', // 96px
+      ['9XL']: '8rem', // 128px
     },
     lineheight: {
       /**
@@ -76,13 +76,13 @@ export const theme = {
       LG: '1.75rem', // 28px
       XL: '1.75rem', // 28px
       XXL: '2rem', // 32px
-      '3XL': '2.25rem', // 36px
-      '4XL': '2.5rem', // 40px
-      '5XL': '1', // 1
-      '6XL': '1', // 1
-      '7XL': '1', // 1
-      '8XL': '1', // 1
-      '9XL': '1', // 1
+      ['3XL']: '2.25rem', // 36px
+      ['4XL']: '2.5rem', // 40px
+      ['5XL']: '1', // 1
+      ['6XL']: '1', // 1
+      ['7XL']: '1', // 1
+      ['8XL']: '1', // 1
+      ['9XL']: '1', // 1
     },
     weight: {
       SUPRLITE: '100',

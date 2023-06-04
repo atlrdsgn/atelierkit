@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import * as css from './text.css';
 import clsx from 'clsx';
@@ -23,10 +21,21 @@ interface BASE_TEXT_PROPS {
   weight?: TextWeightVariants;
 }
 
-export type TextProps = BASE_TEXT_PROPS & TextVariantProps & React.HTMLAttributes<HTMLParagraphElement>;
+export type TextProps = BASE_TEXT_PROPS &
+  TextVariantProps &
+  React.HTMLAttributes<HTMLParagraphElement>;
 export const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
   (
-    { children, className, font = 'inter', size = 'md', align = 'left', color = 'slate5', weight = 'medium', ...props },
+    {
+      children,
+      className,
+      font = 'inter',
+      size = 'md',
+      align = 'left',
+      color = 'slate5',
+      weight = 'medium',
+      ...props
+    },
     forwardedRef,
   ) => {
     return (

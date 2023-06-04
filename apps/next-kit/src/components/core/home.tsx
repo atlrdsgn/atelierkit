@@ -2,7 +2,7 @@
 
 import React from 'react';
 import content from '../../../web.config.json';
-import { Canvas, Text } from '@atlrdsgn/kit';
+import { Canvas, Space, Text } from '@atlrdsgn/kit';
 
 function HomePage({ children }: { children: React.ReactNode }) {
   const { index } = content;
@@ -10,11 +10,14 @@ function HomePage({ children }: { children: React.ReactNode }) {
   return (
     <Canvas>
       <Text
-        size='sm'
-        weight='bold'
+        color='slate10'
+        size='4xl'
+        weight='heavy'
         font='inter'>
         {index.introduction}
       </Text>
+
+      <Space size='sm' />
       {children}
     </Canvas>
   );
