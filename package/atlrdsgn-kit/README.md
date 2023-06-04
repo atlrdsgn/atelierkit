@@ -1,5 +1,3 @@
-<!-- @format -->
-
 # `ATELIERKIT®`
 
 <a href="https://docs.atlrdsgn.com">
@@ -35,14 +33,14 @@ npm install --save @atlrdsgn/kit
 ### Use.
 
 ```tsx
-import React from 'react'
-import {Canvas} from '@atlrdsgn/kit'
+import React from 'react';
+import { Canvas } from '@atlrdsgn/kit';
 
 export const DefaultExample = () => (
   <Canvas>
     <Text size='sm'>ATELIERKIT®</Text>
   </Canvas>
-)
+);
 ```
 
 #### More examples..

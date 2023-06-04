@@ -1,10 +1,7 @@
-/** @format */
-
 import { kit } from '../kit.css';
 /**
  * shadows
  *
- * @format
  *
  *
  *

@@ -1,5 +1,3 @@
-/** @format */
-
 import { style } from '@vanilla-extract/css';
 
 /**
@@ -86,7 +84,10 @@ const input = style([
   style({
     selectors: {
       ['&[type="number"]']: {},
-      [['&[type="number"]::-webkit-inner-spin-button', '&[type="number"]::-webkit-outer-spin-button'].join(',')]: {
+      [[
+        '&[type="number"]::-webkit-inner-spin-button',
+        '&[type="number"]::-webkit-outer-spin-button',
+      ].join(',')]: {
         WebkitAppearance: 'none',
         margin: 0,
       },

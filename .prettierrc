@@ -1,6 +1,4 @@
 {
-    "insertPragma": true,
-    "requirePragma": false,
     "arrowParens": "always",
     "bracketSameLine": true,
     "bracketSpacing": true,
