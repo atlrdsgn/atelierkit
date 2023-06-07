@@ -52,7 +52,7 @@ export default defineConfig({
     react(),
     banner(`
     atelierkit© v${process.env.npm_package_version}. 
-    All rights reserved.
+    Copyright © 2023 atlrdsgn®. All rights reserved.
     
     see https://docs.atlrdsgn.com for more information.
     `),

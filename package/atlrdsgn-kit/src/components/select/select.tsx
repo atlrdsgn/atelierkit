@@ -2,7 +2,7 @@ import React from 'react';
 import * as SLCT from '@radix-ui/react-select';
 import * as CSS from './select.css';
 import { kit } from '../../lib';
-import { ArrowDownIcon, SmallArrowDownIcon, SmallArrowUpIcon } from '../../lib/_icons';
+import { ArrowDownIcon, SmallArrowDownIcon, SmallArrowUpIcon } from '../../lib';
 import clsx from 'clsx';
 
 import type {

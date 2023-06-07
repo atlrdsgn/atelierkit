@@ -5134,6 +5134,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kit-app@workspace:apps/website":
+  version: 0.0.0-use.local
+  resolution: "kit-app@workspace:apps/website"
+  dependencies:
+    "@atlrdsgn/kit": "*"
+    "@types/node": ^20.1.3
+    "@types/react": ^18.2.6
+    "@types/react-dom": ^18.2.4
+    inter-ui: ^3.19.3
+    next: ^13.4.4
+    next-themes: ^0.2.1
+    prettier: ^2.8.8
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    sass: ^1.62.1
+    typescript: ^5.0.4
+    zustand: ^4.3.8
+  languageName: unknown
+  linkType: soft
+
 "kleur@npm:^4.1.5":
   version: 4.1.5
   resolution: "kleur@npm:4.1.5"

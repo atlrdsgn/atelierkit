@@ -1,5 +1,3 @@
-/** @format */
-
 import type { NociProps } from '../types';
 
 export const ArrowDownIcon = ({ color = 'currentColor', ...props }: NociProps) => {
