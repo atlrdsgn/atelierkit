@@ -1,5 +1,3 @@
-/** @format */
-
 import { hyper } from './src';
 import { lemon } from './src';
 import { slate } from './src';

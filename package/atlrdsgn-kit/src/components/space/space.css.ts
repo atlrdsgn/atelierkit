@@ -11,6 +11,11 @@ const SIZE_MAP = {
   lg: { height: kit.space.OPX },
   xl: { height: kit.space.RPX },
   xxl: { height: kit.space.UPX },
+  '3xl': { height: kit.space.VPX },
+  '4xl': { height: kit.space.WPX },
+  '5xl': { height: kit.space.XPX },
+  '6xl': { height: kit.space.YPX },
+  '7xl': { height: kit.space.ZPX },
 } as const;
 
 export const size = {

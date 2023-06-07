@@ -81,13 +81,6 @@ const SIZE_MAP = {
     padding: sp.padding.XSMALL,
     border: sp.border.XSMALL,
     borderRadius: sp.radii.XSMALL,
-
-    onHOVER: {
-      boxShadow: sp.shadows.SLATE.HOVER.XS,
-    },
-    onFOCUS: {
-      boxShadow: sp.shadows.SLATE.FOCUS.XS,
-    },
   },
   sm: {
     fontSize: kit.font.size.XS,
@@ -95,13 +88,6 @@ const SIZE_MAP = {
     padding: sp.padding.SMALL,
     border: sp.border.SMALL,
     borderRadius: sp.radii.SMALL,
-
-    onHOVER: {
-      boxShadow: sp.shadows.SLATE.HOVER.SM,
-    },
-    onFOCUS: {
-      boxShadow: sp.shadows.SLATE.FOCUS.SM,
-    },
   },
   md: {
     fontSize: kit.font.size.MD,
@@ -109,13 +95,6 @@ const SIZE_MAP = {
     padding: sp.padding.MEDIUM,
     border: sp.border.MEDIUM,
     borderRadius: sp.radii.MEDIUM,
-
-    onHOVER: {
-      boxShadow: sp.shadows.SLATE.HOVER.MD,
-    },
-    onFOCUS: {
-      boxShadow: sp.shadows.SLATE.FOCUS.MD,
-    },
   },
   lg: {
     fontSize: kit.font.size.LG,
@@ -123,13 +102,6 @@ const SIZE_MAP = {
     padding: sp.padding.LARGE,
     border: sp.border.LARGE,
     borderRadius: sp.radii.LARGE,
-
-    onHOVER: {
-      boxShadow: sp.shadows.SLATE.HOVER.LG,
-    },
-    onFOCUS: {
-      boxShadow: sp.shadows.SLATE.FOCUS.LG,
-    },
   },
 } as const;
 
@@ -138,34 +110,16 @@ const COLOR_MAP = {
     backgroundColor: kit.color.slate1,
     borderColor: kit.color.slate2,
     color: kit.color.slate6,
-    onHOVER: {
-      boxShadow: 'none',
-    },
-    onFOCUS: {
-      boxShadow: 'none',
-    },
   },
   hyper: {
     backgroundColor: kit.color.hyper5,
     borderColor: kit.color.hyper6,
     color: kit.color.white,
-    onHOVER: {
-      boxShadow: 'none',
-    },
-    onFOCUS: {
-      boxShadow: 'none',
-    },
   },
   neon: {
     backgroundColor: kit.color.slate1,
     borderColor: kit.color.slate2,
     color: kit.color.slate6,
-    onHOVER: {
-      boxShadow: rainbow_shadow.LIGHT.HOVER,
-    },
-    onFOCUS: {
-      boxShadow: 'none',
-    },
   },
 } as const;
 
@@ -187,12 +141,8 @@ const variant = {
     backgroundColor: value.backgroundColor,
     color: value.color,
 
-    ':hover': {
-      boxShadow: value.onHOVER.boxShadow,
-    },
-    ':focus': {
-      boxShadow: value.onFOCUS.boxShadow,
-    },
+    ':hover': {},
+    ':focus': {},
   })),
 } as const;
 
