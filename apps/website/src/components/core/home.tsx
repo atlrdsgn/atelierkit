@@ -2,7 +2,7 @@
 
 import React from 'react';
 import content from '../../../web.config.json';
-import { Container, Space, Text } from '@atlrdsgn/kit';
+import { Container, LogoIcon, Space, Text } from '@atlrdsgn/kit';
 
 function HomePage({ children }: { children: React.ReactNode }) {
   const { index } = content;
@@ -12,6 +12,12 @@ function HomePage({ children }: { children: React.ReactNode }) {
       width={'small'}
       align={'center'}>
       <Space size={'xxl'} />
+
+      <LogoIcon
+        width={48}
+        height={48}
+      />
+      <Space size={'lg'} />
       <Text
         align='center'
         color='slate10'
@@ -23,11 +29,13 @@ function HomePage({ children }: { children: React.ReactNode }) {
       <Space size='sm' />
       <Text
         color='slate7'
-        size='md'
+        size='lg'
         align='center'
         weight='medium'
         font='inter'>
         {index.subtitle}
+        <br />
+        {index.line2}
       </Text>
 
       <Space size='xxl' />

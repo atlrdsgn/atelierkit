@@ -13,12 +13,13 @@
 
   "index": {
     "introduction": "We'll be back.",
-    "subtitle": "We're updating a few things, and the documentation site will be back soon."
+    "subtitle": "We are updating a few things.",
+    "line2": "The documentation site will be back soon."
   },
 
   "components": {
-    "introduction": "@atlrdsgn/kit",
-    "subtitle": "An ever– expanding toolkit, for the disruptive.",
+    "introduction": "Atelierkit",
+    "subtitle": "An ever expanding component kit, for the disruptive.",
 
     "components": {}
   },

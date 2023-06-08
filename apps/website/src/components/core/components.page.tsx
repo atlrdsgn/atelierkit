@@ -2,9 +2,7 @@
 
 import React from 'react';
 import content from '../../../web.config.json';
-import { Container, Section, Text } from '@atlrdsgn/kit';
-import { Heading } from '@atlrdsgn/kit';
-import { Space } from '@atlrdsgn/kit';
+import { Container, Section, Text, Heading, Space } from '@atlrdsgn/kit';
 
 function ComponentsPage({ children }: { children?: React.ReactNode }) {
   const { components } = content;
@@ -27,8 +25,8 @@ function ComponentsPage({ children }: { children?: React.ReactNode }) {
           <Text
             color='volt5'
             align='center'
-            size='xxl'
-            weight='normal'
+            size='lg'
+            weight='lite'
             font='inter'>
             {components.subtitle}
           </Text>
