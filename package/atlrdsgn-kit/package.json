@@ -44,7 +44,7 @@
   "dependencies": {
     "@atlrdsgn/tsconfig": "*",
     "@radix-ui/react-avatar": "^1.0.2",
-    "@radix-ui/react-menubar": "^1.0.2",
+    "@radix-ui/react-menubar": "^1.0.3",
     "@radix-ui/react-select": "^1.2.1",
     "@radix-ui/react-switch": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.5",
