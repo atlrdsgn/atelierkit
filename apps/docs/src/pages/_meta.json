@@ -1,0 +1,16 @@
+{
+  "index": "Introduction",
+  "components": "Components v0.2.5",
+  "colour": "Colour",
+  "advanced": "Advanced",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  }
+}

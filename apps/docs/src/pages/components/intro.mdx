@@ -1,0 +1,93 @@
+### Component Introduction
+ 
+Aliqua ut id quis Lorem ipsum et anim.
+
+A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+
+### Get started.
+
+import { Steps } from 'nextra-theme-docs'
+ 
+<Steps>
+ 
+### Install the kit.
+ 
+`yarn add @atlrdsgn/kit`
+ 
+### Import `.scss` file and wrap your app.
+ 
+```tsx
+import '@atlrdsgn/kit/styles'
+import '...other_styles.css'
+
+import { KitProvider } from '@atlrdsgn/kit'
+
+export default function App({ Component, pageProps }) {
+  return (
+    <KitProvider>
+      <Component {...pageProps} />
+    </KitProvider>
+  )
+}
+```
+
+### Import and use a component.
+
+```tsx
+import { Button } from '@atlrdsgn/kit'
+
+export default function Home() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  )
+}
+```
+ 
+</Steps>
+
+
+
+#### You can use components individually, or import as many as you like.
+
+**Import an individual component**
+
+```tsx
+import { Canvas } from '@atlrdsgn/kit'
+
+export default function Home() {
+  return (
+    <div>
+      <Canvas />
+    </div>
+  )
+}
+```
+
+**Import multiple components**
+
+```tsx
+import { Canvas, Button, Section, Text } from '@atlrdsgn/kit'
+
+export default function Home() {
+  return (
+    <div>
+      <Canvas />
+      <Section>
+        <Text>Some text</Text>
+        <Button>Click me</Button>
+      </Section>
+    </div>
+  )
+}
+```
+
+
+
+
+
+
+### Documentation
+
+The documentation is available at [https://nextra.site](https://nextra.site).
