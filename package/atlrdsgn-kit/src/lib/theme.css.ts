@@ -121,7 +121,7 @@ export const theme = {
   space: {
     ZERO: '0px',
     NO: '0px',
-    DF: '16px', // IPX
+    DF: '16px', // IPX.. DEFAULT
     APX: '1px',
     BPX: '2px',
     CPX: '0.25rem', // 4px

@@ -1,0 +1,30 @@
+{
+  "global": {
+    "title": "Global",
+    "description": "Global settings for the site"
+  },
+
+  "meta": [
+    {
+      "name": "og:type",
+      "value": "website"
+    }
+  ],
+
+  "index": {
+    "introduction": "We'll be back.",
+    "subtitle": "We're updating a few things, and the documentation site will be back soon."
+  },
+
+  "components": {
+    "introduction": "@atlrdsgn/kit",
+    "subtitle": "An ever– expanding toolkit, for the disruptive.",
+
+    "components": {}
+  },
+
+  "footer": {
+    "componentlink": "/components",
+    "copyright": "© 2019 - 2020"
+  }
+}
