@@ -1,8 +1,12 @@
 {
   "index": "Introduction",
-  "components": "Components v0.2.5",
+  "components": "Components",
   "colour": "Colour",
   "advanced": "Advanced",
+  "changelog": {
+    "title": "Changelog",
+    "type": "page"
+  },
   "about": {
     "title": "About",
     "type": "page"
@@ -12,5 +16,9 @@
     "type": "page",
     "href": "https://twitter.com/shuding_",
     "newWindow": true
+  },
+  "github_link": {
+    "title": "Atelierkit",
+    "href": "https://github.com/atlrdsgn/atelierkit"
   }
 }
