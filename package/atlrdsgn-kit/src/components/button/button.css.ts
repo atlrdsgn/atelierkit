@@ -2,7 +2,6 @@
 
 import { style, styleVariants } from '@vanilla-extract/css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
-import { rainbow_shadow } from '../../lib/properties';
 import { kit } from '../../lib';
 
 const style_properties = {
@@ -111,6 +110,11 @@ const COLOR_MAP = {
     borderColor: kit.color.slate2,
     color: kit.color.slate6,
   },
+  jade: {
+    backgroundColor: kit.color.volt8,
+    borderColor: kit.color.volt9,
+    color: kit.color.volt1,
+  },
   hyper: {
     backgroundColor: kit.color.hyper5,
     borderColor: kit.color.hyper6,
@@ -162,10 +166,10 @@ const BUTTON_BASE = style({
   justifyContent: 'center',
   alignItems: 'center',
   verticalAlign: 'middle',
-  gap: '4px',
+  gap: '8px',
 
   fontFamily: kit.font.family.system,
-  fontWeight: kit.font.weight.MEDIUM,
+  fontWeight: kit.font.weight.REGULAR,
   letterSpacing: '-0.03em',
 
   transition: '0.2s cubic-bezier(0.3, 0, 0.5, 1)',
@@ -193,3 +197,42 @@ export const button = recipe({
     variant: 'slate',
   },
 });
+
+/*
+/* Button
+
+CSS: .btn
+React: <Button>
+Primer::ButtonComponent.new
+
+button: primary, green, medium
+
+CSS: btn-primary
+React: ButtonPrimary
+
+
+
+///
+box-sizing: border-box;
+///
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 8px;
+///
+width: 100px;
+height: 30px;
+///
+background: #00C454;
+///
+border: 1px solid rgba(27, 31, 36, 0.15);
+///
+box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.1);
+border-radius: 9px;
+
+///
+flex: none;
+order: 0;
+flex-grow: 0;
+*/
