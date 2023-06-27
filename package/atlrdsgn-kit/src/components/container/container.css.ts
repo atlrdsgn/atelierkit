@@ -33,7 +33,7 @@ const ALIGNMENT_MAP = {
 } as const;
 
 const BORDER_API = {
-  true: { border: `1px solid ${kit.color.slate3}` },
+  true: { border: `1px solid ${kit.color.slate3}`, backgroundColor: kit.color.slate3 },
 };
 
 /** -------------------------------------------- */
@@ -55,6 +55,7 @@ export const align = {
 export const border = {
   ...styleVariants(BORDER_API, (value) => ({
     border: value.border,
+    backgroundColor: value.backgroundColor,
   })),
 } as const;
 

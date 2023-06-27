@@ -1,5 +1,3 @@
-/** @format */
-
 import { style, styleVariants } from '@vanilla-extract/css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 import { kit } from '../../lib';
@@ -10,6 +8,7 @@ const FONT_MAP = {
   mono: { fontFamily: kit.font.family.mono },
 } as const;
 
+/*
 const SIZE_MAP = {
   xs: { fontSize: kit.font.size.XS, lineHeight: kit.font.lineheight.XS },
   sm: { fontSize: kit.font.size.SM, lineHeight: kit.font.lineheight.SM },
@@ -25,6 +24,12 @@ const SIZE_MAP = {
   '8xl': { fontSize: kit.font.size['8XL'], lineHeight: kit.font.lineheight['8XL'] },
   '9xl': { fontSize: kit.font.size['9XL'], lineHeight: kit.font.lineheight['9XL'] },
 } as const;
+*/
+
+const SIZE_MAP = Object.entries(kit.font.size).reduce((acc, [size, fontSize]) => {
+  acc[size] = { fontSize, lineHeight: kit.font.lineheight[size] };
+  return acc;
+}, {} as Record<string, { fontSize: string; lineHeight: string }>);
 
 const WEIGHT_MAP = {
   superlite: { fontWeight: kit.font.weight.SUPRLITE },
@@ -43,36 +48,37 @@ const ALIGNMENT_MAP = {
   right: { textAlign: 'right' },
 } as const;
 
-export const font = {
-  ...styleVariants(FONT_MAP, (value) => ({
-    fontFamily: value.fontFamily,
-  })),
-} as const;
+/** ---------------------------------------------------------- */
 
+const font = styleVariants(FONT_MAP, (value) => ({
+  fontFamily: value.fontFamily,
+}));
+
+/*
 export const size = {
   ...styleVariants(SIZE_MAP, (value) => ({
     fontSize: value.fontSize,
     lineHeight: value.lineHeight,
   })),
 } as const;
+*/
 
-export const weight = {
-  ...styleVariants(WEIGHT_MAP, (value) => ({
-    fontWeight: value.fontWeight,
-  })),
-} as const;
+const size = styleVariants(SIZE_MAP, (value) => ({
+  fontSize: value.fontSize,
+  lineHeight: value.lineHeight,
+}));
 
-export const color = {
-  ...styleVariants(kit.color, (value) => ({
-    color: value,
-  })),
-} as const;
+const weight = styleVariants(WEIGHT_MAP, (value) => ({
+  fontWeight: value.fontWeight,
+}));
 
-export const align = {
-  ...styleVariants(ALIGNMENT_MAP, (value) => ({
-    textAlign: value.textAlign,
-  })),
-} as const;
+const color = styleVariants(kit.color, (value) => ({
+  color: value,
+}));
+
+const align = styleVariants(ALIGNMENT_MAP, (value) => ({
+  textAlign: value.textAlign,
+}));
 
 /** ------------------------------------------------------- */
 
@@ -88,6 +94,17 @@ export type TextSizeVariants = keyof typeof size;
 export type TextWeightVariants = keyof typeof weight;
 export type TextColorVariants = keyof typeof color;
 export type TextAlignVariants = keyof typeof align;
+
+/**
+ * The `text` recipe combines the `font`, `size`, `weight`, `color`, and `align` style variants
+ * into a single CSS rule, with default values set.
+ *
+ * Usage:
+ *
+ * <Text font="system" size="md" weight="medium" color="slate5" align="left" />
+ * (or)
+ * `className={text({ font: 'system', size: 'md', weight: 'medium', color: 'slate5', align: 'left' })}`
+ */
 export type TextVariantProps = RecipeVariants<typeof text>;
 export const text = recipe({
   base: TEXT_BASE,

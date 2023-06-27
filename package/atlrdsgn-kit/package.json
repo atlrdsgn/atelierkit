@@ -1,7 +1,7 @@
 {
   "name": "@atlrdsgn/kit",
   "packageManager": "yarn@3.2.2",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Atelierkit",
   "author": "chvndler",
   "homepage": "https://docs.atlrdsgn.com",
@@ -23,7 +23,7 @@
       "import": "./dist/index.js",
       "require": "./dist/index.umd.cjs"
     },
-    "./styles": {
+    "./css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     }

@@ -21,6 +21,6 @@ function MyButton() {
   );
 }
 
-export default function MyApp() {
+export default function Button() {
   return <MyButton />;
 }
