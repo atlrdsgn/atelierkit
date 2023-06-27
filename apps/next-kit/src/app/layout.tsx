@@ -1,5 +1,5 @@
 import '@/scss/global.scss';
-import '@atlrdsgn/kit/styles';
+import '@atlrdsgn/kit/css';
 
 import ThemeProvider from '@/components/theme-provider';
 import { siteURL } from '@/lib/const';

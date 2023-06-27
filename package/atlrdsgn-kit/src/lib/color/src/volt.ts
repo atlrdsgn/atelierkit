@@ -1,5 +1,3 @@
-/** @format */
-
 export const volt = {
   volt0: `#eeffec`,
   volt1: `#ddffdb`,

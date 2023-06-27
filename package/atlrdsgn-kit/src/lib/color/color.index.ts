@@ -5,6 +5,20 @@ import { sapphire } from './src';
 import { volt } from './src';
 import { grays, pales } from './src';
 
+/**
+ *
+ * @colours
+ *
+ * i currently have a [5] colour system.
+ *
+ * - hyper [magenta]
+ * - lemon [yellow]
+ * - slate [blue/gray]
+ * - sapphire [blue]
+ * - volt [lime]
+ *
+ */
+
 export const kitColorPalette = {
   transparent: 'transparent',
   current: 'currentColor',

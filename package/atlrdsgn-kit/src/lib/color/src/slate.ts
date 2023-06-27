@@ -1,5 +1,3 @@
-/** @format */
-
 export const slate = {
   slate0: `#f4f4f5`,
   slate1: `#e7e9eb`,

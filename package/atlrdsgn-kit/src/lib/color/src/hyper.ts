@@ -1,5 +1,3 @@
-/** @format */
-
 export const hyper = {
   hyper0: `#ffebfd`,
   hyper1: `#ffdafc`,
@@ -32,4 +30,22 @@ export const hyperRGBA = {
   hyper11: `rgba(65, 15, 59, 1)`,
   hyper12: `rgba(41, 7, 37, 1)`,
   hyper13: `rgba(17, 0, 15, 1)`,
+} as const;
+
+export const fuse = {
+  /**
+   *
+   * this is @tailwindcss/fuschia
+   */
+  fuse0: `#fdf4ff`,
+  fuse1: `#fae8ff`,
+  fuse2: `#f5d0fe`,
+  fuse3: `#f0abfc`,
+  fuse4: `#e879f9`,
+  fuse5: `#d946ef`,
+  fuse6: `#c026d3`,
+  fuse7: `#a21caf`,
+  fuse8: `#86198f`,
+  fuse9: `#701a75`,
+  fuse10: `#4a044e`,
 } as const;

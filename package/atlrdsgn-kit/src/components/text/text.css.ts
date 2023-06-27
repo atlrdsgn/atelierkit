@@ -8,7 +8,6 @@ const FONT_MAP = {
   mono: { fontFamily: kit.font.family.mono },
 } as const;
 
-/*
 const SIZE_MAP = {
   xs: { fontSize: kit.font.size.XS, lineHeight: kit.font.lineheight.XS },
   sm: { fontSize: kit.font.size.SM, lineHeight: kit.font.lineheight.SM },
@@ -24,12 +23,6 @@ const SIZE_MAP = {
   '8xl': { fontSize: kit.font.size['8XL'], lineHeight: kit.font.lineheight['8XL'] },
   '9xl': { fontSize: kit.font.size['9XL'], lineHeight: kit.font.lineheight['9XL'] },
 } as const;
-*/
-
-const SIZE_MAP = Object.entries(kit.font.size).reduce((acc, [size, fontSize]) => {
-  acc[size] = { fontSize, lineHeight: kit.font.lineheight[size] };
-  return acc;
-}, {} as Record<string, { fontSize: string; lineHeight: string }>);
 
 const WEIGHT_MAP = {
   superlite: { fontWeight: kit.font.weight.SUPRLITE },
