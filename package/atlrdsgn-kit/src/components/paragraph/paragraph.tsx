@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import * as css from './para.css';
 import clsx from 'clsx';
@@ -29,7 +27,6 @@ type PARAGRAPH_PRIMITIVE_PROPS = BASE_PARAGRAPH_PROPS &
   ParagraphVariantProps &
   React.HTMLAttributes<HTMLParagraphElement>;
 export type ParagraphProps = PARAGRAPH_PRIMITIVE_PROPS;
-
 export const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
   ({ children, className, size, color, weight, align, font, ...rest }, ref) => {
     return (
@@ -42,3 +39,5 @@ export const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
     );
   },
 );
+
+Paragraph.displayName = 'Paragraph';
