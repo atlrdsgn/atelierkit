@@ -26,7 +26,7 @@ __metadata:
     "@radix-ui/react-select": ^1.2.2
     "@radix-ui/react-switch": ^1.0.2
     "@radix-ui/react-tooltip": ^1.0.6
-    "@types/node": ^20.3.1
+    "@types/node": ^20.3.2
     "@types/react": ^18.2.12
     "@types/react-dom": ^18.2.4
     "@vanilla-extract/css": ^1.11.1
@@ -2582,10 +2582,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.3.1":
-  version: 20.3.1
-  resolution: "@types/node@npm:20.3.1"
-  checksum: 63a393ab6d947be17320817b35d7277ef03728e231558166ed07ee30b09fd7c08861be4d746f10fdc63ca7912e8cd023939d4eab887ff6580ff704ff24ed810c
+"@types/node@npm:^20.3.2":
+  version: 20.3.2
+  resolution: "@types/node@npm:20.3.2"
+  checksum: 5929ce2b9b12b1e2a2304a0921a953c72a81f5753ad39ac43b99ce6312fbb2b4fb5bc6b60d64a2550704e3223cd5de1299467d36085ac69888899db978f2653a
   languageName: node
   linkType: hard
 
@@ -4453,7 +4453,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs-app@workspace:apps/docs"
   dependencies:
-    "@types/node": ^20.3.1
+    "@types/node": ^20.3.2
     next: ^13.4.4
     nextra: ^2.8.0
     nextra-theme-docs: ^2.8.0
@@ -6786,7 +6786,7 @@ __metadata:
   resolution: "kit-app@workspace:apps/website"
   dependencies:
     "@atlrdsgn/kit": "*"
-    "@types/node": ^20.3.1
+    "@types/node": ^20.3.2
     "@types/react": ^18.2.12
     "@types/react-dom": ^18.2.4
     clsx: ^1.2.1
@@ -8044,7 +8044,7 @@ __metadata:
   resolution: "next-app@workspace:apps/next-kit"
   dependencies:
     "@atlrdsgn/kit": "*"
-    "@types/node": ^20.3.1
+    "@types/node": ^20.3.2
     "@types/react": ^18.2.12
     "@types/react-dom": ^18.2.4
     inter-ui: ^3.19.3
