@@ -196,6 +196,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/font@npm:^13.4.7":
+  version: 13.4.7
+  resolution: "@next/font@npm:13.4.7"
+  checksum: 87680e1c3f69cdad634e5b85904c2cf99bedea42b1127cb82152698fe71f97d5ca2b4625b17a6d7f7433bc19d96a5c2bb0b20ef95c816d232818eda9e65f7377
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-arm64@npm:13.4.4":
   version: 13.4.4
   resolution: "@next/swc-darwin-arm64@npm:13.4.4"
@@ -374,7 +381,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.3.1":
+"@types/node@npm:^20.3.2":
   version: 20.3.2
   resolution: "@types/node@npm:20.3.2"
   checksum: 5929ce2b9b12b1e2a2304a0921a953c72a81f5753ad39ac43b99ce6312fbb2b4fb5bc6b60d64a2550704e3223cd5de1299467d36085ac69888899db978f2653a
@@ -1074,7 +1081,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs-app@workspace:."
   dependencies:
-    "@types/node": ^20.3.1
+    "@next/font": ^13.4.7
+    "@types/node": ^20.3.2
     next: ^13.4.4
     nextra: ^2.8.0
     nextra-theme-docs: ^2.8.0

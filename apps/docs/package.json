@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/atlrdsgn/atelierkit/apps/docs#readme",
   "dependencies": {
+    "@next/font": "^13.4.7",
     "next": "^13.4.4",
     "nextra": "^2.8.0",
     "nextra-theme-docs": "^2.8.0",
