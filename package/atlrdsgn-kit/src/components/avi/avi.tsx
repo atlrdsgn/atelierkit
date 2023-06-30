@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import * as AVI from '@radix-ui/react-avatar';
 import * as CSS from './avi.css';
@@ -15,7 +13,9 @@ interface AVI_PROPS {
   shape?: AviShape;
 }
 
-type AviPrimitiveProps = AVI_PROPS & AviVariantProps & React.ComponentProps<typeof AVI.Root>;
+type AviPrimitiveProps = AVI_PROPS &
+  AviVariantProps &
+  React.ComponentProps<typeof AVI.Root>;
 export type AviProps = AviPrimitiveProps;
 const AviComponent = React.forwardRef<React.ElementRef<typeof AVI.Root>, AviProps>(
   ({ className, size = 'xs', shape = 'rounded', ...props }, forwardedRef) => {
@@ -58,33 +58,35 @@ export type ImageProps = React.ComponentProps<typeof AVI.Image> & {
    */
   onLoadingChangeState?: (status: 'idle' | 'loading' | 'loaded' | 'error') => void;
 };
-const AviImageComponent = React.forwardRef<React.ElementRef<typeof AVI.Image>, ImageProps>(
-  ({ className, ...props }, forwardedRef) => {
-    return (
-      <AviImage
-        {...props}
-        ref={forwardedRef}
-        className={clsx(CSS.avi_img, className)}
-      />
-    );
-  },
-);
+const AviImageComponent = React.forwardRef<
+  React.ElementRef<typeof AVI.Image>,
+  ImageProps
+>(({ className, ...props }, forwardedRef) => {
+  return (
+    <AviImage
+      {...props}
+      ref={forwardedRef}
+      className={clsx(CSS.avi_img, className)}
+    />
+  );
+});
 
 /** ------------------------------------------------------------------------------- */
 
 const demo = 'https://cdn.atlrdsgn.com/assets/github/atlrdsgn/A2.jpg';
-const AviDemoImageComponent = React.forwardRef<React.ElementRef<typeof AVI.Image>, ImageProps>(
-  ({ className, ...props }, forwardedRef) => {
-    return (
-      <AviImage
-        {...props}
-        ref={forwardedRef}
-        src={demo}
-        className={clsx(CSS.avi_img, className)}
-      />
-    );
-  },
-);
+const AviDemoImageComponent = React.forwardRef<
+  React.ElementRef<typeof AVI.Image>,
+  ImageProps
+>(({ className, ...props }, forwardedRef) => {
+  return (
+    <AviImage
+      {...props}
+      ref={forwardedRef}
+      src={demo}
+      className={clsx(CSS.avi_img, className)}
+    />
+  );
+});
 
 /** -------------------------- Exports --------------------------------- */
 

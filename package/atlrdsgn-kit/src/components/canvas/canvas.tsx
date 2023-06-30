@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import * as css from './canvas.css';
 
@@ -10,27 +8,31 @@ interface CanvasProps {
   className?: string;
 }
 
-export const Canvas = React.forwardRef<HTMLDivElement, CanvasProps>(({ children, ...rest }, forwardedRef) => {
-  return (
-    <div
-      ref={forwardedRef}
-      className={clsx(css.canvas)}
-      {...rest}>
-      {children}
-    </div>
-  );
-});
+export const Canvas = React.forwardRef<HTMLDivElement, CanvasProps>(
+  ({ children, ...rest }, forwardedRef) => {
+    return (
+      <div
+        ref={forwardedRef}
+        className={clsx(css.canvas)}
+        {...rest}>
+        {children}
+      </div>
+    );
+  },
+);
 
-export const CanvasBlur = React.forwardRef<HTMLDivElement, CanvasProps>(({ children, ...rest }, forwardedRef) => {
-  return (
-    <div
-      ref={forwardedRef}
-      className={clsx(css.canvas_blur)}
-      {...rest}>
-      {children}
-    </div>
-  );
-});
+export const CanvasBlur = React.forwardRef<HTMLDivElement, CanvasProps>(
+  ({ children, ...rest }, forwardedRef) => {
+    return (
+      <div
+        ref={forwardedRef}
+        className={clsx(css.canvas_blur)}
+        {...rest}>
+        {children}
+      </div>
+    );
+  },
+);
 
 Canvas.displayName = 'Canvas';
 CanvasBlur.displayName = 'Blurred-Canvas';

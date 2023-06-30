@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import type { ButtonSize, ButtonVariant } from './button.css';
 

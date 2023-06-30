@@ -1,5 +1,3 @@
-/** @format */
-
 import { style } from '@vanilla-extract/css';
 import { kit } from '../../lib';
 
