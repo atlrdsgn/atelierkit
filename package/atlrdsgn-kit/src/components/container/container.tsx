@@ -1,30 +1,21 @@
 import React from 'react';
-import * as css from './container.css';
+import clsx from 'clsx';
+import { container } from './container.css';
 import type {
-  ContainerVariantProps,
-  ContainerWidth,
   ContainerAlignment,
   ContainerBorder,
+  ContainerVariantProps,
+  ContainerWidth,
 } from './container.css';
 
-import clsx from 'clsx';
-
-interface BASE_CONTAINER_PROPS {
-  children: React.ReactNode;
-
-  /**
-   *
-   * className to be passed to the section.
-   */
-  className?: string;
-  width?: ContainerWidth;
-  align?: ContainerAlignment;
-  border?: ContainerBorder | boolean;
-}
-
-type ContainerProps = BASE_CONTAINER_PROPS &
-  ContainerVariantProps &
-  React.HTMLAttributes<HTMLDivElement>;
+export type ContainerProps = ContainerVariantProps &
+  React.HTMLAttributes<HTMLDivElement> & {
+    children: React.ReactNode;
+    className?: string;
+    width?: ContainerWidth;
+    align?: ContainerAlignment;
+    border?: ContainerBorder | boolean;
+  };
 
 export const Container: React.FC<ContainerProps> = ({
   children,
@@ -37,12 +28,10 @@ export const Container: React.FC<ContainerProps> = ({
   return (
     <div
       {...rest}
-      className={clsx(className, css.container({ width, align, border }))}>
+      className={clsx(className, container({ width, align, border }))}>
       {children}
     </div>
   );
 };
 
 Container.displayName = 'Container';
-
-export type { ContainerProps };

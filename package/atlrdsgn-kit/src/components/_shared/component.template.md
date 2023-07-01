@@ -1,6 +1,4 @@
-<!-- @format -->
-
-## Component Name
+# Component Name
 
 Component Parts
 

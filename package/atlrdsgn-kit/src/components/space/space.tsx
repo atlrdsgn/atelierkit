@@ -1,23 +1,23 @@
-/** @format */
+import React, { forwardRef } from 'react';
+import { space as createSpace, SpaceSizeProps } from './space.css';
 
-import React from 'react';
-import * as css from './space.css';
-
-import type { SpaceVariantProps, SpaceSizeProps } from './space.css';
-
-interface BASE_SPACE_PROPS {
+interface SpaceProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   size?: SpaceSizeProps;
 }
 
-export type SpaceProps = BASE_SPACE_PROPS & SpaceVariantProps & React.HTMLAttributes<HTMLDivElement>;
+export const Space = forwardRef<HTMLDivElement, SpaceProps>(
+  ({ size = 'sm', className, ...props }, forwardedRef) => {
+    const spaceClassName = createSpace({ size });
 
-export const Space = React.forwardRef<HTMLDivElement, SpaceProps>(({ size = 'sm', ...props }, forwardedRef) => (
-  <div
-    {...props}
-    ref={forwardedRef}
-    className={css.space({ size })}
-  />
-));
+    return (
+      <div
+        {...props}
+        ref={forwardedRef}
+        className={className ? `${className} ${spaceClassName}` : spaceClassName}
+      />
+    );
+  },
+);
 
 Space.displayName = 'Space';

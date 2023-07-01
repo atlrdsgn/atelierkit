@@ -1,5 +1,3 @@
-/** @format */
-
 import { style, styleVariants } from '@vanilla-extract/css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 import { kit } from '../../lib';

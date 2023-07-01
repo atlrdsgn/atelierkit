@@ -1,8 +1,6 @@
-/** @format */
-
 import type { InputSize, InputColorVariant } from './input.css';
 
-export interface BASE_INPUT_PROPS {
+export interface BaseInputProps {
   /**
    *
    * class prop for clsx

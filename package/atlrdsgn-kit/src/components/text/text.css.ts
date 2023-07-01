@@ -47,15 +47,6 @@ const font = styleVariants(FONT_MAP, (value) => ({
   fontFamily: value.fontFamily,
 }));
 
-/*
-export const size = {
-  ...styleVariants(SIZE_MAP, (value) => ({
-    fontSize: value.fontSize,
-    lineHeight: value.lineHeight,
-  })),
-} as const;
-*/
-
 const size = styleVariants(SIZE_MAP, (value) => ({
   fontSize: value.fontSize,
   lineHeight: value.lineHeight,

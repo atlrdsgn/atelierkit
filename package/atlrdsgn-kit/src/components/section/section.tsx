@@ -1,10 +1,7 @@
-/** @format */
-
 import React from 'react';
-import * as css from './section.css';
-import type { SectionVariantProps, SectionSize } from './section.css';
-
 import clsx from 'clsx';
+import * as css from './section.css';
+import type { SectionSize, SectionVariantProps } from './section.css';
 
 interface BASE_SECTION_PROPS {
   children: React.ReactNode;
@@ -17,9 +14,16 @@ interface BASE_SECTION_PROPS {
   size?: SectionSize;
 }
 
-export type SectionProps = BASE_SECTION_PROPS & SectionVariantProps & React.HTMLAttributes<HTMLDivElement>;
+export type SectionProps = BASE_SECTION_PROPS &
+  SectionVariantProps &
+  React.HTMLAttributes<HTMLDivElement>;
 
-export const Section: React.FC<SectionProps> = ({ children, className, size = 'vw', ...rest }) => {
+export const Section: React.FC<SectionProps> = ({
+  children,
+  className,
+  size = 'vw',
+  ...rest
+}) => {
   return (
     <div
       {...rest}

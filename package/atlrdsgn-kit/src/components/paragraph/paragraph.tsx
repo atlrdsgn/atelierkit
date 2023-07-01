@@ -1,15 +1,13 @@
-import React from 'react';
-import * as css from './para.css';
+import React, { forwardRef } from 'react';
 import clsx from 'clsx';
-
+import { paragraph } from './para.css';
 import type {
-  ParagraphVariantProps,
-  //..
-  ParagraphSizeProps,
-  ParagraphColorProps,
-  ParagraphWeightProps,
   ParagraphAlignProps,
+  ParagraphColorProps,
   ParagraphFontProps,
+  ParagraphSizeProps,
+  ParagraphVariantProps,
+  ParagraphWeightProps,
 } from './para.css';
 
 interface BASE_PARAGRAPH_PROPS {
@@ -27,12 +25,12 @@ type PARAGRAPH_PRIMITIVE_PROPS = BASE_PARAGRAPH_PROPS &
   ParagraphVariantProps &
   React.HTMLAttributes<HTMLParagraphElement>;
 export type ParagraphProps = PARAGRAPH_PRIMITIVE_PROPS;
-export const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
+export const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
   ({ children, className, size, color, weight, align, font, ...rest }, ref) => {
     return (
       <p
         ref={ref}
-        className={clsx(className, css.paragraph({ size, color, weight, align, font }))}
+        className={clsx(className, paragraph({ size, color, weight, align, font }))}
         {...rest}>
         {children}
       </p>

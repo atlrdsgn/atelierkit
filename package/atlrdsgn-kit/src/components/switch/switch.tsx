@@ -1,9 +1,9 @@
-/** @format */
-
-import React from 'react';
-import * as SWI from '@radix-ui/react-switch';
-import * as css from './switch.css';
+import React, { forwardRef, ElementRef } from 'react';
+import { Root as SwitchRoot, Thumb as SwitchThumb } from '@radix-ui/react-switch';
+import { switchToggle, switchRoot } from './switch.css';
 import clsx from 'clsx';
+
+import type { SwitchToggleVariantProps } from './switch.css';
 
 interface BASE_SWITCH_PROPS {
   className?: string;
@@ -55,14 +55,23 @@ interface BASE_SWITCH_PROPS {
   value?: string;
 }
 
-export type SwitchProps = BASE_SWITCH_PROPS & React.ComponentProps<typeof SWI.Root>;
-const SwitchRootComponent = (props: SwitchProps) => {
-  const { className, asChild, defaultChecked, checked, onCheckedChange, disabled, required, name, value, ...rest } =
-    props;
+export type SwitchProps = BASE_SWITCH_PROPS & React.ComponentProps<typeof SwitchRoot>;
+const SwitchRootComponent: React.FC<SwitchProps> = ({
+  className,
+  asChild,
+  defaultChecked,
+  checked,
+  onCheckedChange,
+  disabled,
+  required,
+  name,
+  value,
+  ...rest
+}) => {
   return (
-    <SWI.Root
+    <SwitchRoot
       {...rest}
-      className={clsx(className, css.switch_root)}
+      className={clsx(className, switchRoot)}
       defaultChecked={defaultChecked}
       checked={checked}
       onCheckedChange={onCheckedChange}
@@ -74,19 +83,36 @@ const SwitchRootComponent = (props: SwitchProps) => {
   );
 };
 
-export type ToggleProps = React.ComponentProps<typeof SWI.Thumb>;
-const SwitchToggleComponent = React.forwardRef<React.ElementRef<typeof SWI.Thumb>, ToggleProps>((props, ref) => {
-  const { className, asChild = false, ...rest } = props;
-  return (
-    <SWI.Thumb
-      {...rest}
-      ref={ref}
-      className={clsx(className, css.switch_toggle)}
-    />
-  );
-});
+/**
+ * --------------------------------------------
+ * [SwitchToggleVariantProps]
+ * holds the props (size) and (variant) for the ToggleComponent.
+ */
+export type ToggleProps = SwitchToggleVariantProps &
+  React.ComponentProps<typeof SwitchThumb>;
 
-/** -------------------------------------------- */
+const SwitchToggleComponent = forwardRef<ElementRef<typeof SwitchThumb>, ToggleProps>(
+  (props, ref) => {
+    const {
+      className,
+      size = 'small',
+      variant = 'default',
+      asChild = false,
+      ...rest
+    } = props;
+
+    return (
+      <SwitchThumb
+        {...rest}
+        ref={ref}
+        asChild={asChild}
+        className={clsx(className, switchToggle({ size, variant }))}
+      />
+    );
+  },
+);
+
+/** ------------------- exports ------------------------- */
 
 export const Switch: React.FC<SwitchProps> & {
   Toggle: typeof SwitchToggleComponent;

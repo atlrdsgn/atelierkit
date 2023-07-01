@@ -1,18 +1,15 @@
-/** @format */
-
-import React from 'react';
-import * as css from './input.css';
+import React, { forwardRef } from 'react';
 import clsx from 'clsx';
-
+import { input_root, input_label, input_field } from './input.css';
 import type { InputVariantProps } from './input.css';
-import type { BASE_INPUT_PROPS, InputRootProps, InputLabelProps } from './input.types';
+import type { BaseInputProps, InputRootProps, InputLabelProps } from './input.types';
 
-const InputRootComponent = React.forwardRef<HTMLDivElement, InputRootProps>(
+const InputRoot = forwardRef<HTMLDivElement, InputRootProps>(
   ({ children, className, ...props }, ref) => {
     return (
       <div
         ref={ref}
-        className={clsx(className, css.input_root)}
+        className={clsx(className, input_root)}
         {...props}>
         {children}
       </div>
@@ -20,12 +17,12 @@ const InputRootComponent = React.forwardRef<HTMLDivElement, InputRootProps>(
   },
 );
 
-const InputLabelComponent = React.forwardRef<HTMLLabelElement, InputLabelProps>(
+const InputLabel = forwardRef<HTMLLabelElement, InputLabelProps>(
   ({ children, className, ...props }, ref) => {
     return (
       <label
         ref={ref}
-        className={clsx(className, css.input_label)}
+        className={clsx(className, input_label)}
         {...props}>
         <span>{children}</span>
       </label>
@@ -33,14 +30,17 @@ const InputLabelComponent = React.forwardRef<HTMLLabelElement, InputLabelProps>(
   },
 );
 
-type InputPrimitiveProps = BASE_INPUT_PROPS & InputVariantProps & React.HTMLAttributes<HTMLInputElement>;
-export type InputProps = InputPrimitiveProps;
-const InputFieldComponent = React.forwardRef<HTMLInputElement, InputProps>(
+type InputPrimitiveProps = BaseInputProps &
+  InputVariantProps &
+  React.HTMLAttributes<HTMLInputElement>;
+type InputProps = InputPrimitiveProps;
+
+const InputField = forwardRef<HTMLInputElement, InputProps>(
   ({ className, size = 'medium', variant = 'slate', ...rest }, ref) => {
     return (
       <input
         ref={ref}
-        className={clsx(className, css.input_field({ size, variant }))}
+        className={clsx(className, input_field({ size, variant }))}
         {...rest}
       />
     );
@@ -50,13 +50,13 @@ const InputFieldComponent = React.forwardRef<HTMLInputElement, InputProps>(
 /** ---------------------------------------------------------- */
 
 export const Input: React.FC<InputProps> & {
-  Flex: typeof InputRootComponent;
-  Label: typeof InputLabelComponent;
-} = (props) => <InputFieldComponent {...props} />;
+  Flex: typeof InputRoot;
+  Label: typeof InputLabel;
+} = (props) => <InputField {...props} />;
 
-Input.Flex = InputRootComponent;
-Input.Label = InputLabelComponent;
+Input.Flex = InputRoot;
+Input.Label = InputLabel;
 
 Input.displayName = 'Input';
-InputRootComponent.displayName = 'Input.Flex';
-InputLabelComponent.displayName = 'Input.Label';
+InputRoot.displayName = 'Input.Flex';
+InputLabel.displayName = 'Input.Label';

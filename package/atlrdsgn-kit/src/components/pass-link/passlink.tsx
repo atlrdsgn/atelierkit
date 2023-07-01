@@ -1,8 +1,7 @@
-import React from 'react';
-import * as styles from './passlink.css';
+import React, { forwardRef } from 'react';
 import clsx from 'clsx';
-
-import type { LinkSizeProps, LinkColorProps, LinkFontProps } from './passlink.css';
+import { link } from './passlink.css';
+import type { LinkColorProps, LinkFontProps, LinkSizeProps } from './passlink.css';
 
 interface LinkElementProps {
   children: React.ReactNode;
@@ -24,7 +23,7 @@ interface LinkElementProps {
 }
 
 export type PassLinkProps = LinkElementProps & React.HTMLAttributes<HTMLAnchorElement>;
-export const PassLink = React.forwardRef<HTMLAnchorElement, PassLinkProps>(
+export const PassLink = forwardRef<HTMLAnchorElement, PassLinkProps>(
   (
     {
       children,
@@ -42,7 +41,7 @@ export const PassLink = React.forwardRef<HTMLAnchorElement, PassLinkProps>(
       ref={forwardedRef}
       href={href}
       target={target}
-      className={clsx(styles.link({ size, variant }), className)}
+      className={clsx(link({ size, variant }), className)}
       {...rest}>
       {children}
     </a>
