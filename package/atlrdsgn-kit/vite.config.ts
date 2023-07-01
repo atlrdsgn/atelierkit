@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 import react from '@vitejs/plugin-react';
+import zipPack from 'vite-plugin-zip-pack';
 import banner from 'vite-plugin-banner';
 import dts from 'vite-plugin-dts';
 import path from 'path';
@@ -41,6 +42,10 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    zipPack({
+      outDir: 'pkg',
+      outFileName: 'kit.zip',
+    }),
     banner(`
     atelierkit© v${process.env.npm_package_version}. 
     Copyright © 2023 atlrdsgn®. All rights reserved.
