@@ -1,44 +1,31 @@
----
-title: Switch
-description: A control that allows the user to toggle between checked and not checked.
-component: true
-radix:
-  link: https://www.radix-ui.com/docs/primitives/components/switch
-  api: https://www.radix-ui.com/docs/primitives/components/switch#api-reference
----
+### Switch Component
 
-
-
-## Installation
-
-<Tabs defaultValue="cli">
-
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-<TabsContent value="cli">
+#### Installation
 
 ```bash
-npx shadcn-ui@latest add switch
+yarn add @atlrdsgn/kit
 ```
 
-</TabsContent>
 
-
-</Tabs>
-
-## Usage
+#### Usage
 
 ```tsx
 import { Switch } from "@/components/ui/switch"
+
+<Switch>
+  <Switch.Toggle />
+</Switch>
 ```
 
-```tsx
-<Switch />
-```
 
-## Examples
+### Examples
+
+<iframe src="https://codesandbox.io/embed/kit-switch-djn6qs?fontsize=12&hidenavigation=1&theme=light&view=preview"
+     style={{height: '300px', width: '100%', border: '2px solid blue', borderRadius: '12px', overflow: 'hidden'}}
+     title="kit.switch"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
 
 ### Form
 
