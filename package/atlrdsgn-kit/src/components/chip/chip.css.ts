@@ -1,5 +1,3 @@
-/** @format */
-
 import { style, styleVariants } from '@vanilla-extract/css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 import { component_shadows } from '../../lib/properties';

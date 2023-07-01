@@ -26,7 +26,7 @@ function ComponentsPage({ children }: { children?: React.ReactNode }) {
             color='volt5'
             align='center'
             size='lg'
-            weight='lite'
+            weight='normal'
             font='inter'>
             {components.subtitle}
           </Text>

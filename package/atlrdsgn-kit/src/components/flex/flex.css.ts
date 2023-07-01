@@ -32,30 +32,34 @@ const GAP_MAP = {
   xl: { gap: kit.space.IPX },
 } as const;
 
-const direction = {
-  ...styleVariants(DIR_MAP, (value) => ({
-    flexDirection: value.flexDirection,
-  })),
+const WRAP_MAP = {
+  wrap: { flexWrap: 'wrap' },
+  nowrap: { flexWrap: 'nowrap' },
+  wrapReverse: { flexWrap: 'wrap-reverse' },
 } as const;
 
-const align = {
-  ...styleVariants(ALIGN_MAP, (value) => ({
-    alignItems: value.alignItems,
-  })),
-} as const;
+/** ------------------------------------------------------ */
 
-const justify = {
-  ...styleVariants(JUSTIFY_MAP, (value) => ({
-    justifyContent: value.justifyContent,
-    alignContent: value.alignContent,
-  })),
-} as const;
+const direction = styleVariants(DIR_MAP, (value) => ({
+  flexDirection: value.flexDirection,
+}));
 
-const gap = {
-  ...styleVariants(GAP_MAP, (value) => ({
-    gap: value.gap,
-  })),
-} as const;
+const align = styleVariants(ALIGN_MAP, (value) => ({
+  alignItems: value.alignItems,
+}));
+
+const justify = styleVariants(JUSTIFY_MAP, (value) => ({
+  justifyContent: value.justifyContent,
+  alignContent: value.alignContent,
+}));
+
+const gap = styleVariants(GAP_MAP, (value) => ({
+  gap: value.gap,
+}));
+
+const wrap = styleVariants(WRAP_MAP, (value) => ({
+  flexWrap: value.flexWrap,
+}));
 
 /** ------------------------------------------- */
 
@@ -80,6 +84,12 @@ export type FlexGapProps = keyof typeof gap;
 export type FlexVariantProps = RecipeVariants<typeof flex>;
 export const flex = recipe({
   base: FLEX_BASE,
-  variants: { direction, align, justify, gap },
-  defaultVariants: { direction: 'row', align: 'start', justify: 'start', gap: 'sm' },
+  variants: { direction, align, justify, gap, wrap },
+  defaultVariants: {
+    direction: 'row',
+    align: 'start',
+    justify: 'start',
+    gap: 'sm',
+    wrap: 'wrap',
+  },
 });

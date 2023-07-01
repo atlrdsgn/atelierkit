@@ -1,37 +1,24 @@
 import React from 'react';
-import * as css from './chip.css';
 import clsx from 'clsx';
+import { chip } from './chip.css';
+import type { ChipVariantProps } from './chip.css';
 
-import type {
-  ChipVariantProps,
-  ChipSizeProps,
-  ChipShapeProps,
-  ChipVProps,
-} from './chip.css';
+export type ChipProps = ChipVariantProps &
+  React.HTMLAttributes<HTMLSpanElement> & { className?: string };
 
-type BASE_CHIP_PROPS = {
-  size?: ChipSizeProps;
-  variant?: ChipVProps;
-  shape?: ChipShapeProps;
-
-  className?: string;
-} & ChipVariantProps &
-  React.HTMLAttributes<HTMLDivElement>;
-
-type ChipProps = BASE_CHIP_PROPS;
-export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
-  ({ children, className, size = 'small', shape, variant = 'slate', ...rest }, ref) => {
-    return (
-      <div
-        {...rest}
-        className={clsx(className, css.chip({ size, shape, variant }))}
-        ref={ref}>
-        {children}
-      </div>
-    );
-  },
+export const Chip: React.FC<ChipProps> = ({
+  children,
+  className,
+  size = 'small',
+  shape = 'pill',
+  variant = 'slate',
+  ...rest
+}) => (
+  <span
+    {...rest}
+    className={clsx(className, chip({ size, shape, variant }))}>
+    {children}
+  </span>
 );
 
 Chip.displayName = 'Chip';
-
-export type { ChipProps };
