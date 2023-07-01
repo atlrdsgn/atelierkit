@@ -4,8 +4,8 @@ import { themes } from '../kit.css';
 export type CSSProps = Omit<StyleRule, 'selectors' | '@media' | '@supports'>;
 
 export const colorModeSelectors = {
-  light: themes.light, // `html:not(${darkMode}) &`,
-  dark: themes.dark, // `html${darkMode} &`,
+  light: `html:not(${themes.light}) &`,
+  dark: `html${themes.dark} &`,
 };
 
 const makeSelector = (mode: keyof typeof colorModeSelectors, styles?: CSSProps) =>

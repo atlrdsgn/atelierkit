@@ -3,17 +3,13 @@ import { createThemeContract } from '@vanilla-extract/css';
 export type ThemeContractProps = typeof themeVars;
 export const themeVars = createThemeContract({
   media: {
-    small: null,
-    medium: null,
-    large: null,
-    xlarge: null,
-    queries: {
-      XS: null,
-      SM: null,
-      MD: null,
-      LG: null,
-      XL: null,
-
+    breakpoints: {
+      small: null,
+      medium: null,
+      large: null,
+      xlarge: null,
+    },
+    colorModes: {
       LIGHT: null,
       DARK: null,
     },
@@ -27,8 +23,6 @@ export const themeVars = createThemeContract({
     family: {
       system: 'font-system',
       sf: 'font-sf',
-      aspekta: 'font-aspekta',
-
       mono: 'font-mono',
     },
     heading: {

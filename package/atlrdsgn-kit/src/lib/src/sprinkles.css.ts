@@ -97,8 +97,13 @@ export type Sprinkles = Parameters<typeof sprinkles>[0];
  * we can use to map over the breakpoint object.
  */
 function mapValues(
-  breakpoints: any,
-  arg1: (bp: number) => { '@media'?: undefined } | { '@media': string },
-): any {
-  throw new Error('Function not implemented.');
+  breakpoints: Record<string, number>,
+  callback: (bp: number) => { '@media'?: undefined } | { '@media': string },
+): Record<string, { '@media'?: undefined } | { '@media': string }> {
+  const result: Record<string, { '@media'?: undefined } | { '@media': string }> = {};
+  for (const key in breakpoints) {
+    const value = breakpoints[key];
+    result[key] = value === 0 ? {} : { '@media': `screen and (min-width: ${value}px)` };
+  }
+  return result;
 }

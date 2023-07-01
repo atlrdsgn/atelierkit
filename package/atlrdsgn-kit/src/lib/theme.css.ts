@@ -3,37 +3,22 @@ import type { ColorTypes } from './vars.css';
 
 export const theme = {
   media: {
-    small: '460px',
-    medium: '768px',
-    large: '1024px',
-    xlarge: '1200px',
-
-    /**
-     * @mediaqueries
-     */
-    queries: {
-      XS: 'screen and (max-width: 460px)',
-      SM: 'screen and (max-width: 640px)',
-      MD: 'screen and (max-width: 768px)',
-      LG: 'screen and (max-width: 1024px)',
-      XL: 'screen and (max-width: 1200px)',
-
-      LIGHT: 'screen and (prefers-color-scheme: light)',
-      DARK: 'screen and (prefers-color-scheme: dark)',
+    breakpoints: {
+      small: '460px',
+      medium: '768px',
+      large: '1024px',
+      xlarge: '1200px',
+    },
+    colorModes: {
+      LIGHT: '(prefers-color-scheme: light)',
+      DARK: '(prefers-color-scheme: dark)',
     },
   },
 
-  /**
-   *
-   * @typedesign
-   */
   font: {
     family: {
-      system:
-        "-apple-system, BlinkMacSystemFont, 'Segoe UI','Roboto', 'Ubuntu', 'Fira Sans', 'Droid Sans','Helvetica Neue', sans-serif;",
+      system: `'-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif'`,
       sf: `'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif`,
-      aspekta: `'Aspekta', sans-serif`,
-
       mono: `'SF Mono', monospace`,
     },
     heading: {
@@ -97,10 +82,6 @@ export const theme = {
     },
   },
 
-  /**
-   *
-   * @radius
-   */
   radii: {
     ZERO: '0px',
     NO: '0px',
@@ -114,46 +95,38 @@ export const theme = {
     PILL: '1000px',
   },
 
-  /**
-   *
-   * @spacing
-   */
   space: {
-    ZERO: '0px',
-    NO: '0px',
-    DF: '16px', // IPX.. DEFAULT
+    ZERO: '0',
+    NO: '0',
+    DF: '16px',
     APX: '1px',
     BPX: '2px',
-    CPX: '0.25rem', // 4px
-    DPX: '0.375rem', // 6px
-    EPX: '0.5rem', // 8px
-    FPX: '0.625rem', // 10px
-    GPX: '0.75rem', // 12px
-    HPX: '0.875rem', // 14px
-    IPX: '1rem', // 16px
-    JPX: '1.125rem', // 18px
-    KPX: '1.25rem', // 20px
-    LPX: '1.5rem', // 24px
-    MPX: '1.75rem', // 28px
-    NPX: '2rem', // 32px
-    OPX: '2.25rem', // 36px
-    PPX: '2.5rem', // 40px
-    QPX: '2.75rem', // 44px
-    RPX: '3rem', // 48px
-    SPX: '3.5rem', // 56px
-    TPX: '4rem', // 64px
-    UPX: '4.5rem', // 72px
-    VPX: '6rem', // 96px
-    WPX: '8rem', // 128px
-    XPX: '12rem', // 192px
-    YPX: '15rem', // 240px
-    ZPX: '20rem', // 320px
+    CPX: '4px',
+    DPX: '6px',
+    EPX: '8px',
+    FPX: '10px',
+    GPX: '12px',
+    HPX: '14px',
+    IPX: '16px',
+    JPX: '18px',
+    KPX: '20px',
+    LPX: '24px',
+    MPX: '28px',
+    NPX: '32px',
+    OPX: '36px',
+    PPX: '40px',
+    QPX: '44px',
+    RPX: '48px',
+    SPX: '56px',
+    TPX: '64px',
+    UPX: '72px',
+    VPX: '96px',
+    WPX: '128px',
+    XPX: '192px',
+    YPX: '240px',
+    ZPX: '320px',
   },
 
-  /**
-   *
-   * @zindex
-   */
   z: {
     indice: {
       ZERO: '0',
@@ -166,10 +139,6 @@ export const theme = {
     },
   },
 
-  /**
-   *
-   * @basicshadow
-   */
   shadow: {
     NO: 'none',
     DF: '0px 4px 8px rgba(0, 0, 0, 0.1)',
