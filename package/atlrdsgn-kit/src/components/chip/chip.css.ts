@@ -3,38 +3,41 @@ import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 import { component_shadows } from '../../lib/properties';
 import { kit } from '../../lib';
 
-const BR_SMALL = '8px';
-const BR_MEDIUM = '12px';
+const BORDER_RADIUS_XSMALL = '7px';
+const BORDER_RADIUS_SMALL = '8px';
+const BORDER_RADIUS_MEDIUM = '12px';
 
 const SIZE_MAP = {
+  xsmall: {
+    fontSize: kit.font.size.MINI,
+    lineHeight: kit.font.lineheight.MINI,
+    padding: '3px 6px',
+    borderRadius: BORDER_RADIUS_XSMALL,
+  },
   small: {
     fontSize: kit.font.size.XS,
     lineHeight: kit.font.lineheight.XS,
-    padding: `3px 6px`,
-    borderRadius: BR_SMALL,
+    padding: '3px 6px',
+    borderRadius: BORDER_RADIUS_SMALL,
   },
   medium: {
     fontSize: kit.font.size.SM,
-    lineHeight: kit.font.lineheight.SM,
-    padding: `4px 8px`,
-    borderRadius: BR_MEDIUM,
+    lineHeight: kit.font.size.MD,
+    padding: '4px 8px',
+    borderRadius: BORDER_RADIUS_MEDIUM,
   },
 } as const;
 
 const SHAPE_MAP = {
   rounded: {
-    borderRadius: `${BR_MEDIUM} !important`,
+    borderRadius: `${BORDER_RADIUS_MEDIUM} !important`,
   },
   pill: {
-    borderRadius: `50px !important`,
+    borderRadius: '50px !important',
   },
 } as const;
 
 const VARIANT_COLOR_MAP = {
-  /**
-   *
-   * slate_variant
-   */
   slate: {
     backgroundColor: kit.color.slate1,
     border: `1px solid ${kit.color.slate3}`,
@@ -50,11 +53,6 @@ const VARIANT_COLOR_MAP = {
       boxShadow: component_shadows.primary.focus,
     },
   },
-
-  /**
-   *
-   * hyper_variant
-   */
   hyper: {
     backgroundColor: kit.color.hyper6,
     border: `1px solid ${kit.color.hyper7}`,
@@ -72,44 +70,41 @@ const VARIANT_COLOR_MAP = {
   },
 } as const;
 
-/** --------------------------------------------------------- */
+/** --------------------------------------------------- */
 
-const size = {
-  ...styleVariants(SIZE_MAP, (size) => ({
-    fontSize: size.fontSize,
-    lineHeight: size.lineHeight,
-    padding: size.padding,
-    borderRadius: size.borderRadius,
-  })),
-};
+const size = styleVariants(
+  SIZE_MAP,
+  ({ fontSize, lineHeight, padding, borderRadius }) => ({
+    fontSize,
+    lineHeight,
+    padding,
+    borderRadius,
+  }),
+);
 
-const shape = {
-  ...styleVariants(SHAPE_MAP, (shape) => ({
-    borderRadius: shape.borderRadius,
-  })),
-};
+const shape = styleVariants(SHAPE_MAP, ({ borderRadius }) => ({
+  borderRadius,
+}));
 
-const variant = {
-  ...styleVariants(VARIANT_COLOR_MAP, (variant) => ({
-    backgroundColor: variant.backgroundColor,
-    border: variant.border,
-    color: variant.color,
-    boxShadow: variant.boxShadow,
+const variant = styleVariants(VARIANT_COLOR_MAP, (variant) => ({
+  backgroundColor: variant.backgroundColor,
+  border: variant.border,
+  color: variant.color,
+  boxShadow: variant.boxShadow,
 
-    ':hover': {
-      backgroundColor: variant.onHover.backgroundColor,
-      border: variant.onHover.border,
-      color: variant.onHover.color,
-      boxShadow: variant.onHover.boxShadow,
-    },
+  ':hover': {
+    backgroundColor: variant.onHover.backgroundColor,
+    border: variant.onHover.border,
+    color: variant.onHover.color,
+    boxShadow: variant.onHover.boxShadow,
+  },
 
-    ':focus': {
-      boxShadow: variant.onFocus.boxShadow,
-    },
-  })),
-};
+  ':focus': {
+    boxShadow: variant.onFocus.boxShadow,
+  },
+}));
 
-/** --------------------------------------------------------- */
+/** --------------------------------------------------- */
 
 const CHIP_ROOT = style({
   userSelect: 'none',
@@ -146,17 +141,16 @@ const CHIP_ROOT = style({
   },
 });
 
-/** --------------------------------------------------------- */
-
 export type ChipSizeProps = keyof typeof size;
 export type ChipShapeProps = keyof typeof shape;
 export type ChipVProps = keyof typeof variant;
 export type ChipVariantProps = RecipeVariants<typeof chip>;
 export const chip = recipe({
-  base: [CHIP_ROOT],
+  base: CHIP_ROOT,
   variants: { size, shape, variant },
   defaultVariants: {
     size: 'small',
+    shape: 'pill',
     variant: 'slate',
   },
 });

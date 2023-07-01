@@ -1,13 +1,15 @@
 import React from 'react';
-import * as css from './button.css';
+
+import { button } from './btn.css';
 
 import type { BASE_BUTTON_PROPS } from './button.types';
 import type { ButtonVariantProps } from './button.css';
 
 type ButtonElementProps = BASE_BUTTON_PROPS &
   ButtonVariantProps &
-  React.HTMLAttributes<HTMLButtonElement>;
+  React.ButtonHTMLAttributes<HTMLButtonElement>;
 export type ButtonProps = ButtonElementProps;
+
 export const Button = ({
   children,
   type = 'button',
@@ -16,19 +18,11 @@ export const Button = ({
   href,
   target = '_self',
   rel = 'noopener noreferrer',
-  // ..
   size = 'sm',
   variant = 'hyper',
   ...rest
 }: ButtonProps) => {
-  /**
-   *
-   * @param event
-   * @returns
-   *
-   * onClick called when button is clicked.
-   */
-  const clickEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (href) {
       event.preventDefault();
       window.open(href, target, rel);
@@ -40,15 +34,13 @@ export const Button = ({
   };
 
   return (
-    <>
-      <button
-        {...rest}
-        type={type}
-        className={css.button({ size, variant })}
-        onClick={clickEvent}>
-        {children}
-      </button>
-    </>
+    <button
+      {...rest}
+      type={type}
+      className={button({ size, variant })}
+      onClick={handleClick}>
+      {children}
+    </button>
   );
 };
 

@@ -23,10 +23,10 @@ function ComponentsPage({ children }: { children?: React.ReactNode }) {
           </Heading>
 
           <Text
-            color='volt5'
+            color='volt7'
             align='center'
             size='lg'
-            weight='normal'
+            weight='medium'
             font='inter'>
             {components.subtitle}
           </Text>

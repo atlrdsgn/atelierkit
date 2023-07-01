@@ -2,19 +2,18 @@ import React from 'react';
 import { PageLayout } from '@/components/core';
 
 import ComponentsPage from '@/components/core/components.page';
-import { DemoButton, DemoChip } from '@/components/react-kit';
+import { DemoButton, DemoChip, DemoSwitch } from '@/components/react-kit';
 
-const ComponentsIndex = () => {
+export default function ComponentsIndex() {
   return (
     <>
       <PageLayout type={'Production'}>
         <ComponentsPage>
           <DemoButton />
           <DemoChip />
+          <DemoSwitch />
         </ComponentsPage>
       </PageLayout>
     </>
   );
-};
-
-export default ComponentsIndex;
+}

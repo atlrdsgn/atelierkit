@@ -1,6 +1,6 @@
-import React from 'react';
-import { KitMode, KitContext } from './context';
+import React, { useState } from 'react';
 
+import { KitMode, KitContext } from './context';
 import { themes } from '../kit.css';
 
 export interface KitProviderProps {
@@ -8,24 +8,19 @@ export interface KitProviderProps {
   defaultTheme?: KitMode;
 }
 
-export const KitProvider = ({
+export const KitProvider: React.FC<KitProviderProps> = ({
   children,
-}: // defaultTheme,
-React.PropsWithChildren<KitProviderProps>) => {
-  const [kitTheme, setTheme] = React.useState<KitMode>('light');
+}: React.PropsWithChildren<KitProviderProps>) => {
+  const [kitTheme, setTheme] = useState<KitMode>('light');
 
   const toggleTheme = () => {
-    setTheme((prevValue) => (prevValue === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   const Mode = kitTheme === 'light' ? themes.dark : themes.light;
 
   return (
-    <KitContext.Provider
-      value={{
-        theme: kitTheme,
-        toggleTheme,
-      }}>
+    <KitContext.Provider value={{ theme: kitTheme, toggleTheme }}>
       <div className={`${themes.base} ${Mode}`}>{children}</div>
     </KitContext.Provider>
   );
