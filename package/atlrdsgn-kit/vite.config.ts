@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { peerDependencies } from './package.json';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 import react from '@vitejs/plugin-react';
@@ -6,8 +7,6 @@ import zipPack from 'vite-plugin-zip-pack';
 import banner from 'vite-plugin-banner';
 import dts from 'vite-plugin-dts';
 import path from 'path';
-
-import { peerDependencies } from './package.json';
 
 const peerDeps = Object.keys(peerDependencies);
 const primitiveDeps = [
