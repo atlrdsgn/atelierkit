@@ -6,26 +6,26 @@ import { kit } from '../../lib';
 
 const SIZE_MAP = {
   sm: {
-    paddingTop: kit.space.DPX,
-    paddingBottom: kit.space.DPX,
+    paddingTop: kit.space.GPX,
+    paddingBottom: kit.space.GPX,
     paddingLeft: kit.space.ZERO,
     paddingRight: kit.space.ZERO,
   },
   md: {
-    paddingTop: kit.space.IPX,
-    paddingBottom: kit.space.IPX,
+    paddingTop: kit.space.MPX,
+    paddingBottom: kit.space.MPX,
     paddingLeft: kit.space.ZERO,
     paddingRight: kit.space.ZERO,
   },
   lg: {
-    paddingTop: kit.space.KPX,
-    paddingBottom: kit.space.KPX,
+    paddingTop: kit.space.SPX,
+    paddingBottom: kit.space.SPX,
     paddingLeft: kit.space.ZERO,
     paddingRight: kit.space.ZERO,
   },
   vw: {
-    paddingTop: kit.space.IPX,
-    paddingBottom: kit.space.IPX,
+    paddingTop: kit.space.KPX,
+    paddingBottom: kit.space.KPX,
     paddingLeft: kit.space.ZERO,
     paddingRight: kit.space.ZERO,
   },

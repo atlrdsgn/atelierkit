@@ -1,9 +1,7 @@
-/** @format */
-
 :root {
   --pure-white: #fff;
   --pure-black: #000;
-  --athens-gray: #f5f5f8;
+  --athens-gray: #FCFAF9;
   --shark-gray: #1d1d1d;
   --inspect: #f00;
   --background-start-rgb: 214, 219, 220;
@@ -59,13 +57,9 @@ html {
 
 html,
 body {
-  background: var(--athens-gray) !important;
+  background: var(--pure-white) !important;
   color: var(--shark-gray);
   font-family: var(--font-inter) !important;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  padding: 0;
-  margin: 0;
 }
 
 body.inspect * {

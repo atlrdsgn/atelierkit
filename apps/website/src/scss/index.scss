@@ -5,6 +5,12 @@
 @import './normalize';
 @import './global';
 
+:root {
+  --aside-width: 280px;
+  --aside-bg: rgba(251, 251, 253, 0.8);
+  --max-width: calc(100vw - var(--aside-width));
+}
+
 /**
   *
   * read first.
@@ -16,8 +22,57 @@ html.fonts-loaded body {
 
 body {
   transition: opacity #{$duration / 6 + 's'} ease-in !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: auto;
+
+  margin-left: var(--aside-width) !important;
 }
 
-.component-wrapper {
-  border: 1px solid black !important;
+main .main-content {
+  padding-bottom: 60px !important;
+  margin-bottom: 60px !important;
 }
+
+aside {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--aside-width); /* set the desired width */
+  background-color: var(--aside-bg) !important;
+  height: 100vh;
+
+
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+aside .comp-nav {
+
+
+  // border-right-width: 1px solid #6A7280;
+  box-shadow: inset -1px 0 0 #6A7280;
+}
+
+@media screen and (max-width: 768px) {
+  aside .comp-nav {
+    display: none;
+  }
+
+  body {
+    margin: 0 !important;
+  }
+}
+  
+

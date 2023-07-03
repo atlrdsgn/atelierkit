@@ -105,19 +105,19 @@ export const theme = {
     DPX: '6px',
     EPX: '8px',
     FPX: '10px',
-    GPX: '12px',
+    GPX: '12px', // sect.sm
     HPX: '14px',
     IPX: '16px',
     JPX: '18px',
-    KPX: '20px',
+    KPX: '20px', // sect.vw
     LPX: '24px',
-    MPX: '28px',
+    MPX: '28px', // sect.md
     NPX: '32px',
     OPX: '36px',
     PPX: '40px',
     QPX: '44px',
     RPX: '48px',
-    SPX: '56px',
+    SPX: '56px', // sect.lg
     TPX: '64px',
     UPX: '72px',
     VPX: '96px',

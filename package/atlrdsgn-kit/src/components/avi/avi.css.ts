@@ -70,19 +70,21 @@ const AVI_SHAPE = {
   },
 } as const;
 
-export const size = {
-  ...styleVariants(AVI_SIZES, (size) => ({
-    width: size.width,
-    height: size.height,
-    border: size.border,
-  })),
-} as const;
+/** --------------------------------------------------- */
 
-export const shape = {
-  ...styleVariants(AVI_SHAPE, (shape) => ({
-    borderRadius: shape.borderRadius,
-  })),
-} as const;
+const size = styleVariants(AVI_SIZES, (size) => ({
+  width: size.width,
+  height: size.height,
+  border: size.border,
+}));
+
+const shape = styleVariants(AVI_SHAPE, (shape) => ({
+  borderRadius: shape.borderRadius,
+}));
+
+const variant = styleVariants(kit.color, (clr) => ({
+  borderColor: clr,
+}));
 
 /** --------------------------------------- */
 
@@ -107,6 +109,6 @@ export type AviShape = keyof typeof shape;
 export type AviVariantProps = RecipeVariants<typeof avi>;
 export const avi = recipe({
   base: [AVI_BASE],
-  variants: { size, shape },
+  variants: { size, shape, variant },
   defaultVariants: { size: 'sm', shape: 'rounded' },
 });

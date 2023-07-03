@@ -1,9 +1,10 @@
-import '@/scss/global.scss';
+import '@/scss/index.scss';
 import '@atlrdsgn/kit/css';
 
 import ThemeProvider from '@/components/theme-provider';
 import { siteURL } from '@/lib/const';
 import type { Metadata } from 'next';
+import ComponentNav from '@/components/core/component.nav';
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
       suppressHydrationWarning>
       <body style={{ opacity: 1 }}>
         <ThemeProvider>
+          <ComponentNav />
           <main>{children}</main>
         </ThemeProvider>
       </body>
