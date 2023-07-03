@@ -1,6 +1,14 @@
-import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles';
-import { breakpoints } from './constants';
+import {
+  defineProperties,
+  createSprinkles,
+  ConditionalValue,
+  RequiredConditionalValue,
+} from '@vanilla-extract/sprinkles';
+import { createMapValueFn } from '@vanilla-extract/sprinkles';
+import { breakpoints, breakpointNames } from './constants';
 import { kit } from '../kit.css';
+
+type Breakpoint = keyof typeof breakpoints;
 
 const media = ['small', 'medium', 'large', 'xlarge'] as const;
 const alignment = ['flex-start', 'center', 'flex-end', 'stretch'] as const;
@@ -27,6 +35,12 @@ const responsiveProperties = defineProperties({
 
     // flexbox properties..
     display: ['none', 'flex', 'block', 'inline-block', 'inline-flex', 'inline'],
+    flex: {
+      1: '1 1 0%',
+      auto: '1 1 auto',
+      initial: '0 1 auto',
+      none: 'none',
+    },
     flexDirection: ['row', 'column', 'row-reverse', 'column-reverse'],
     flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
     justifyContent: [...alignment, 'space-between', 'space-around'],
@@ -90,6 +104,20 @@ const colorProperties = defineProperties({
 
 export const sprinkles = createSprinkles(responsiveProperties, colorProperties);
 export type Sprinkles = Parameters<typeof sprinkles>[0];
+
+export const mapResponsiveValue = createMapValueFn(responsiveProperties);
+export const mapColorValue = createMapValueFn(colorProperties);
+
+export type OptionalResponsiveValue<Value extends string | number> = ConditionalValue<
+  typeof responsiveProperties,
+  Value
+>;
+export type RequiredResponsiveValue<Value extends string | number> =
+  RequiredConditionalValue<typeof responsiveProperties, Value>;
+
+export type OptionalResponsiveObject<Value> = Value | Partial<Record<Breakpoint, Value>>;
+export type RequiredResponsiveObject<Value> = Partial<Record<Breakpoint, Value>> &
+  Record<(typeof breakpointNames)[0], Value>;
 
 /**
  *

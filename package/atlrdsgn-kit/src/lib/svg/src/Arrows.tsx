@@ -1,6 +1,6 @@
-import type { NociProps } from '../types';
+import type { IconProps } from '../types';
 
-export const ArrowDownIcon = ({ color = 'currentColor', ...props }: NociProps) => {
+export const ArrowDownIcon = ({ color = 'currentColor', ...props }: IconProps) => {
   return (
     <svg
       width='24'
@@ -19,9 +19,9 @@ export const ArrowDownIcon = ({ color = 'currentColor', ...props }: NociProps) =
   );
 };
 
-export const ArrowUpIcon = ({ color = 'currentColor', ...props }: NociProps) => <></>;
+export const ArrowUpIcon = ({ color = 'currentColor', ...props }: IconProps) => <></>;
 
-export const SmallArrowDownIcon = ({ color = 'currentColor', ...props }: NociProps) => {
+export const SmallArrowDownIcon = ({ color = 'currentColor', ...props }: IconProps) => {
   return (
     <>
       <svg
@@ -42,7 +42,7 @@ export const SmallArrowDownIcon = ({ color = 'currentColor', ...props }: NociPro
   );
 };
 
-export const SmallArrowUpIcon = ({ color = 'currentColor', ...props }: NociProps) => {
+export const SmallArrowUpIcon = ({ color = 'currentColor', ...props }: IconProps) => {
   return (
     <>
       <svg

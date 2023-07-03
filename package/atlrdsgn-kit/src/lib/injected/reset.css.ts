@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css';
-
+import { style as styleRes } from '@vanilla-extract/css';
+import { kit } from '../kit.css';
 /**
  *
  * the following code is
@@ -8,7 +8,7 @@ import { style } from '@vanilla-extract/css';
  * https://github.com/seek-oss/braid-design-system/blob/master/packages/braid-design-system/lib/css/reset/reset.css.ts
  */
 
-export const base = style({
+export const base = styleRes({
   margin: 0,
   padding: 0,
   border: 0,
@@ -21,19 +21,19 @@ export const base = style({
 });
 
 // HTML5 display-role reset for older browsers
-const block = style({
+const block = styleRes({
   display: 'block',
 });
 
-const body = style({
+const body = styleRes({
   lineHeight: 1,
 });
 
-const list = style({
+const list = styleRes({
   listStyle: 'none',
 });
 
-const quote = style({
+const quote = styleRes({
   quotes: 'none',
   selectors: {
     '&:before, &:after': {
@@ -42,32 +42,42 @@ const quote = style({
   },
 });
 
-const table = style({
+const table = styleRes({
   borderCollapse: 'collapse',
   borderSpacing: 0,
 });
 
-const appearance = style({
+const appearance = styleRes({
   appearance: 'none',
 });
 
-const transparent = style({
+const transparent = styleRes({
   backgroundColor: 'transparent',
 });
 
-const field = style([block, appearance, transparent]);
+const field = styleRes([
+  block,
+  appearance,
+  styleRes({
+    outline: 'none',
+    '::placeholder': {
+      color: kit.color.slate5,
+      opacity: 1,
+    },
+  }),
+]);
 
 // Custom reset rules
-const mark = style([
+const mark = styleRes([
   transparent,
   {
     color: 'inherit',
   },
 ]);
 
-const select = style([
+const select = styleRes([
   field,
-  style({
+  styleRes({
     ':disabled': {
       opacity: 1,
     },
@@ -79,9 +89,9 @@ const select = style([
   }),
 ]);
 
-const input = style([
+const input = styleRes([
   field,
-  style({
+  styleRes({
     selectors: {
       ['&[type="number"]']: {},
       [[
@@ -101,9 +111,9 @@ const input = style([
   }),
 ]);
 
-const button = style([transparent]);
+const button = styleRes([transparent]);
 
-const a = style({
+const a = styleRes({
   textDecoration: 'none',
   color: 'inherit',
 });
@@ -113,7 +123,6 @@ const a = style({
  *
  * type of elements..
  */
-export type KitElement = keyof typeof element;
 export const element = {
   article: block,
   aside: block,
@@ -139,3 +148,5 @@ export const element = {
   textarea: field,
   input,
 };
+
+export type KitElement = keyof typeof element;

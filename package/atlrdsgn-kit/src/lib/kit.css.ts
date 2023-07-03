@@ -1,6 +1,6 @@
 import { createTheme } from '@vanilla-extract/css';
-import { themeVars } from './vars.css';
 import { BASE_KIT_THEME, DARK_KIT_THEME } from './theme.css';
+import { themeVars } from './vars.css';
 
 /**
  * Create the base theme class.
@@ -13,10 +13,9 @@ export const [kitClass, tokens] = createTheme(themeVars);
 const lightTheme = createTheme(tokens, BASE_KIT_THEME);
 const darkTheme = createTheme(tokens, DARK_KIT_THEME);
 
+export const kit = tokens;
 export const themes = {
   base: kitClass,
   light: lightTheme,
   dark: darkTheme,
 };
-
-export const kit = tokens;
