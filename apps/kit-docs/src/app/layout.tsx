@@ -2,7 +2,7 @@ import './index.css';
 import '@atlrdsgn/kit/css';
 
 import { SiteHeader } from '@/components/site-header';
-import { ThemeProvider } from '@/components/theme-provider';
+import ThemeProvider from '@/components/theme-provider';
 import { siteURL } from '@/lib/const';
 import type { Metadata } from 'next';
 

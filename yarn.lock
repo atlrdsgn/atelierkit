@@ -1523,6 +1523,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@markdoc/next.js@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "@markdoc/next.js@npm:0.2.2"
+  dependencies:
+    js-yaml: ^4.1.0
+  peerDependencies:
+    "@markdoc/markdoc": "*"
+    next: "*"
+    react: "*"
+  checksum: c579c66e5489ac4b4b70dcccc70c07870e9e388dc7ed6b4ffa9fd1ef0cc24b860403f3f6c574009cc71d6af3587e57845485fa55ed2ba4269b3a1b9a3b6a600d
+  languageName: node
+  linkType: hard
+
 "@mdx-js/mdx@npm:^2.2.1, @mdx-js/mdx@npm:^2.3.0":
   version: 2.3.0
   resolution: "@mdx-js/mdx@npm:2.3.0"
@@ -7666,6 +7679,7 @@ __metadata:
     "@atlrdsgn/kit": "*"
     "@code-hike/lighter": ^0.7.1
     "@markdoc/markdoc": ^0.3.0
+    "@markdoc/next.js": ^0.2.2
     "@radix-ui/react-accordion": ^1.1.2
     "@radix-ui/react-scroll-area": ^1.0.4
     "@radix-ui/react-tabs": ^1.0.4
