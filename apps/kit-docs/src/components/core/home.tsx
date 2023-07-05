@@ -9,31 +9,28 @@ function HomePage({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Section size='lg'>
-        <div>
-          {siteConfig.sections.map((section, i) => {
-            return (
-              <>
-                <Text
+        {siteConfig.sections.map((section, i) => {
+          return (
+            <div key={i}>
+              <Text
+                key={i}
+                size='md'
+                weight='bold'>
+                {section.title}
+              </Text>
+              <Button
+                key={i}
+                size='sm'
+                className='btn'>
+                <Link
                   key={i}
-                  size='md'
-                  weight='bold'>
-                  {section.title}
-                </Text>
-
-                <Button
-                  key={i}
-                  size='sm'
-                  className='btn'>
-                  <Link
-                    key={i}
-                    href={section.href}>
-                    Go to example
-                  </Link>
-                </Button>
-              </>
-            );
-          })}
-        </div>
+                  href={section.href}>
+                  Go to example
+                </Link>
+              </Button>
+            </div>
+          );
+        })}
       </Section>
       {children}
     </>

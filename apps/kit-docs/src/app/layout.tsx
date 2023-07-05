@@ -1,10 +1,10 @@
 import './index.css';
 import '@atlrdsgn/kit/css';
 
-import { SiteHeader } from '@/components/site-header';
 import ThemeProvider from '@/components/theme-provider';
 import { siteURL } from '@/lib/const';
 import type { Metadata } from 'next';
+import AppWrapper from '@/components/core/wrapper';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://docs.atlrdsgn.com/'),
@@ -25,7 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning>
       <body style={{ opacity: 1 }}>
         <ThemeProvider>
-          <main className='flex column'>{children}</main>
+          <main className='column flex'>
+            <AppWrapper>{children}</AppWrapper>
+          </main>
         </ThemeProvider>
       </body>
     </html>

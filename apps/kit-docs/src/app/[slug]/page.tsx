@@ -54,7 +54,9 @@ function collectHeadings(nodes: Node[], slugify = slugifyWithCounter()) {
         if (node.attributes.level > 2) {
           if (!sections[sections.length - 1]) {
             throw new Error(
-              `Cannot add 'h${node.attributes.level}' to table of contents without a preceding 'h${
+              `Cannot add 'h${
+                node.attributes.level
+              }' to table of contents without a preceding 'h${
                 node.attributes.level - 1
               }'`,
             );
@@ -111,7 +113,7 @@ export default async function ContentPage({ params }: PageProps) {
   const tableOfContents = toc ? collectHeadings([content] as Node[]) : [];
 
   return (
-    <main>
+    <main className='prose'>
       <div>
         <div>
           <div>
@@ -120,11 +122,13 @@ export default async function ContentPage({ params }: PageProps) {
           <ChevronRight />
           <div>{title}</div>
         </div>
-        <div>
-          <h1>{title}</h1>
+        <div className='space-y-2'>
+          <h1 className='scroll-m-20 text-4xl font-bold tracking-tight'>{title}</h1>
         </div>
 
-        <div>{Markdoc.renderers.react(content, React, { components })}</div>
+        <div className='prose max-w-prose list-none'>
+          {Markdoc.renderers.react(content, React, { components })}
+        </div>
         {/* <DocsPager doc={doc} /> */}
       </div>
       {toc && (

@@ -40,13 +40,5 @@ export const siteConfig = {
       title: 'Codeblock',
       href: '/codeblock',
     },
-    {
-      title: 'Accordion',
-      href: '/accordion',
-    },
-    {
-      title: 'Callout / Alerts',
-      href: '/callout',
-    },
   ],
 };
