@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 import { NavItem } from '@/lib/nav';
 import { siteConfig } from 'config/site.config';
-import { Icons } from '@/components/icons';
+// import { Icons } from '@/components/icons';
+import { cn } from '@/lib/utils';
 
 interface MainNavProps {
   items?: NavItem[];
@@ -15,7 +16,9 @@ export function MainNav({ items }: MainNavProps) {
       <Link
         href='/'
         className='flex items-center space-x-2'>
+        {/* <!-- Add logo if necessary
         <Icons.logo className='h-6 w-6' />
+        --> */}
         <span className='inline-block font-bold'>{siteConfig.name}</span>
       </Link>
       {items?.length ? (
@@ -25,7 +28,11 @@ export function MainNav({ items }: MainNavProps) {
               item.href && (
                 <Link
                   key={index}
-                  href={item.href}>
+                  href={item.href}
+                  className={cn(
+                    'text-muted-foreground flex items-center text-sm font-medium',
+                    item.disabled && 'cursor-not-allowed opacity-80',
+                  )}>
                   {item.title}
                 </Link>
               ),

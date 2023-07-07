@@ -1,5 +1,5 @@
 @import './styles.css';
-
+@import '@atlrdsgn/kit/css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

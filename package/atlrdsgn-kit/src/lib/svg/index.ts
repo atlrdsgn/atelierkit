@@ -3,6 +3,6 @@ export {
   ArrowUpIcon,
   SmallArrowDownIcon,
   SmallArrowUpIcon,
-} from './src/Arrows';
-export { LogoIcon } from './src/LogoIcon';
+} from './icons/Arrows';
+export { LogoIcon } from './icons/LogoIcon';
 export type { IconProps, LogoProps } from './types';

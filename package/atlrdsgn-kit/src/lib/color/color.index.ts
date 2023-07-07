@@ -1,9 +1,4 @@
-import { hyper } from './src';
-import { lemon } from './src';
-import { slate } from './src';
-import { sapphire } from './src';
-import { volt } from './src';
-import { grays, pales } from './src';
+import { hyper, lemon, slate, sapphire, volt, grays, pales } from './library';
 
 /**
  *

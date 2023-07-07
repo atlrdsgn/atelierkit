@@ -2,11 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Container, Button, Section, Text } from '@atlrdsgn/kit';
+import { Container, Button, Text } from '@atlrdsgn/kit';
 import { siteConfig } from 'config/site.config';
 import { cn } from '@/lib/utils';
 
-function HomePage({ children }: { children: React.ReactNode }) {
+function ComponentList() {
   return (
     <>
       <Container
@@ -19,20 +19,20 @@ function HomePage({ children }: { children: React.ReactNode }) {
               width='medium'
               align='start'>
               <div
-                key={i}
+                // key={i}
                 className={cn('my-3 w-full items-start justify-start p-4')}>
                 <Text
-                  key={i}
+                  // key={i}
                   size='md'
                   weight='bold'>
                   {section.title}
                 </Text>
                 <Button
-                  key={i}
+                  // key={i}
                   size='sm'
                   className='btn'>
                   <Link
-                    key={i}
+                    // key={i}
                     href={section.href}>
                     Go to example
                   </Link>
@@ -42,10 +42,8 @@ function HomePage({ children }: { children: React.ReactNode }) {
           );
         })}
       </Container>
-
-      {children}
     </>
   );
 }
 
-export default HomePage;
+export default ComponentList;

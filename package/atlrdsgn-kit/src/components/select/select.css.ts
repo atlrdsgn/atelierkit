@@ -139,14 +139,11 @@ export const select_label = style({
   fontFamily: kit.font.family.system,
   fontSize: kit.font.size.XS,
   fontWeight: kit.font.weight.MEDIUM,
-
   color: kit.color.hyper5,
-
   paddingTop: 4,
   paddingBottom: 4,
   paddingLeft: 8,
   paddingRight: 8,
-
   textAlign: 'left',
   lineHeight: '32px',
 });

@@ -1,16 +1,17 @@
 'use client';
 
-import React from 'react';
+import * as React from 'react';
 import { KitProvider } from '@atlrdsgn/kit';
+import type { KitProviderProps } from '@atlrdsgn/kit';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ThemeProviderProps } from 'next-themes/dist/types';
 
-const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+type ThemeProps = KitProviderProps & ThemeProviderProps;
+
+export function ThemeProvider({ children, ...props }: ThemeProps) {
   return (
-    <>
-      <KitProvider>
-        <>{children}</>
-      </KitProvider>
-    </>
+    <NextThemesProvider {...props}>
+      <KitProvider {...props}>{children}</KitProvider>
+    </NextThemesProvider>
   );
-};
-
-export default ThemeProvider;
+}

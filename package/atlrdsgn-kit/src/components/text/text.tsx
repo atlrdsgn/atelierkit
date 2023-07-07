@@ -1,5 +1,5 @@
 import React from 'react';
-import * as css from './text.css';
+import { text } from './text.css';
 import clsx from 'clsx';
 
 import type {
@@ -8,6 +8,7 @@ import type {
   TextAlignVariants,
   TextColorVariants,
   TextWeightVariants,
+  TextCasingVariants,
   TextVariantProps,
 } from './text.css';
 
@@ -19,6 +20,7 @@ interface BASE_TEXT_PROPS {
   align?: TextAlignVariants;
   color?: TextColorVariants;
   weight?: TextWeightVariants;
+  casing?: TextCasingVariants;
 }
 
 export type TextProps = BASE_TEXT_PROPS &
@@ -34,6 +36,7 @@ export const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
       align = 'left',
       color = 'slate5',
       weight = 'medium',
+      casing,
       ...props
     },
     forwardedRef,
@@ -41,7 +44,7 @@ export const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
     return (
       <p
         ref={forwardedRef}
-        className={clsx(className, css.text({ font, size, align, color, weight }))}
+        className={clsx(className, text({ font, size, align, color, weight, casing }))}
         {...props}>
         {children}
       </p>

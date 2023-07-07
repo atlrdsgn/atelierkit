@@ -1,7 +1,7 @@
 {
   "name": "@atlrdsgn/kit",
   "packageManager": "yarn@3.2.2",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "Atelierkit",
   "author": "chvndler",
   "homepage": "https://docs.atlrdsgn.com",
@@ -44,7 +44,9 @@
   "dependencies": {
     "@atlrdsgn/tsconfig": "*",
     "@radix-ui/react-avatar": "^1.0.2",
+    "@radix-ui/react-hover-card": "^1.0.6",
     "@radix-ui/react-menubar": "^1.0.3",
+    "@radix-ui/react-popover": "^1.0.6",
     "@radix-ui/react-select": "^1.2.2",
     "@radix-ui/react-switch": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.6",

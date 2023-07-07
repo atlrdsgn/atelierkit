@@ -3,7 +3,14 @@ import { Config, Tag } from '@markdoc/markdoc';
 import { TypographyBlockquote } from '@/components/ui/blockquote';
 import { TypographyList } from '@/components/ui/list';
 import TypographyP from '@/components/ui/paragraph';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 
 import { Code } from '@/components/markdoc/code';
 import Heading from '@/components/markdoc/heading';
@@ -100,7 +107,11 @@ const config: Config = {
             .find((tab: any) => tab?.attributes?.default == true) as any
         )?.attributes?.label;
 
-        return new Tag(this.render, { labels, defaultValue }, node.transformChildren(config));
+        return new Tag(
+          this.render,
+          { labels, defaultValue },
+          node.transformChildren(config),
+        );
       },
     },
 

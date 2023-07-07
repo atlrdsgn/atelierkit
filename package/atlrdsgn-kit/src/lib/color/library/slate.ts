@@ -1,0 +1,16 @@
+export const slate = {
+  slate0: `rgba(244, 244, 245, 1)`,
+  slate1: `rgba(231, 233, 235, 1)`,
+  slate2: `rgba(220, 222, 225, 1)`,
+  slate3: `rgba(209, 211, 217, 1)`,
+  slate4: `rgba(187, 189, 197, 1)`,
+  slate5: `rgba(163, 167, 177, 1)`,
+  slate6: `rgba(139, 145, 158, 1)`,
+  slate7: `rgba(114, 118, 128, 1)`,
+  slate8: `rgba(88, 90, 98, 1)`,
+  slate9: `rgba(61, 63, 69, 1)`,
+  slate10: `rgba(47, 49, 55, 1)`,
+  slate11: `rgba(33, 35, 39, 1)`,
+  slate12: `rgba(20, 22, 24, 1)`,
+  slate13: `rgba(8, 8, 9, 1)`,
+} as const;

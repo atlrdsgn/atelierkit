@@ -1,4 +1,6 @@
 import { isClient } from './const';
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export const isApiSupported = (api: string) => isClient && api in window;
 export const formatError = (error: unknown): { message: string; name?: string } => {
@@ -11,3 +13,7 @@ export const formatError = (error: unknown): { message: string; name?: string } 
     return { message: 'An unknown error ocurred.' };
   }
 };
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}

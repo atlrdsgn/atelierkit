@@ -14,6 +14,7 @@ const primitiveDeps = [
   '@radix-ui/react-menubar',
   '@radix-ui/react-switch',
   '@radix-ui/react-tooltip',
+  '@radix-ui/react-popover',
 ];
 
 export default defineConfig({
@@ -27,8 +28,12 @@ export default defineConfig({
           'react-dom': 'ReactDom',
           '@radix-ui/react-avatar': 'AVI',
           '@radix-ui/react-menubar': 'MBAR',
-          '@radix-ui/react-switch': 'SwitchRoot, SwitchThumb',
+          '@radix-ui/react-hover-card': 'HOV',
           '@radix-ui/react-tooltip': 'TIP',
+
+          '@radix-ui/react-switch': 'SwitchRoot, SwitchThumb',
+          '@radix-ui/react-popover':
+            'PopoverRoot, PopoverTrigger, PopoverContent, PopoverClose',
         },
       },
     },
@@ -43,7 +48,7 @@ export default defineConfig({
     react(),
     zipPack({
       outDir: 'pkg',
-      outFileName: 'kit.zip',
+      outFileName: `kit(${process.env.npm_package_version}).zip`,
     }),
     banner(`
     atelierkit© v${process.env.npm_package_version}. 

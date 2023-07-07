@@ -41,6 +41,13 @@ const ALIGNMENT_MAP = {
   right: { textAlign: 'right' },
 } as const;
 
+const CASE_MAP = {
+  none: { textTransform: 'none' },
+  uppercase: { textTransform: 'uppercase' },
+  lowercase: { textTransform: 'lowercase' },
+  capitalize: { textTransform: 'capitalize' },
+} as const;
+
 /** ---------------------------------------------------------- */
 
 const font = styleVariants(FONT_MAP, (value) => ({
@@ -64,6 +71,10 @@ const align = styleVariants(ALIGNMENT_MAP, (value) => ({
   textAlign: value.textAlign,
 }));
 
+const casing = styleVariants(CASE_MAP, (value) => ({
+  textTransform: value.textTransform,
+}));
+
 /** ------------------------------------------------------- */
 
 const TEXT_BASE = style({
@@ -78,6 +89,7 @@ export type TextSizeVariants = keyof typeof size;
 export type TextWeightVariants = keyof typeof weight;
 export type TextColorVariants = keyof typeof color;
 export type TextAlignVariants = keyof typeof align;
+export type TextCasingVariants = keyof typeof casing;
 
 /**
  * The `text` recipe combines the `font`, `size`, `weight`, `color`, and `align` style variants
@@ -98,6 +110,7 @@ export const text = recipe({
     weight,
     color,
     align,
+    casing,
   },
   defaultVariants: {
     font: 'system',
@@ -105,5 +118,6 @@ export const text = recipe({
     weight: 'medium',
     color: 'slate5',
     align: 'left',
+    casing: 'none',
   },
 });

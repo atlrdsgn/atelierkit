@@ -10,6 +10,7 @@ import { globby } from 'globby';
 import { ChevronRight } from 'lucide-react';
 import { z } from 'zod';
 import { parse } from 'zod-matter';
+import { cn } from '@/lib/utils';
 
 import { components, config } from 'config/markdoc.config';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -113,35 +114,34 @@ export default async function ContentPage({ params }: PageProps) {
   const tableOfContents = toc ? collectHeadings([content] as Node[]) : [];
 
   return (
-    <main className='prose'>
-      <div>
-        <div>
-          <div>
+    <article className='prose py-6'>
+      <div className='mx-auto w-full min-w-0 max-w-prose items-center justify-center'>
+        <div className='text-muted-foreground mb-4 flex space-x-1 text-xs'>
+          <div className='truncate'>
             <Link href='/'>Overview</Link>
           </div>
           <ChevronRight />
-          <div>{title}</div>
-        </div>
-        <div className='space-y-2'>
-          <h1 className='scroll-m-20 text-4xl font-bold tracking-tight'>{title}</h1>
+          <div className='font-semibold'>{title}</div>
         </div>
 
-        <div className='prose max-w-prose list-none'>
+        <div className='space-y-2'>
+          <h1 className={cn('scroll-m-20 text-4xl font-bold tracking-tight')}>{title}</h1>
+        </div>
+
+        <div className='mx-auto w-full max-w-prose items-center justify-center pb-12 pt-8'>
           {Markdoc.renderers.react(content, React, { components })}
         </div>
         {/* <DocsPager doc={doc} /> */}
       </div>
       {toc && (
-        <div>
-          <div>
-            <div>
-              <ScrollArea>
-                <TableOfContents toc={tableOfContents} />
-              </ScrollArea>
-            </div>
+        <div className='z-40 hidden text-xs lg:block'>
+          <div className='sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] overflow-hidden border-l pt-6 '>
+            <ScrollArea>
+              <TableOfContents toc={tableOfContents} />
+            </ScrollArea>
           </div>
         </div>
       )}
-    </main>
+    </article>
   );
 }

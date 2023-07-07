@@ -3,7 +3,7 @@ import { Theme } from '@code-hike/lighter';
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Kit Docs',
+  name: 'Atelierkit',
   description: 'rooted in subtractive design.',
   highlighter: {
     theme: 'monokai' as Theme,

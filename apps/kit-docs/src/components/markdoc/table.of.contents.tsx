@@ -1,27 +1,26 @@
 // Source: https://github.com/shadcn/ui/blob/main/apps/www/components/toc.tsx
 // @ts-nocheck
-"use client"
+'use client';
 
-import * as React from "react"
-
+import * as React from 'react';
 
 export type TableOfContents = {
-  length: any
-  map: any
-  id: string
-  title: string
-  attributes: { [key: string]: any }
-  children?: TableOfContents[]
-}
+  length: any;
+  map: any;
+  id: string;
+  title: string;
+  attributes: { [key: string]: any };
+  children?: TableOfContents[];
+};
 
 interface TocProps {
-  toc: TableOfContents[]
+  toc: TableOfContents[];
 }
 
 interface TreeProps {
-  tree: TableOfContents
-  level?: number
-  activeItem?: string
+  tree: TableOfContents;
+  level?: number;
+  activeItem?: string;
 }
 
 export function TableOfContents({ toc }: TocProps) {
@@ -35,54 +34,57 @@ export function TableOfContents({ toc }: TocProps) {
             ])
             .flat()
             .filter(Boolean)
-            .map((id) => id?.split("#")[1])
+            .map((id) => id?.split('#')[1])
         : [],
-    [toc]
-  )
+    [toc],
+  );
 
-  const activeHeading = useActiveItem(itemIds)
+  const activeHeading = useActiveItem(itemIds);
 
   return (
-    <div className="space-y-2">
-      <p className="font-medium">On This Page</p>
-      <Tree tree={toc} activeItem={activeHeading} />
+    <div className='space-y-2'>
+      <p className='font-medium'>On This Page</p>
+      <Tree
+        tree={toc}
+        activeItem={activeHeading}
+      />
     </div>
-  )
+  );
 }
 
 function useActiveItem(itemIds: string[]) {
-  const [activeId, setActiveId] = React.useState(null)
+  const [activeId, setActiveId] = React.useState(null);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveId(entry.target.id)
+            setActiveId(entry.target.id);
           }
-        })
+        });
       },
-      { rootMargin: `0% 0% -80% 0%` }
-    )
+      { rootMargin: `0% 0% -80% 0%` },
+    );
 
     itemIds?.forEach((id) => {
-      const element = document.getElementById(id)
+      const element = document.getElementById(id);
       if (element) {
-        observer.observe(element)
+        observer.observe(element);
       }
-    })
+    });
 
     return () => {
       itemIds?.forEach((id) => {
-        const element = document.getElementById(id)
+        const element = document.getElementById(id);
         if (element) {
-          observer.unobserve(element)
+          observer.unobserve(element);
         }
-      })
-    }
-  }, [itemIds])
+      });
+    };
+  }, [itemIds]);
 
-  return activeId
+  return activeId;
 }
 
 function Tree({ tree, level = 1, activeItem }: TreeProps) {
@@ -90,11 +92,12 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
     <ul className='upper-list'>
       {tree.map((item, index) => {
         return (
-          <li key={index} className='list'>
+          <li
+            key={index}
+            className='list'>
             <a
               href={`#${item.id}`}
-              className='link'
-            >
+              className='link'>
               {item.title}
             </a>
             {item.children?.length > 0 && level < 3 ? (
@@ -105,8 +108,8 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
               />
             ) : null}
           </li>
-        )
+        );
       })}
     </ul>
-  ) : null
+  ) : null;
 }

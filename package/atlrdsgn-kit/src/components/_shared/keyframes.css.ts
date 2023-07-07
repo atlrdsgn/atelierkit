@@ -1,5 +1,3 @@
-/** @format */
-
 import { keyframes, style } from '@vanilla-extract/css';
 
 const SLIDE_UP_FADE = keyframes({

@@ -1,5 +1,3 @@
-/** @format */
-
 import { style } from '@vanilla-extract/css';
 import { kit } from '../../lib';
 
@@ -168,7 +166,8 @@ export const menubar_content = style({
   border: `0.5px solid ${kit.color.slate3}`,
   borderRadius: ROOT_RADII,
 
-  boxShadow: '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+  boxShadow:
+    '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
   animationDuration: '400ms',
   animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
   willChange: 'transform, opacity',
@@ -208,7 +207,8 @@ export const submenu_content = style({
   border: `0.5px solid ${kit.color.slate3}`,
   borderRadius: ROOT_RADII,
 
-  boxShadow: '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
+  boxShadow:
+    '0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2)',
   animationDuration: '400ms',
   animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
   willChange: 'transform, opacity',
