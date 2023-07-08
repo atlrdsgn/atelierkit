@@ -5,7 +5,7 @@ import HomePage from '@/components/core/home';
 const AppIndex = () => {
   return (
     <>
-      <PageLayout type={'Production'}>
+      <PageLayout type={'Standard'}>
         <HomePage>⁘</HomePage>
       </PageLayout>
     </>

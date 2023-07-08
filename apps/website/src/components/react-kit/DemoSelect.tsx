@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Select, Flex } from '@atlrdsgn/kit';
+import { Select } from '@atlrdsgn/kit';
 import ComponentWrapper from '../core/component.wrapper';
 
 const options = [
@@ -33,37 +33,27 @@ const options = [
 export const DemoSelect = () => {
   return (
     <ComponentWrapper>
-      <Flex
-        direction={'row'}
-        align={'start'}
-        justify={'start'}
-        gap={'xs'}
-        wrap={'wrap'}
-        style={{ marginBottom: '20px', marginTop: '20px' }}>
-        <>
-          <Select>
-            <Select.Trigger>
-              <Select.Value placeholder={'Select an option..'} />
-              <Select.Icon />
-            </Select.Trigger>
+      <Select>
+        <Select.Trigger>
+          <Select.Value placeholder={'Select an option..'} />
+          <Select.Icon />
+        </Select.Trigger>
 
-            <Select.Content sideOffset={5}>
-              <Select.Group>
-                <Select.Label>Primitives</Select.Label>
+        <Select.Content sideOffset={5}>
+          <Select.Group>
+            <Select.Label>Primitives</Select.Label>
 
-                {/* <!--- Map the values to the options --> */}
-                {options.map((options) => (
-                  <Select.Item
-                    key={options.type}
-                    value={options.value}>
-                    {options.value}
-                  </Select.Item>
-                ))}
-              </Select.Group>
-            </Select.Content>
-          </Select>
-        </>
-      </Flex>
+            {/* <!--- Map the values to the options --> */}
+            {options.map((options) => (
+              <Select.Item
+                key={options.type}
+                value={options.value}>
+                {options.value}
+              </Select.Item>
+            ))}
+          </Select.Group>
+        </Select.Content>
+      </Select>
     </ComponentWrapper>
   );
 };

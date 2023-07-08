@@ -9,8 +9,7 @@ function ComponentWrapper({ children }: { children?: React.ReactNode }) {
     <Section>
       <Space size='lg' />
       <Container
-        style={{ border: '1px solid #DDDDDD', borderRadius: '12px' }}
-        className={'component-wrapper'}
+        className='component-wrapper'
         width='medium'
         align='center'>
         {children}

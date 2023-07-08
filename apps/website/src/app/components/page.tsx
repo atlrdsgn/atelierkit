@@ -12,6 +12,7 @@ import {
   DemoSwitch,
   DemoInline,
   DemoSelect,
+  DemoPopover,
 } from '@/components/react-kit';
 
 export default function ComponentsIndex() {
@@ -28,6 +29,7 @@ export default function ComponentsIndex() {
           <DemoAvi />
           <DemoInline />
           <DemoSelect />
+          <DemoPopover />
         </ComponentsPage>
       </PageLayout>
     </>

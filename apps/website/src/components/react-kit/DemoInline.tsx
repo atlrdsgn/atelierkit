@@ -13,6 +13,7 @@ export const DemoInline = () => {
         Lorem velit id culpa consectetur ullamco id commodo sunt elit. Eiusmod anim eu et
         occaecat et aliquip elit.{' '}
         <Inline
+          hover
           font='mono'
           strong>
           Veniam magna
