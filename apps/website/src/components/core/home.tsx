@@ -14,8 +14,8 @@ function HomePage({ children }: { children: React.ReactNode }) {
       <Space size={'xxl'} />
 
       <LogoIcon
-        width={48}
-        height={48}
+        width={'48'}
+        height={'48'}
       />
       <Space size={'lg'} />
       <Text

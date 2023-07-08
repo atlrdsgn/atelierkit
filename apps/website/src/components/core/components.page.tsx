@@ -18,7 +18,7 @@ function ComponentsPage({ children }: { children?: React.ReactNode }) {
             align='center'
             size='H1'
             weight='bold'
-            font='sf'>
+            font='system'>
             {components.introduction}
           </Heading>
 

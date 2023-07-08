@@ -41,7 +41,7 @@ export const DemoSelect = () => {
         wrap={'wrap'}
         style={{ marginBottom: '20px', marginTop: '20px' }}>
         <>
-          <Select style={{ minWidth: '200px', margin: 'auto', alignItems: 'center' }}>
+          <Select>
             <Select.Trigger>
               <Select.Value placeholder={'Select an option..'} />
               <Select.Icon />
