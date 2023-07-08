@@ -155,7 +155,9 @@ export const select_separator = style({
   margin: 5,
 });
 
-export const select_icon = style({});
+export const select_icon = style({
+  lineHeight: 'inherit',
+});
 
 export const select_group = style({});
 

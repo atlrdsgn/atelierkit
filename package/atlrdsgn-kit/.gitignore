@@ -28,7 +28,7 @@ package-lock.json
 # outputs
 .turbo/*
 .next/*
-dist/*
+dist/
 dist-ssr
 
 *.log

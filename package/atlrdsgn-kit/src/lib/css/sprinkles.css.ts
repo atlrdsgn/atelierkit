@@ -15,6 +15,14 @@ const alignment = ['flex-start', 'center', 'flex-end', 'stretch'] as const;
 const vertical = ['top', 'middle', 'bottom', 'baseline'] as const;
 const global = ['initial', 'inherit', 'unset'] as const;
 
+const durations = ['150ms', '300ms', '500ms', '700ms', '1000ms'] as const;
+
+/**
+ * Responsive properties
+ *
+ * These properties are responsive, meaning
+ * they change at different breakpoints.
+ */
 const responsiveProperties = defineProperties({
   defaultCondition: 'small',
   responsiveArray: media,
@@ -71,11 +79,28 @@ const responsiveProperties = defineProperties({
     mixBlendMode: [...global, 'difference', 'multiply', 'screen', 'overlay'],
 
     // etc.
+    fontWeight: ['inherit', 'normal', 'bold', 'strong'],
+    textTransform: ['capitalize', 'lowercase', 'uppercase'],
+    transitionProperty: ['none', 'all', 'initial'],
+    transitionTimingFunction: [
+      'linear',
+      'cubic-bezier(0.4, 0, 1, 1)',
+      'cubic-bezier(0, 0, 0.2, 1)',
+      'cubic-bezier(0.42, 0, 0.58, 1)',
+    ],
+    transitionDuration: [...durations],
   },
   shorthands: {
     // ..
   },
 });
+
+/**
+ * Non-responsive properties
+ *
+ * These properties are not responsive, meaning
+ * they do not change at different breakpoints.
+ */
 
 /* <!-- 
 attempting to create a color map
@@ -106,6 +131,7 @@ export const sprinkles = createSprinkles(responsiveProperties, colorProperties);
 export type Sprinkles = Parameters<typeof sprinkles>[0];
 
 export const mapResponsiveValue = createMapValueFn(responsiveProperties);
+// export const mapNonResponsiveValue = createMapValueFn(nonResponsiveProperties);
 export const mapColorValue = createMapValueFn(colorProperties);
 
 export type OptionalResponsiveValue<Value extends string | number> = ConditionalValue<

@@ -6,6 +6,7 @@ export * from './container';
 export * from './flex';
 export * from './heading';
 export * from './hover-card';
+export * from './inline';
 export * from './input';
 export * from './menubar';
 export * from './paragraph';

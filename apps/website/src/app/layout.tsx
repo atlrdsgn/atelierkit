@@ -4,20 +4,14 @@ import '@atlrdsgn/kit/css';
 import ThemeProvider from '@/components/theme-provider';
 import { siteURL } from '@/lib/const';
 import type { Metadata } from 'next';
-import ComponentNav from '@/components/core/component.nav';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang='en'
       suppressHydrationWarning>
       <body style={{ opacity: 1 }}>
         <ThemeProvider>
-          <ComponentNav />
           <main>{children}</main>
         </ThemeProvider>
       </body>

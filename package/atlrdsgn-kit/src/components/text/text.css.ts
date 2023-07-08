@@ -82,6 +82,7 @@ const TEXT_BASE = style({
   margin: 0,
   padding: 0,
   fontVariantNumeric: 'tabular-nums',
+  transitionProperty: 'color',
 });
 
 export type TextFontVariants = keyof typeof font;

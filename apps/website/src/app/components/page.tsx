@@ -10,6 +10,8 @@ import {
   DemoSection,
   DemoStack,
   DemoSwitch,
+  DemoInline,
+  DemoSelect,
 } from '@/components/react-kit';
 
 export default function ComponentsIndex() {
@@ -24,6 +26,8 @@ export default function ComponentsIndex() {
           <DemoSwitch />
           <DemoStack />
           <DemoAvi />
+          <DemoInline />
+          <DemoSelect />
         </ComponentsPage>
       </PageLayout>
     </>

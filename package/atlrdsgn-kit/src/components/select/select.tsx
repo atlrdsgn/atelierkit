@@ -1,7 +1,6 @@
 import React from 'react';
 import * as SLCT from '@radix-ui/react-select';
 import * as CSS from './select.css';
-import { kit } from '../../lib';
 import { ArrowDownIcon, SmallArrowDownIcon, SmallArrowUpIcon } from '../../lib';
 import clsx from 'clsx';
 
@@ -83,7 +82,7 @@ const SelectIcon = React.forwardRef<React.ElementRef<typeof SLCT.Icon>, SelectIc
       ref={forwardedRef}
       asChild={asChild}
       className={clsx(CSS.select_icon, className)}>
-      <ArrowDownIcon color={kit.color.slate5} />
+      <ArrowDownIcon />
     </SLCT.Icon>
   ),
 );

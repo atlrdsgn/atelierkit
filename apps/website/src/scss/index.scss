@@ -1,4 +1,3 @@
-
 @import 'inter-ui/inter.css';
 @import './fontface';
 @import './helpers';
@@ -32,7 +31,7 @@ body {
   padding: 0;
   margin: auto;
 
-  margin-left: var(--aside-width) !important;
+  // margin-left: var(--aside-width) !important;
 }
 
 main .main-content {
@@ -50,8 +49,6 @@ aside {
   background-color: var(--aside-bg) !important;
   height: 100vh;
 
-
-
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 60px;
@@ -59,10 +56,8 @@ aside {
 }
 
 aside .comp-nav {
-
-
   // border-right-width: 1px solid #6A7280;
-  box-shadow: inset -1px 0 0 #6A7280;
+  box-shadow: inset -1px 0 0 #6a7280;
 }
 
 @media screen and (max-width: 768px) {
@@ -74,5 +69,3 @@ aside .comp-nav {
     margin: 0 !important;
   }
 }
-  
-
