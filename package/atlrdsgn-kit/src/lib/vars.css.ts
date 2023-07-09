@@ -252,6 +252,22 @@ export const themeVars = createThemeContract({
     volt11: null,
     volt12: null,
     volt13: null,
+
+    /*
+    jade0: null,
+    jade1: null,
+    jade2: null,
+    jade3: null,
+    jade4: null,
+    jade5: null,
+    jade6: null,
+    jade7: null,
+    jade8: null,
+    jade9: null,
+    jade10: null,
+    jade11: null,
+    jade12: null,
+    */
   },
   // ..
 });

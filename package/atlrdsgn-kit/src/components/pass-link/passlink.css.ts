@@ -59,7 +59,6 @@ export const font = styleVariants(fontOps, (value) => ({
 /** ------------------------------------------------------ */
 
 export const base = style({
-  all: 'unset',
   textDecoration: 'none',
   backgroundColor: 'transparent',
   background: 'none',
