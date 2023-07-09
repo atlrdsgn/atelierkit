@@ -1,6 +1,11 @@
-import { style, styleVariants } from '@vanilla-extract/css';
-import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
+import { style } from '@vanilla-extract/css';
 import { kit } from '../../lib';
+import {
+  slideFadeDown,
+  slideFadeLeft,
+  slideFadeRight,
+  slideFadeUp,
+} from '../_shared/keyframes.css';
 
 const TRGGR_PADDING_LEFT = 14;
 const TRGGR_PADDING_RIGHT = 6;
@@ -35,7 +40,7 @@ export const select_trigger = style({
 
   color: kit.color.slate9,
   border: `1.5px solid ${kit.color.slate6}`,
-  borderRadius: kit.radii.LG,
+  borderRadius: kit.radii.MD,
   backgroundColor: kit.color.slate1,
 
   paddingTop: 0,
@@ -75,6 +80,11 @@ export const select_content = style({
     '&::-webkit-scrollbar': {},
     '&[data-state="open"]': {},
     '&[data-state="closed"]': {},
+
+    '&[data-side="top"]': { animationName: `${slideFadeDown}` },
+    '&[data-side="right"]': { animationName: `${slideFadeLeft}` },
+    '&[data-side="bottom"]': { animationName: `${slideFadeUp}` },
+    '&[data-side="left"]': { animationName: `${slideFadeRight}` },
   },
 });
 
@@ -117,9 +127,8 @@ export const select_item = style({
 
   selectors: {
     '&[data-highlighted]': {
-      backgroundImage: kit.color.hyper5,
-      backgroundColor: kit.color.hyper5,
-      background: kit.color.hyper5,
+      backgroundColor: kit.color.slate7,
+      background: kit.color.slate7,
       color: kit.color.slate1,
     },
   },

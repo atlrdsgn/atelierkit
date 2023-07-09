@@ -9,8 +9,12 @@ import type {
   BASE_SELECT_PROPS,
 } from './types';
 
-export type SelectProps = BASE_SELECT_PROPS & React.ComponentProps<typeof SLCT.Root>;
+const SelectRoot = SLCT.Root;
 
+export type SelectProps = BASE_SELECT_PROPS &
+  React.ComponentProps<typeof SLCT.Root>;
+
+/*
 const SelectRoot = ({
   children,
   className,
@@ -41,6 +45,7 @@ const SelectRoot = ({
     </SLCT.Root>
   );
 };
+*/
 
 /***************************************************************
  *
@@ -68,24 +73,24 @@ const SelectValueComponent = React.forwardRef<
     <SLCT.Value
       {...rest}
       ref={forwardedRef}
-      placeholder={placeholder}>
-      {children}
-    </SLCT.Value>
+      placeholder={placeholder}
+    />
   );
 });
 
 export type SelectIconProps = React.ComponentPropsWithRef<typeof SLCT.Icon>;
-const SelectIcon = React.forwardRef<React.ElementRef<typeof SLCT.Icon>, SelectIconProps>(
-  ({ className, asChild, ...rest }, forwardedRef) => (
-    <SLCT.Icon
-      {...rest}
-      ref={forwardedRef}
-      asChild={asChild}
-      className={clsx(CSS.select_icon, className)}>
-      <ArrowDownIcon />
-    </SLCT.Icon>
-  ),
-);
+const SelectIcon = React.forwardRef<
+  React.ElementRef<typeof SLCT.Icon>,
+  SelectIconProps
+>(({ className, asChild, ...rest }, forwardedRef) => (
+  <SLCT.Icon
+    {...rest}
+    ref={forwardedRef}
+    asChild={asChild}
+    className={clsx(CSS.select_icon, className)}>
+    <ArrowDownIcon />
+  </SLCT.Icon>
+));
 
 /**
  *
@@ -175,14 +180,19 @@ const SelectItemComponent = React.forwardRef<
 export type SelectItemIndicatorProps = React.ComponentPropsWithRef<
   typeof SLCT.ItemIndicator
 >;
-const SelectItemIndicator = ({ className, ...rest }: SelectItemIndicatorProps) => (
+const SelectItemIndicator = ({
+  className,
+  ...rest
+}: SelectItemIndicatorProps) => (
   <SLCT.ItemIndicator
     {...rest}
     className={clsx(CSS.select_item_indicate, className)}
   />
 );
 
-export type SelectSeparatorProps = React.ComponentPropsWithRef<typeof SLCT.Separator>;
+export type SelectSeparatorProps = React.ComponentPropsWithRef<
+  typeof SLCT.Separator
+>;
 const SelectSeparator = ({ className, ...rest }: SelectSeparatorProps) => (
   <SLCT.Separator
     {...rest}

@@ -37,30 +37,24 @@ const fontOps = {
   mono: { fontFamily: kit.font.family.mono },
 } as const;
 
-export const size = {
-  ...styleVariants(sizeOptions, (value) => ({
-    fontSize: value.fontSize,
-    lineHeight: value.lineHeight,
-  })),
-};
+export const size = styleVariants(sizeOptions, (value) => ({
+  fontSize: value.fontSize,
+  lineHeight: value.lineHeight,
+}));
 
-export const variant = {
-  ...styleVariants(colorOps, (value) => ({
-    color: value.color,
-    ':hover': {
-      color: value.hov.color,
-    },
-    ':active': {
-      color: value.act.color,
-    },
-  })),
-};
+export const variant = styleVariants(colorOps, (value) => ({
+  color: value.color,
+  ':hover': {
+    color: value.hov.color,
+  },
+  ':active': {
+    color: value.act.color,
+  },
+}));
 
-export const font = {
-  ...styleVariants(fontOps, (value) => ({
-    fontFamily: value.fontFamily,
-  })),
-};
+export const font = styleVariants(fontOps, (value) => ({
+  fontFamily: value.fontFamily,
+}));
 
 /** ------------------------------------------------------ */
 

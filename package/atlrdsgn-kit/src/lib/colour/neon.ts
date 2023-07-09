@@ -10,6 +10,8 @@ export const azure = {
   azure8: 'rgba(54, 135, 255, 1)',
   azure9: 'rgba(27, 119, 255, 1)',
   azure10: 'rgba(0, 102, 255, 1)',
+  azure11: 'rgba(0, 85, 230, 1)',
+  azure12: 'rgba(0, 68, 204, 1)',
 } as const;
 
 export const cherry = {
@@ -24,6 +26,8 @@ export const cherry = {
   cherry8: 'rgba(204, 0, 0, 1)',
   cherry9: 'rgba(179, 0, 0, 1)',
   cherry10: 'rgba(153, 0, 0, 1)',
+  cherry11: 'rgba(128, 0, 0, 1)',
+  cherry12: 'rgba(102, 0, 0, 1)',
 } as const;
 
 export const lime = {
@@ -38,6 +42,8 @@ export const lime = {
   lime8: 'rgba(29, 232, 0, 1)',
   lime9: 'rgba(14, 193, 0, 1)',
   lime10: 'rgba(54, 83, 20, 1)',
+  lime11: 'rgba(0, 153, 0, 1)',
+  lime12: 'rgba(0, 128, 0, 1)',
 } as const;
 
 export const lemon = {
@@ -52,6 +58,8 @@ export const lemon = {
   lemon8: 'rgba(230, 230, 0, 1)',
   lemon9: 'rgba(204, 204, 0, 1)',
   lemon10: 'rgba(179, 179, 0, 1)',
+  lemon11: 'rgba(153, 153, 0, 1)',
+  lemon12: 'rgba(128, 128, 0, 1)',
 } as const;
 
 /**
@@ -60,5 +68,5 @@ export const lemon = {
  * @lime
  * @lemon
  *
- * 1 / 10
+ * 1 / 12
  */

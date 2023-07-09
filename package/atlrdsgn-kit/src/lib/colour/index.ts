@@ -1,3 +1,1 @@
-export * from './core';
-export * from './neon';
-export * from './neutral';
+export { type KitColours, kitColour, darkKitColour } from './system';
