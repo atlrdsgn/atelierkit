@@ -1,12 +1,12 @@
 import React from 'react';
-import { PageLayout } from '@/components/core';
-import HomePage from '@/components/core/home';
+import { HomePage, GlobalFooter, PageLayout } from '@/components/core';
 
 const AppIndex = () => {
   return (
     <>
       <PageLayout type={'Standard'}>
-        <HomePage>⁘</HomePage>
+        <HomePage />
+        <GlobalFooter />
       </PageLayout>
     </>
   );

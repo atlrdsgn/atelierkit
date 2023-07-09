@@ -1,9 +1,7 @@
 import { style } from '@vanilla-extract/css';
-import { kit } from '../../lib';
 import { slideFadeDown, slideFadeUp } from '../_shared/keyframes.css';
 
 export const popoverRoot = style({});
-export const popoverTrigger = style({});
 
 // content
 export const popoverContent = style({
@@ -23,7 +21,9 @@ export const popoverContent = style({
   },
 
   selectors: {
-    '&[data-state="open"][data-side="bottom"]': { animationName: `${slideFadeDown}` },
+    '&[data-state="open"][data-side="bottom"]': {
+      animationName: `${slideFadeDown}`,
+    },
     '&[data-state="closed"]': { animationName: `${slideFadeUp}` },
   },
 });
