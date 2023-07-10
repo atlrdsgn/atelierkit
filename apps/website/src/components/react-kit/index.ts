@@ -8,3 +8,4 @@ export * from './DemoSwitch';
 export * from './DemoInline';
 export * from './DemoSelect';
 export * from './DemoPopover';
+export * from './DemoGrid';

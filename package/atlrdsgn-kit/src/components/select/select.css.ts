@@ -22,11 +22,12 @@ export const select_root = style({
 });
 
 export const select_trigger = style({
-  display: 'inline-flex',
+  display: 'flex',
   flexDirection: 'row',
   margin: 'auto',
   alignItems: 'center',
   justifyContent: 'space-between',
+  verticalAlign: 'middle',
 
   gap: 20,
   height: 32,
@@ -53,7 +54,10 @@ export const select_trigger = style({
   ':focus': { boxShadow: `0 0 0 2px ${kit.color.hyper4}` },
 
   selectors: {
-    '&[data-placeholder]': { color: kit.color.slate9 },
+    '&[data-placeholder]': {
+      color: kit.color.slate4,
+      fontWeight: kit.font.weight.REGULAR,
+    },
     '&[data-disabled]': {},
   },
 });
@@ -145,7 +149,6 @@ export const select_item_indicate = style({
 });
 
 export const select_label = style({
-  all: 'unset',
   fontFamily: kit.font.family.system,
   fontSize: kit.font.size.XS,
   fontWeight: kit.font.weight.MEDIUM,

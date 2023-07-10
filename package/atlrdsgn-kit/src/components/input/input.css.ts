@@ -97,7 +97,7 @@ const INPUT_COLOR_VARIANT = {
     backgroundColor: kit.color.slate1,
     borderColor: kit.color.slate3,
     color: kit.color.slate8,
-    boxShadow: property_vars.shadow.onFOCUS,
+    boxShadow: 'none',
     onHover: {
       backgroundColor: kit.color.slate1,
       borderColor: kit.color.slate4,
@@ -113,7 +113,7 @@ const INPUT_COLOR_VARIANT = {
     backgroundColor: kit.color.hyper1,
     borderColor: kit.color.hyper3,
     color: kit.color.hyper6,
-    boxShadow: property_vars.shadow.onFOCUS,
+    boxShadow: 'none',
     onHover: {
       backgroundColor: kit.color.slate1,
       borderColor: kit.color.hyper4,
@@ -157,7 +157,6 @@ const variant = {
 /** ---------------------------------------------- */
 
 const input_base = style({
-  all: 'unset',
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'row',
@@ -170,7 +169,7 @@ const input_base = style({
   height: 'auto',
   minWidth: '400px',
 
-  border: `2px solid`,
+  border: `2px solid transparent`,
 });
 
 /** --------------------------------------------------------- */

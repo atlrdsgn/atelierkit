@@ -14,6 +14,45 @@ export const jade = {
   jade12: 'rgba(0, 18, 20, 1)',
 } as const;
 
+export const ocGreen = {
+  oc_green0: 'rgba(235, 251, 238, 1)',
+  oc_green1: 'rgba(211, 249, 216, 1)',
+  oc_green2: 'rgba(178, 242, 187, 1)',
+  oc_green3: 'rgba(140, 233, 154, 1)',
+  oc_green4: 'rgba(105, 219, 124, 1)',
+  oc_green5: 'rgba(81, 207, 102, 1)',
+  oc_green6: 'rgba(64, 192, 87, 1)',
+  oc_green7: 'rgba(55, 178, 77, 1)',
+  oc_green8: 'rgba(47, 158, 68, 1)',
+  oc_green9: 'rgba(43, 138, 62, 1)',
+  oc_green10: 'rgba(43, 138, 62, 1)',
+  oc_green11: 'rgba(43, 138, 62, 1)',
+  oc_green12: 'rgba(43, 138, 62, 1)',
+} as const;
+
+/*
+--oc-green-0: #ebfbee;
+--oc-green-0-rgb: 235, 251, 238;
+--oc-green-1: #d3f9d8;
+--oc-green-1-rgb: 211, 249, 216;
+--oc-green-2: #b2f2bb;
+--oc-green-2-rgb: 178, 242, 187;
+--oc-green-3: #8ce99a;
+--oc-green-3-rgb: 140, 233, 154;
+--oc-green-4: #69db7c;
+--oc-green-4-rgb: 105, 219, 124;
+--oc-green-5: #51cf66;
+--oc-green-5-rgb: 81, 207, 102;
+--oc-green-6: #40c057;
+--oc-green-6-rgb: 64, 192, 87;
+--oc-green-7: #37b24d;
+--oc-green-7-rgb: 55, 178, 77;
+--oc-green-8: #2f9e44;
+--oc-green-8-rgb: 47, 158, 68;
+--oc-green-9: #2b8a3e;
+--oc-green-9-rgb: 43, 138, 62;
+*/
+
 export const peach = {
   peach0: 'rgba(255, 255, 255, 1)',
   peach1: 'rgba(255, 243, 234, 1)',

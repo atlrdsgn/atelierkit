@@ -136,30 +136,32 @@ const SelectContent = ({
   hideWhenDetached = false,
   ...props
 }: SelectContentProps) => (
-  <SLCT.Content
-    {...props}
-    className={clsx(CSS.select_content, className)}
-    position={position}
-    side={side}
-    sideOffset={sideOffset}
-    align={align}
-    alignOffset={alignOffset}
-    avoidCollisions={avoidCollisions}
-    sticky={sticky}
-    hideWhenDetached={hideWhenDetached}
-    /**
-     *
-     * portal > content > up > viewport > down > [content.items]
-     */
-  >
-    <SLCT.ScrollUpButton className={clsx(CSS.scroll_up, className)}>
-      <SmallArrowUpIcon />
-    </SLCT.ScrollUpButton>
-    <SLCT.Viewport>{children}</SLCT.Viewport>
-    <SLCT.ScrollDownButton className={clsx(CSS.scroll_down, className)}>
-      <SmallArrowDownIcon />
-    </SLCT.ScrollDownButton>
-  </SLCT.Content>
+  <SLCT.Portal>
+    <SLCT.Content
+      {...props}
+      className={clsx(CSS.select_content, className)}
+      position={position}
+      side={side}
+      sideOffset={sideOffset}
+      align={align}
+      alignOffset={alignOffset}
+      avoidCollisions={avoidCollisions}
+      sticky={sticky}
+      hideWhenDetached={hideWhenDetached}
+      /**
+       *
+       * portal > content > up > viewport > down > [content.items]
+       */
+    >
+      <SLCT.ScrollUpButton className={clsx(CSS.scroll_up, className)}>
+        <SmallArrowUpIcon />
+      </SLCT.ScrollUpButton>
+      <SLCT.Viewport>{children}</SLCT.Viewport>
+      <SLCT.ScrollDownButton className={clsx(CSS.scroll_down, className)}>
+        <SmallArrowDownIcon />
+      </SLCT.ScrollDownButton>
+    </SLCT.Content>
+  </SLCT.Portal>
 );
 
 export type SelectItemProps = React.ComponentPropsWithRef<typeof SLCT.Item> &
@@ -224,8 +226,6 @@ export const Select: React.FC<SelectProps> & {
   Content: typeof SelectContent;
   Item: typeof SelectItemComponent;
   Icon: typeof SelectIcon;
-  Viewport: typeof SLCT.Viewport;
-  Portal: typeof SLCT.Portal;
   // ..
   Indicator: typeof SelectItemIndicator;
   Separator: typeof SelectSeparator;
@@ -240,8 +240,6 @@ Select.Trigger = SelectTriggerComponent;
 Select.Value = SelectValueComponent;
 Select.Content = SelectContent;
 Select.Item = SelectItemComponent;
-Select.Viewport = SLCT.Viewport;
-Select.Portal = SLCT.Portal;
 Select.Icon = SelectIcon;
 Select.Indicator = SelectItemIndicator;
 Select.Separator = SelectSeparator;
@@ -254,7 +252,5 @@ Select.displayName = 'Select';
 // ..
 Select.Value.displayName = 'Select.Value';
 Select.Item.displayName = 'Select.Item';
-Select.Viewport.displayName = 'Select.Viewport';
-Select.Portal.displayName = 'Select.Portal';
 Select.ScrollUpButton.displayName = 'Select.ScrollUpButton';
 Select.ScrollDownButton.displayName = 'Select.ScrollDownButton';

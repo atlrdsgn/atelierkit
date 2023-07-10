@@ -13,7 +13,9 @@ import {
   DemoInline,
   DemoSelect,
   DemoPopover,
+  DemoGrid,
 } from '@/components/react-kit';
+import { DemoInput } from '@/components/react-kit/DemoInput';
 
 export default function ComponentsIndex() {
   return (
@@ -22,12 +24,14 @@ export default function ComponentsIndex() {
         <ComponentsPage>
           <DemoSection />
           <DemoContainer />
+          <DemoGrid />
           <DemoButton />
           <DemoChip />
           <DemoSwitch />
           <DemoStack />
           <DemoAvi />
           <DemoInline />
+          <DemoInput />
           <DemoSelect />
           <DemoPopover />
         </ComponentsPage>
