@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   extends: [
     'next',
     'turbo',
@@ -6,10 +7,12 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:react-hooks/recommended',
   ],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react-refresh'],
   rules: {},
 
+  parser: '@typescript-eslint/parser',
   /**
    *
    * see: 'https://typescript-eslint.io/getting-started/'
