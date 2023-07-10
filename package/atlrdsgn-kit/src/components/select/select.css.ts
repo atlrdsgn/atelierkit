@@ -29,9 +29,10 @@ export const select_trigger = style({
   justifyContent: 'space-between',
 
   gap: 20,
-  width: 'auto',
   height: 32,
   minWidth: 140,
+  maxWidth: 280,
+  width: 200,
 
   fontFamily: kit.font.family.system,
   fontSize: kit.font.size.SM,
@@ -40,7 +41,7 @@ export const select_trigger = style({
 
   color: kit.color.slate9,
   border: `1.5px solid ${kit.color.slate6}`,
-  borderRadius: kit.radii.MD,
+  borderRadius: kit.radii.SM,
   backgroundColor: kit.color.slate1,
 
   paddingTop: 0,
