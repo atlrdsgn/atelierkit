@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react';
 import { Switch, Flex } from '@atlrdsgn/kit';
@@ -14,7 +13,7 @@ export const DemoSwitch = () => {
         gap={'xs'}
         wrap={'wrap'}
         style={{ marginBottom: '20px', marginTop: '20px' }}>
-        <Switch>
+        <Switch size='small'>
           <Switch.Toggle />
         </Switch>
       </Flex>

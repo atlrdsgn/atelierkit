@@ -8,7 +8,7 @@ function ComponentsPage({ children }: { children?: React.ReactNode }) {
   const { components } = content;
 
   return (
-    <main>
+    <>
       <Section>
         <Space size='xxl' />
         <Container
@@ -34,7 +34,7 @@ function ComponentsPage({ children }: { children?: React.ReactNode }) {
       </Section>
 
       {children}
-    </main>
+    </>
   );
 }
 

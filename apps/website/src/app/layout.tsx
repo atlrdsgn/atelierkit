@@ -11,9 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang='en'
       suppressHydrationWarning>
       <body style={{ opacity: 1 }}>
-        <ThemeProvider>
-          <main>{children}</main>
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

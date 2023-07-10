@@ -1,1 +1,5 @@
-export * from './rect';
+export {
+  Rect,
+  //..
+  type DivProps,
+} from './rect';

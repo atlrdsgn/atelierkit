@@ -1,9 +1,15 @@
 import React, { forwardRef, ElementRef } from 'react';
-import { Root as SwitchRoot, Thumb as SwitchThumb } from '@radix-ui/react-switch';
+import {
+  Root as SwitchRoot,
+  Thumb as SwitchThumb,
+} from '@radix-ui/react-switch';
 import { switchToggle, switchRoot } from './switch.css';
 import clsx from 'clsx';
 
-import type { SwitchToggleVariantProps } from './switch.css';
+import type {
+  SwitchRootVariantProps,
+  SwitchToggleVariantProps,
+} from './switch.css';
 
 interface BASE_SWITCH_PROPS {
   className?: string;
@@ -53,9 +59,13 @@ interface BASE_SWITCH_PROPS {
    * when submitted with a name.
    */
   value?: string;
+
+  size?: 'small' | 'medium';
 }
 
-export type SwitchProps = BASE_SWITCH_PROPS & React.ComponentProps<typeof SwitchRoot>;
+export type SwitchProps = BASE_SWITCH_PROPS &
+  SwitchRootVariantProps &
+  React.ComponentProps<typeof SwitchRoot>;
 const SwitchRootComponent: React.FC<SwitchProps> = ({
   className,
   asChild,
@@ -66,12 +76,14 @@ const SwitchRootComponent: React.FC<SwitchProps> = ({
   required,
   name,
   value,
+  size = 'small',
   ...rest
 }) => {
   return (
     <SwitchRoot
       {...rest}
-      className={clsx(className, switchRoot)}
+      asChild={asChild}
+      className={clsx(className, switchRoot({ size }))}
       defaultChecked={defaultChecked}
       checked={checked}
       onCheckedChange={onCheckedChange}
@@ -91,26 +103,21 @@ const SwitchRootComponent: React.FC<SwitchProps> = ({
 export type ToggleProps = SwitchToggleVariantProps &
   React.ComponentProps<typeof SwitchThumb>;
 
-const SwitchToggleComponent = forwardRef<ElementRef<typeof SwitchThumb>, ToggleProps>(
-  (props, ref) => {
-    const {
-      className,
-      size = 'small',
-      variant = 'default',
-      asChild = false,
-      ...rest
-    } = props;
+const SwitchToggleComponent = forwardRef<
+  ElementRef<typeof SwitchThumb>,
+  ToggleProps
+>((props, ref) => {
+  const { className, size = 'small', asChild = false, ...rest } = props;
 
-    return (
-      <SwitchThumb
-        {...rest}
-        ref={ref}
-        asChild={asChild}
-        className={clsx(className, switchToggle({ size, variant }))}
-      />
-    );
-  },
-);
+  return (
+    <SwitchThumb
+      {...rest}
+      ref={ref}
+      asChild={asChild}
+      className={clsx(className, switchToggle({ size }))}
+    />
+  );
+});
 
 /** ------------------- exports ------------------------- */
 

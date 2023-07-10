@@ -4,6 +4,7 @@ export * from './canvas';
 export * from './chip';
 export * from './container';
 export * from './flex';
+export * from './grid';
 export * from './heading';
 export * from './hover-card';
 export * from './inline';
