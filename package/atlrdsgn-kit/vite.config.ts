@@ -71,7 +71,9 @@ export default defineConfig({
       exclude: [],
     }),
     vanillaExtractPlugin({
-      identifiers: 'short',
+      // identifiers: 'short',
+      emitCssInSsr: true,
+      identifiers: 'debug',
     }),
   ],
 });

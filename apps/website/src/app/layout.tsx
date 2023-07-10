@@ -19,8 +19,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.chvndler.ch/'),
-  title: 'Chandler Chappell',
-  description: 'Personal site.',
+  title: 'AtelierKit™ by atlrdsgn®',
+  description: 'An ever– expanding ecosystem of React components.',
   manifest: `${siteURL}/manifest.webmanifest`,
   viewport: {
     width: 'device-width',
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     maximumScale: 1,
   },
   openGraph: {
-    title: 'Chandler Chappell',
-    description: 'Personal site.',
+    title: 'AtelierKit™ by atlrdsgn®',
+    description: 'An ever– expanding ecosystem of React components.',
     url: siteURL,
-    siteName: 'Chandler Chappell',
+    siteName: 'AtelierKit™',
     images: [
       {
         url: `${siteURL}/static/img/og.jpg`,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chandler Chappell',
+    title: 'AteilerKit™ by atlrdsgn®',
     description: 'Personal site.',
     creator: '@chvndler',
     images: ['/static/img/og.jpg'],

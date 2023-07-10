@@ -33,6 +33,7 @@ __metadata:
     "@types/react": ^18.2.12
     "@types/react-dom": ^18.2.4
     "@vanilla-extract/css": ^1.11.1
+    "@vanilla-extract/css-utils": ^0.1.3
     "@vanilla-extract/dynamic": ^2.0.3
     "@vanilla-extract/recipes": ^0.4.0
     "@vanilla-extract/sprinkles": ^1.6.0
@@ -3239,6 +3240,13 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.7
   checksum: aff82b7f5c0e1df0e3018335287d194832930b1e7a586716dbcf5dd2b0d6d74d48cb5cd64ab84232d2b597ff04c8bb2a734f3965c931e07fd3385d4954592fb0
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/css-utils@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@vanilla-extract/css-utils@npm:0.1.3"
+  checksum: fa6c28d3f6c4675a7668f64e7ae8ea7e7af173b49660b1e83b9a9c63dc1a2597db0debb315ebd51f3fc8162900d4f50569b1d65cfccf104b32ed25418db69afd
   languageName: node
   linkType: hard
 
