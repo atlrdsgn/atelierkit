@@ -5,10 +5,12 @@
   "publishConfig": {
     "access": "public"
   },
+
   "files": [
     "base.json",
     "next.json",
     "node16.json",
-    "react-kit.json"
+    "react-kit.json",
+    "tsconfig.eslint.json"
   ]
 }

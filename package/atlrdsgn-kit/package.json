@@ -17,7 +17,6 @@
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
-  "typings": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -26,6 +25,10 @@
     "./css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
+    },
+    "./types": {
+      "import": "./dist/types/index.d.ts",
+      "require": "./dist/types/index.d.ts"
     }
   },
   "scripts": {

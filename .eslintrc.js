@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    // This tells ESLint to load the config from the package `eslint-config-acme`
+    // This tells ESLint to load the config from the package `eslint-config-atlrdsgn`
     extends: ['atlrdsgn'],
     include: ['apps/*/src/**/*', 'packages/*/src/**/*'],
     parser: '@typescript-eslint/parser',
